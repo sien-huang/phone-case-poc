@@ -1,5 +1,11 @@
 # 🚀 CloudWing Cases - B2B Phone Case Wholesale Platform
 
+[![GitHub license](https://img.shields.io/github/license/sien-huang/phone-case-poc)](https://github.com/sien-huang/phone-case-poc/blob/main/LICENSE)
+[![GitHub stars](https://img.shields.io/github/stars/sien-huang/phone-case-poc?style=social)](https://github.com/sien-huang/phone-case-poc/stargazers)
+[![GitHub forks](https://img.shields.io/github/forks/sien-huang/phone-case-poc?style=social)](https://github.com/sien-huang/phone-case-poc/network/members)
+[![CI Status](https://github.com/sien-huang/phone-case-poc/actions/workflows/ci.yml/badge.svg)](https://github.com/sien-huang/phone-case-poc/actions/workflows/ci.yml)
+[![codecov](https://codecov.io/gh/sien-huang/phone-case-poc/branch/main/graph/badge.svg)](https://codecov.io/gh/sien-huang/phone-case-poc)
+[![Coverage](https://img.shields.io/badge/coverage-80%25-brightgreen)](https://github.com/sien-huang/phone-case-poc)
 [![Next.js](https://img.shields.io/badge/Next.js-15-black)](https://nextjs.org/)
 [![React](https://img.shields.io/badge/React-19-blue)](https://react.dev/)
 [![TypeScript](https://img.shields.io/badge/TypeScript-5-blue)](https://www.typescriptlang.org/)
