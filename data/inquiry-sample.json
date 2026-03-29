@@ -1,0 +1,43 @@
+{
+  "id": "string (UUID)",
+  "created_at": "ISO 8601",
+  "updated_at": "ISO 8601",
+  "status": "pending" | "contacted" | "quoted" | "closed",
+  
+  "customer": {
+    "name": "string",
+    "company": "string",
+    "email": "string",
+    "phone": "string",
+    "country": "string",
+    "website": "string (optional)"
+  },
+  
+  "items": [
+    {
+      "productId": "string",
+      "productName": "string",
+      "quantity": "number",
+      "unitPrice": "number (optional, calculated from MOQ tiers)",
+      "notes": "string (optional)"
+    }
+  ],
+  
+  "summary": {
+    "totalQuantity": "number",
+    "estimatedTotal": "number (optional)",
+    "leadTime": "string (calculated from product lead times)",
+    "shippingMethod": "string (optional)",
+    "notes": "string (customer requirements)"
+  },
+  
+  "assignedTo": "string (admin user ID)",
+  "communications": [
+    {
+      "type": "email" | "note" | "status_change",
+      "content": "string",
+      "created_by": "string",
+      "created_at": "ISO 8601"
+    }
+  ]
+}

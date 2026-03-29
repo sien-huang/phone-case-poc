@@ -1,0 +1,802 @@
+[
+  {
+    "id": "iphone-13",
+    "brand": "iPhone",
+    "series": "13",
+    "model": "iPhone 13",
+    "slug": "iphone-13",
+    "is_current": true,
+    "year": 2024,
+    "created_at": "2026-03-26T00:16:41.367023"
+  },
+  {
+    "id": "iphone-13-pro",
+    "brand": "iPhone",
+    "series": "13",
+    "model": "iPhone 13 Pro",
+    "slug": "iphone-13-pro",
+    "is_current": true,
+    "year": 2024,
+    "created_at": "2026-03-26T00:16:41.367048"
+  },
+  {
+    "id": "iphone-13-pro-max",
+    "brand": "iPhone",
+    "series": "13",
+    "model": "iPhone 13 Pro Max",
+    "slug": "iphone-13-pro-max",
+    "is_current": true,
+    "year": 2024,
+    "created_at": "2026-03-26T00:16:41.367055"
+  },
+  {
+    "id": "iphone-13-mini",
+    "brand": "iPhone",
+    "series": "13",
+    "model": "iPhone 13 mini",
+    "slug": "iphone-13-mini",
+    "is_current": true,
+    "year": 2024,
+    "created_at": "2026-03-26T00:16:41.367060"
+  },
+  {
+    "id": "iphone-14",
+    "brand": "iPhone",
+    "series": "14",
+    "model": "iPhone 14",
+    "slug": "iphone-14",
+    "is_current": true,
+    "year": 2024,
+    "created_at": "2026-03-26T00:16:41.367068"
+  },
+  {
+    "id": "iphone-14-plus",
+    "brand": "iPhone",
+    "series": "14",
+    "model": "iPhone 14 Plus",
+    "slug": "iphone-14-plus",
+    "is_current": true,
+    "year": 2024,
+    "created_at": "2026-03-26T00:16:41.367073"
+  },
+  {
+    "id": "iphone-14-pro",
+    "brand": "iPhone",
+    "series": "14",
+    "model": "iPhone 14 Pro",
+    "slug": "iphone-14-pro",
+    "is_current": true,
+    "year": 2024,
+    "created_at": "2026-03-26T00:16:41.367078"
+  },
+  {
+    "id": "iphone-14-pro-max",
+    "brand": "iPhone",
+    "series": "14",
+    "model": "iPhone 14 Pro Max",
+    "slug": "iphone-14-pro-max",
+    "is_current": true,
+    "year": 2024,
+    "created_at": "2026-03-26T00:16:41.367083"
+  },
+  {
+    "id": "iphone-15",
+    "brand": "iPhone",
+    "series": "15",
+    "model": "iPhone 15",
+    "slug": "iphone-15",
+    "is_current": true,
+    "year": 2024,
+    "created_at": "2026-03-26T00:16:41.367089"
+  },
+  {
+    "id": "iphone-15-plus",
+    "brand": "iPhone",
+    "series": "15",
+    "model": "iPhone 15 Plus",
+    "slug": "iphone-15-plus",
+    "is_current": true,
+    "year": 2024,
+    "created_at": "2026-03-26T00:16:41.367095"
+  },
+  {
+    "id": "iphone-15-pro",
+    "brand": "iPhone",
+    "series": "15",
+    "model": "iPhone 15 Pro",
+    "slug": "iphone-15-pro",
+    "is_current": true,
+    "year": 2024,
+    "created_at": "2026-03-26T00:16:41.367099"
+  },
+  {
+    "id": "iphone-15-pro-max",
+    "brand": "iPhone",
+    "series": "15",
+    "model": "iPhone 15 Pro Max",
+    "slug": "iphone-15-pro-max",
+    "is_current": true,
+    "year": 2024,
+    "created_at": "2026-03-26T00:16:41.367104"
+  },
+  {
+    "id": "iphone-16",
+    "brand": "iPhone",
+    "series": "16",
+    "model": "iPhone 16",
+    "slug": "iphone-16",
+    "is_current": true,
+    "year": 2024,
+    "created_at": "2026-03-26T00:16:41.367110"
+  },
+  {
+    "id": "iphone-16-plus",
+    "brand": "iPhone",
+    "series": "16",
+    "model": "iPhone 16 Plus",
+    "slug": "iphone-16-plus",
+    "is_current": true,
+    "year": 2024,
+    "created_at": "2026-03-26T00:16:41.367115"
+  },
+  {
+    "id": "iphone-16-pro",
+    "brand": "iPhone",
+    "series": "16",
+    "model": "iPhone 16 Pro",
+    "slug": "iphone-16-pro",
+    "is_current": true,
+    "year": 2024,
+    "created_at": "2026-03-26T00:16:41.367119"
+  },
+  {
+    "id": "iphone-16-pro-max",
+    "brand": "iPhone",
+    "series": "16",
+    "model": "iPhone 16 Pro Max",
+    "slug": "iphone-16-pro-max",
+    "is_current": true,
+    "year": 2024,
+    "created_at": "2026-03-26T00:16:41.367124"
+  },
+  {
+    "id": "iphone-17",
+    "brand": "iPhone",
+    "series": "17",
+    "model": "iPhone 17",
+    "slug": "iphone-17",
+    "is_current": true,
+    "year": 2024,
+    "created_at": "2026-03-26T00:16:41.367129"
+  },
+  {
+    "id": "iphone-17-plus",
+    "brand": "iPhone",
+    "series": "17",
+    "model": "iPhone 17 Plus",
+    "slug": "iphone-17-plus",
+    "is_current": true,
+    "year": 2024,
+    "created_at": "2026-03-26T00:16:41.367141"
+  },
+  {
+    "id": "iphone-17-pro",
+    "brand": "iPhone",
+    "series": "17",
+    "model": "iPhone 17 Pro",
+    "slug": "iphone-17-pro",
+    "is_current": true,
+    "year": 2024,
+    "created_at": "2026-03-26T00:16:41.367147"
+  },
+  {
+    "id": "iphone-17-pro-max",
+    "brand": "iPhone",
+    "series": "17",
+    "model": "iPhone 17 Pro Max",
+    "slug": "iphone-17-pro-max",
+    "is_current": true,
+    "year": 2024,
+    "created_at": "2026-03-26T00:16:41.367152"
+  },
+  {
+    "id": "galaxy-s24",
+    "brand": "Samsung",
+    "series": "Galaxy S24",
+    "model": "Galaxy S24",
+    "slug": "galaxy-s24",
+    "is_current": true,
+    "year": 2024,
+    "created_at": "2026-03-26T00:16:41.367160"
+  },
+  {
+    "id": "galaxy-s24plus",
+    "brand": "Samsung",
+    "series": "Galaxy S24",
+    "model": "Galaxy S24+",
+    "slug": "galaxy-s24plus",
+    "is_current": true,
+    "year": 2024,
+    "created_at": "2026-03-26T00:16:41.367166"
+  },
+  {
+    "id": "galaxy-s24-ultra",
+    "brand": "Samsung",
+    "series": "Galaxy S24",
+    "model": "Galaxy S24 Ultra",
+    "slug": "galaxy-s24-ultra",
+    "is_current": true,
+    "year": 2024,
+    "created_at": "2026-03-26T00:16:41.367171"
+  },
+  {
+    "id": "galaxy-s25",
+    "brand": "Samsung",
+    "series": "Galaxy S25",
+    "model": "Galaxy S25",
+    "slug": "galaxy-s25",
+    "is_current": true,
+    "year": 2024,
+    "created_at": "2026-03-26T00:16:41.367177"
+  },
+  {
+    "id": "galaxy-s25plus",
+    "brand": "Samsung",
+    "series": "Galaxy S25",
+    "model": "Galaxy S25+",
+    "slug": "galaxy-s25plus",
+    "is_current": true,
+    "year": 2024,
+    "created_at": "2026-03-26T00:16:41.367182"
+  },
+  {
+    "id": "galaxy-s25-ultra",
+    "brand": "Samsung",
+    "series": "Galaxy S25",
+    "model": "Galaxy S25 Ultra",
+    "slug": "galaxy-s25-ultra",
+    "is_current": true,
+    "year": 2024,
+    "created_at": "2026-03-26T00:16:41.367190"
+  },
+  {
+    "id": "galaxy-z-flip-5",
+    "brand": "Samsung",
+    "series": "Galaxy Z Flip",
+    "model": "Galaxy Z Flip 5",
+    "slug": "galaxy-z-flip-5",
+    "is_current": true,
+    "year": 2024,
+    "created_at": "2026-03-26T00:16:41.367200"
+  },
+  {
+    "id": "galaxy-z-flip-6",
+    "brand": "Samsung",
+    "series": "Galaxy Z Flip",
+    "model": "Galaxy Z Flip 6",
+    "slug": "galaxy-z-flip-6",
+    "is_current": true,
+    "year": 2024,
+    "created_at": "2026-03-26T00:16:41.367206"
+  },
+  {
+    "id": "galaxy-z-fold-5",
+    "brand": "Samsung",
+    "series": "Galaxy Z Fold",
+    "model": "Galaxy Z Fold 5",
+    "slug": "galaxy-z-fold-5",
+    "is_current": true,
+    "year": 2024,
+    "created_at": "2026-03-26T00:16:41.367237"
+  },
+  {
+    "id": "galaxy-z-fold-6",
+    "brand": "Samsung",
+    "series": "Galaxy Z Fold",
+    "model": "Galaxy Z Fold 6",
+    "slug": "galaxy-z-fold-6",
+    "is_current": true,
+    "year": 2024,
+    "created_at": "2026-03-26T00:16:41.367243"
+  },
+  {
+    "id": "galaxy-a54",
+    "brand": "Samsung",
+    "series": "Galaxy A",
+    "model": "Galaxy A54",
+    "slug": "galaxy-a54",
+    "is_current": true,
+    "year": 2024,
+    "created_at": "2026-03-26T00:16:41.367249"
+  },
+  {
+    "id": "galaxy-a55",
+    "brand": "Samsung",
+    "series": "Galaxy A",
+    "model": "Galaxy A55",
+    "slug": "galaxy-a55",
+    "is_current": true,
+    "year": 2024,
+    "created_at": "2026-03-26T00:16:41.367254"
+  },
+  {
+    "id": "galaxy-a53",
+    "brand": "Samsung",
+    "series": "Galaxy A",
+    "model": "Galaxy A53",
+    "slug": "galaxy-a53",
+    "is_current": true,
+    "year": 2024,
+    "created_at": "2026-03-26T00:16:41.367259"
+  },
+  {
+    "id": "galaxy-a52",
+    "brand": "Samsung",
+    "series": "Galaxy A",
+    "model": "Galaxy A52",
+    "slug": "galaxy-a52",
+    "is_current": true,
+    "year": 2024,
+    "created_at": "2026-03-26T00:16:41.367263"
+  },
+  {
+    "id": "mate-60",
+    "brand": "Huawei",
+    "series": "Mate Series",
+    "model": "Mate 60",
+    "slug": "mate-60",
+    "is_current": true,
+    "year": 2024,
+    "created_at": "2026-03-26T00:16:41.367271"
+  },
+  {
+    "id": "mate-60-pro",
+    "brand": "Huawei",
+    "series": "Mate Series",
+    "model": "Mate 60 Pro",
+    "slug": "mate-60-pro",
+    "is_current": true,
+    "year": 2024,
+    "created_at": "2026-03-26T00:16:41.367276"
+  },
+  {
+    "id": "mate-60-proplus",
+    "brand": "Huawei",
+    "series": "Mate Series",
+    "model": "Mate 60 Pro+",
+    "slug": "mate-60-proplus",
+    "is_current": true,
+    "year": 2024,
+    "created_at": "2026-03-26T00:16:41.367285"
+  },
+  {
+    "id": "mate-50",
+    "brand": "Huawei",
+    "series": "Mate Series",
+    "model": "Mate 50",
+    "slug": "mate-50",
+    "is_current": true,
+    "year": 2024,
+    "created_at": "2026-03-26T00:16:41.367290"
+  },
+  {
+    "id": "mate-50-pro",
+    "brand": "Huawei",
+    "series": "Mate Series",
+    "model": "Mate 50 Pro",
+    "slug": "mate-50-pro",
+    "is_current": true,
+    "year": 2024,
+    "created_at": "2026-03-26T00:16:41.367295"
+  },
+  {
+    "id": "mate-40",
+    "brand": "Huawei",
+    "series": "Mate Series",
+    "model": "Mate 40",
+    "slug": "mate-40",
+    "is_current": true,
+    "year": 2024,
+    "created_at": "2026-03-26T00:16:41.367299"
+  },
+  {
+    "id": "mate-40-pro",
+    "brand": "Huawei",
+    "series": "Mate Series",
+    "model": "Mate 40 Pro",
+    "slug": "mate-40-pro",
+    "is_current": true,
+    "year": 2024,
+    "created_at": "2026-03-26T00:16:41.367304"
+  },
+  {
+    "id": "mate-x5",
+    "brand": "Huawei",
+    "series": "Mate Series",
+    "model": "Mate X5",
+    "slug": "mate-x5",
+    "is_current": true,
+    "year": 2024,
+    "created_at": "2026-03-26T00:16:41.367309"
+  },
+  {
+    "id": "p70",
+    "brand": "Huawei",
+    "series": "P Series",
+    "model": "P70",
+    "slug": "p70",
+    "is_current": true,
+    "year": 2024,
+    "created_at": "2026-03-26T00:16:41.367315"
+  },
+  {
+    "id": "p70-pro",
+    "brand": "Huawei",
+    "series": "P Series",
+    "model": "P70 Pro",
+    "slug": "p70-pro",
+    "is_current": true,
+    "year": 2024,
+    "created_at": "2026-03-26T00:16:41.367320"
+  },
+  {
+    "id": "p60",
+    "brand": "Huawei",
+    "series": "P Series",
+    "model": "P60",
+    "slug": "p60",
+    "is_current": true,
+    "year": 2024,
+    "created_at": "2026-03-26T00:16:41.367324"
+  },
+  {
+    "id": "p60-pro",
+    "brand": "Huawei",
+    "series": "P Series",
+    "model": "P60 Pro",
+    "slug": "p60-pro",
+    "is_current": true,
+    "year": 2024,
+    "created_at": "2026-03-26T00:16:41.367329"
+  },
+  {
+    "id": "p50",
+    "brand": "Huawei",
+    "series": "P Series",
+    "model": "P50",
+    "slug": "p50",
+    "is_current": true,
+    "year": 2024,
+    "created_at": "2026-03-26T00:16:41.367334"
+  },
+  {
+    "id": "p50-pro",
+    "brand": "Huawei",
+    "series": "P Series",
+    "model": "P50 Pro",
+    "slug": "p50-pro",
+    "is_current": true,
+    "year": 2024,
+    "created_at": "2026-03-26T00:16:41.367339"
+  },
+  {
+    "id": "p40",
+    "brand": "Huawei",
+    "series": "P Series",
+    "model": "P40",
+    "slug": "p40",
+    "is_current": true,
+    "year": 2024,
+    "created_at": "2026-03-26T00:16:41.367343"
+  },
+  {
+    "id": "p40-pro",
+    "brand": "Huawei",
+    "series": "P Series",
+    "model": "P40 Pro",
+    "slug": "p40-pro",
+    "is_current": true,
+    "year": 2024,
+    "created_at": "2026-03-26T00:16:41.367348"
+  },
+  {
+    "id": "nova-12",
+    "brand": "Huawei",
+    "series": "nova Series",
+    "model": "nova 12",
+    "slug": "nova-12",
+    "is_current": true,
+    "year": 2024,
+    "created_at": "2026-03-26T00:16:41.367353"
+  },
+  {
+    "id": "nova-12-pro",
+    "brand": "Huawei",
+    "series": "nova Series",
+    "model": "nova 12 Pro",
+    "slug": "nova-12-pro",
+    "is_current": true,
+    "year": 2024,
+    "created_at": "2026-03-26T00:16:41.367358"
+  },
+  {
+    "id": "nova-11",
+    "brand": "Huawei",
+    "series": "nova Series",
+    "model": "nova 11",
+    "slug": "nova-11",
+    "is_current": true,
+    "year": 2024,
+    "created_at": "2026-03-26T00:16:41.367363"
+  },
+  {
+    "id": "nova-10",
+    "brand": "Huawei",
+    "series": "nova Series",
+    "model": "nova 10",
+    "slug": "nova-10",
+    "is_current": true,
+    "year": 2024,
+    "created_at": "2026-03-26T00:16:41.367367"
+  },
+  {
+    "id": "nova-9",
+    "brand": "Huawei",
+    "series": "nova Series",
+    "model": "nova 9",
+    "slug": "nova-9",
+    "is_current": true,
+    "year": 2024,
+    "created_at": "2026-03-26T00:16:41.367372"
+  },
+  {
+    "id": "enjoy-60",
+    "brand": "Huawei",
+    "series": "Enjoy Series",
+    "model": "Enjoy 60",
+    "slug": "enjoy-60",
+    "is_current": true,
+    "year": 2024,
+    "created_at": "2026-03-26T00:16:41.367378"
+  },
+  {
+    "id": "enjoy-50",
+    "brand": "Huawei",
+    "series": "Enjoy Series",
+    "model": "Enjoy 50",
+    "slug": "enjoy-50",
+    "is_current": true,
+    "year": 2024,
+    "created_at": "2026-03-26T00:16:41.367388"
+  },
+  {
+    "id": "enjoy-30",
+    "brand": "Huawei",
+    "series": "Enjoy Series",
+    "model": "Enjoy 30",
+    "slug": "enjoy-30",
+    "is_current": true,
+    "year": 2024,
+    "created_at": "2026-03-26T00:16:41.367393"
+  },
+  {
+    "id": "mi-14",
+    "brand": "Xiaomi",
+    "series": "Mi Series",
+    "model": "Mi 14",
+    "slug": "mi-14",
+    "is_current": true,
+    "year": 2024,
+    "created_at": "2026-03-26T00:16:41.367400"
+  },
+  {
+    "id": "mi-14-pro",
+    "brand": "Xiaomi",
+    "series": "Mi Series",
+    "model": "Mi 14 Pro",
+    "slug": "mi-14-pro",
+    "is_current": true,
+    "year": 2024,
+    "created_at": "2026-03-26T00:16:41.367405"
+  },
+  {
+    "id": "mi-13",
+    "brand": "Xiaomi",
+    "series": "Mi Series",
+    "model": "Mi 13",
+    "slug": "mi-13",
+    "is_current": true,
+    "year": 2024,
+    "created_at": "2026-03-26T00:16:41.367409"
+  },
+  {
+    "id": "mi-13-pro",
+    "brand": "Xiaomi",
+    "series": "Mi Series",
+    "model": "Mi 13 Pro",
+    "slug": "mi-13-pro",
+    "is_current": true,
+    "year": 2024,
+    "created_at": "2026-03-26T00:16:41.367414"
+  },
+  {
+    "id": "redmi-note-13",
+    "brand": "Xiaomi",
+    "series": "Redmi Note",
+    "model": "Redmi Note 13",
+    "slug": "redmi-note-13",
+    "is_current": true,
+    "year": 2024,
+    "created_at": "2026-03-26T00:16:41.367420"
+  },
+  {
+    "id": "redmi-note-12",
+    "brand": "Xiaomi",
+    "series": "Redmi Note",
+    "model": "Redmi Note 12",
+    "slug": "redmi-note-12",
+    "is_current": true,
+    "year": 2024,
+    "created_at": "2026-03-26T00:16:41.367425"
+  },
+  {
+    "id": "redmi-note-11",
+    "brand": "Xiaomi",
+    "series": "Redmi Note",
+    "model": "Redmi Note 11",
+    "slug": "redmi-note-11",
+    "is_current": true,
+    "year": 2024,
+    "created_at": "2026-03-26T00:16:41.367429"
+  },
+  {
+    "id": "find-x7",
+    "brand": "OPPO",
+    "series": "Find X",
+    "model": "Find X7",
+    "slug": "find-x7",
+    "is_current": true,
+    "year": 2024,
+    "created_at": "2026-03-26T00:16:41.367440"
+  },
+  {
+    "id": "find-x6",
+    "brand": "OPPO",
+    "series": "Find X",
+    "model": "Find X6",
+    "slug": "find-x6",
+    "is_current": true,
+    "year": 2024,
+    "created_at": "2026-03-26T00:16:41.367445"
+  },
+  {
+    "id": "find-x5",
+    "brand": "OPPO",
+    "series": "Find X",
+    "model": "Find X5",
+    "slug": "find-x5",
+    "is_current": true,
+    "year": 2024,
+    "created_at": "2026-03-26T00:16:41.367450"
+  },
+  {
+    "id": "reno-11",
+    "brand": "OPPO",
+    "series": "Reno",
+    "model": "Reno 11",
+    "slug": "reno-11",
+    "is_current": true,
+    "year": 2024,
+    "created_at": "2026-03-26T00:16:41.367456"
+  },
+  {
+    "id": "reno-10",
+    "brand": "OPPO",
+    "series": "Reno",
+    "model": "Reno 10",
+    "slug": "reno-10",
+    "is_current": true,
+    "year": 2024,
+    "created_at": "2026-03-26T00:16:41.367461"
+  },
+  {
+    "id": "reno-9",
+    "brand": "OPPO",
+    "series": "Reno",
+    "model": "Reno 9",
+    "slug": "reno-9",
+    "is_current": true,
+    "year": 2024,
+    "created_at": "2026-03-26T00:16:41.367465"
+  },
+  {
+    "id": "x100",
+    "brand": "vivo",
+    "series": "X Series",
+    "model": "X100",
+    "slug": "x100",
+    "is_current": true,
+    "year": 2024,
+    "created_at": "2026-03-26T00:16:41.367471"
+  },
+  {
+    "id": "x90",
+    "brand": "vivo",
+    "series": "X Series",
+    "model": "X90",
+    "slug": "x90",
+    "is_current": true,
+    "year": 2024,
+    "created_at": "2026-03-26T00:16:41.367476"
+  },
+  {
+    "id": "x80",
+    "brand": "vivo",
+    "series": "X Series",
+    "model": "X80",
+    "slug": "x80",
+    "is_current": true,
+    "year": 2024,
+    "created_at": "2026-03-26T00:16:41.367481"
+  },
+  {
+    "id": "v30",
+    "brand": "vivo",
+    "series": "V Series",
+    "model": "V30",
+    "slug": "v30",
+    "is_current": true,
+    "year": 2024,
+    "created_at": "2026-03-26T00:16:41.367486"
+  },
+  {
+    "id": "v29",
+    "brand": "vivo",
+    "series": "V Series",
+    "model": "V29",
+    "slug": "v29",
+    "is_current": true,
+    "year": 2024,
+    "created_at": "2026-03-26T00:16:41.367494"
+  },
+  {
+    "id": "v27",
+    "brand": "vivo",
+    "series": "V Series",
+    "model": "V27",
+    "slug": "v27",
+    "is_current": true,
+    "year": 2024,
+    "created_at": "2026-03-26T00:16:41.367502"
+  },
+  {
+    "id": "oneplus-12",
+    "brand": "OnePlus",
+    "series": "Flagship",
+    "model": "OnePlus 12",
+    "slug": "oneplus-12",
+    "is_current": true,
+    "year": 2024,
+    "created_at": "2026-03-26T00:16:41.367510"
+  },
+  {
+    "id": "oneplus-11",
+    "brand": "OnePlus",
+    "series": "Flagship",
+    "model": "OnePlus 11",
+    "slug": "oneplus-11",
+    "is_current": true,
+    "year": 2024,
+    "created_at": "2026-03-26T00:16:41.367515"
+  },
+  {
+    "id": "oneplus-10",
+    "brand": "OnePlus",
+    "series": "Flagship",
+    "model": "OnePlus 10",
+    "slug": "oneplus-10",
+    "is_current": true,
+    "year": 2024,
+    "created_at": "2026-03-26T00:16:41.367520"
+  }
+]

@@ -1,0 +1,2482 @@
+[
+  {
+    "id": "IPHOIPHONE13-CLA-000",
+    "name": "iPhone 13 Classic Case",
+    "slug": "iphoiphone13-cla-000",
+    "category": "iPhone 13 Series",
+    "description": "Clean, minimalist protection for iPhone 13. Perfect for professionals.",
+    "fullDescription": "Our Classic series offers a slim profile with reliable drop protection. The TPU material provides everyday durability while maintaining a sleek appearance. Precise cutouts ensure full functionality. Compatible with iPhone 13. Made from premium TPU with reinforced corners.",
+    "compatibility": [
+      "iPhone 13"
+    ],
+    "material": "TPU",
+    "finish": "Matte Anti-fingerprint",
+    "thickness": "1.2mm",
+    "moq": 500,
+    "leadTime": "7-10 business days",
+    "priceRange": "$1.20 - $1.80",
+    "patent": "Design Patent Pending",
+    "features": [
+      "Slim profile, easy to install/remove",
+      "Precise cutouts for all ports and buttons",
+      "Supports wireless charging",
+      "Anti-yellowing material",
+      "Reinforced corner protection"
+    ],
+    "images": [
+      "/uploads/series-placeholders/iPhone-13-Series.png"
+    ],
+    "is_active": 1,
+    "created_at": "2026-03-26T00:20:03.236791",
+    "updated_at": "2026-03-26T00:20:03.236821"
+  },
+  {
+    "id": "IPHOIPHONE13-CLA-001",
+    "name": "iPhone 13 Pro Classic Case",
+    "slug": "iphoiphone13-cla-001",
+    "category": "iPhone 13 Series",
+    "description": "Clean, minimalist protection for iPhone 13 Pro. Perfect for professionals.",
+    "fullDescription": "Our Classic series offers a slim profile with reliable drop protection. The TPU material provides everyday durability while maintaining a sleek appearance. Precise cutouts ensure full functionality. Compatible with iPhone 13 Pro. Made from premium TPU with reinforced corners.",
+    "compatibility": [
+      "iPhone 13 Pro"
+    ],
+    "material": "TPU",
+    "finish": "Matte Anti-fingerprint",
+    "thickness": "1.2mm",
+    "moq": 500,
+    "leadTime": "7-10 business days",
+    "priceRange": "$1.20 - $1.80",
+    "patent": "Design Patent Pending",
+    "features": [
+      "Slim profile, easy to install/remove",
+      "Precise cutouts for all ports and buttons",
+      "Supports wireless charging",
+      "Anti-yellowing material",
+      "Reinforced corner protection"
+    ],
+    "images": [
+      "/uploads/series-placeholders/iPhone-13-Series.png"
+    ],
+    "is_active": 1,
+    "created_at": "2026-03-26T00:20:03.236876",
+    "updated_at": "2026-03-26T00:20:03.236883"
+  },
+  {
+    "id": "IPHOIPHONE13-PRE-002",
+    "name": "iPhone 13 Pro Max Premium Case",
+    "slug": "iphoiphone13-pre-002",
+    "category": "iPhone 13 Series",
+    "description": "Premium materials and finishes for iPhone 13 Pro Max. Executive appeal with superior protection.",
+    "fullDescription": "The Premium series combines genuine leather with metal accents for an upscale look and feel. Designed specifically for iPhone 13 Pro Max, this case offers excellent protection while maintaining a sophisticated appearance. Includes a built-in card slot for convenience.",
+    "compatibility": [
+      "iPhone 13 Pro Max"
+    ],
+    "material": "Leather",
+    "finish": "Hand-finished leather with metal button",
+    "thickness": "1.5mm",
+    "moq": 500,
+    "leadTime": "7-10 business days",
+    "priceRange": "$3.00 - $4.50",
+    "patent": "Design Patent Pending",
+    "features": [
+      "Genuine leather exterior (where applicable)",
+      "Metal button accents",
+      "Built-in card slot",
+      "RFID protection",
+      "Wireless charging compatible"
+    ],
+    "images": [
+      "/uploads/series-placeholders/iPhone-13-Series.png"
+    ],
+    "is_active": 1,
+    "created_at": "2026-03-26T00:20:03.236925",
+    "updated_at": "2026-03-26T00:20:03.236931"
+  },
+  {
+    "id": "IPHOIPHONE13-CLA-003",
+    "name": "iPhone 13 mini Classic Case",
+    "slug": "iphoiphone13-cla-003",
+    "category": "iPhone 13 Series",
+    "description": "Clean, minimalist protection for iPhone 13 mini. Perfect for professionals.",
+    "fullDescription": "Our Classic series offers a slim profile with reliable drop protection. The TPU material provides everyday durability while maintaining a sleek appearance. Precise cutouts ensure full functionality. Compatible with iPhone 13 mini. Made from premium TPU with reinforced corners.",
+    "compatibility": [
+      "iPhone 13 mini"
+    ],
+    "material": "TPU",
+    "finish": "Matte Anti-fingerprint",
+    "thickness": "1.2mm",
+    "moq": 500,
+    "leadTime": "7-10 business days",
+    "priceRange": "$1.20 - $1.80",
+    "patent": "Design Patent Pending",
+    "features": [
+      "Slim profile, easy to install/remove",
+      "Precise cutouts for all ports and buttons",
+      "Supports wireless charging",
+      "Anti-yellowing material",
+      "Reinforced corner protection"
+    ],
+    "images": [
+      "/uploads/series-placeholders/iPhone-13-Series.png"
+    ],
+    "is_active": 1,
+    "created_at": "2026-03-26T00:20:03.236965",
+    "updated_at": "2026-03-26T00:20:03.236970"
+  },
+  {
+    "id": "IPHOIPHONE14-CLA-004",
+    "name": "iPhone 14 Classic Case",
+    "slug": "iphoiphone14-cla-004",
+    "category": "iPhone 14 Series",
+    "description": "Clean, minimalist protection for iPhone 14. Perfect for professionals.",
+    "fullDescription": "Our Classic series offers a slim profile with reliable drop protection. The TPU material provides everyday durability while maintaining a sleek appearance. Precise cutouts ensure full functionality. Compatible with iPhone 14. Made from premium TPU with reinforced corners.",
+    "compatibility": [
+      "iPhone 14"
+    ],
+    "material": "TPU",
+    "finish": "Matte Anti-fingerprint",
+    "thickness": "1.2mm",
+    "moq": 500,
+    "leadTime": "7-10 business days",
+    "priceRange": "$1.20 - $1.80",
+    "patent": "Design Patent Pending",
+    "features": [
+      "Slim profile, easy to install/remove",
+      "Precise cutouts for all ports and buttons",
+      "Supports wireless charging",
+      "Anti-yellowing material",
+      "Reinforced corner protection"
+    ],
+    "images": [
+      "/uploads/series-placeholders/iPhone-14-Series.png"
+    ],
+    "is_active": 1,
+    "created_at": "2026-03-26T00:20:03.237001",
+    "updated_at": "2026-03-26T00:20:03.237006"
+  },
+  {
+    "id": "IPHOIPHONE14-CLA-005",
+    "name": "iPhone 14 Plus Classic Case",
+    "slug": "iphoiphone14-cla-005",
+    "category": "iPhone 14 Series",
+    "description": "Clean, minimalist protection for iPhone 14 Plus. Perfect for professionals.",
+    "fullDescription": "Our Classic series offers a slim profile with reliable drop protection. The TPU material provides everyday durability while maintaining a sleek appearance. Precise cutouts ensure full functionality. Compatible with iPhone 14 Plus. Made from premium TPU with reinforced corners.",
+    "compatibility": [
+      "iPhone 14 Plus"
+    ],
+    "material": "TPU",
+    "finish": "Matte Anti-fingerprint",
+    "thickness": "1.2mm",
+    "moq": 500,
+    "leadTime": "7-10 business days",
+    "priceRange": "$1.20 - $1.80",
+    "patent": "Design Patent Pending",
+    "features": [
+      "Slim profile, easy to install/remove",
+      "Precise cutouts for all ports and buttons",
+      "Supports wireless charging",
+      "Anti-yellowing material",
+      "Reinforced corner protection"
+    ],
+    "images": [
+      "/uploads/series-placeholders/iPhone-14-Series.png"
+    ],
+    "is_active": 1,
+    "created_at": "2026-03-26T00:20:03.237041",
+    "updated_at": "2026-03-26T00:20:03.237047"
+  },
+  {
+    "id": "IPHOIPHONE14-CLA-006",
+    "name": "iPhone 14 Pro Classic Case",
+    "slug": "iphoiphone14-cla-006",
+    "category": "iPhone 14 Series",
+    "description": "Clean, minimalist protection for iPhone 14 Pro. Perfect for professionals.",
+    "fullDescription": "Our Classic series offers a slim profile with reliable drop protection. The TPU material provides everyday durability while maintaining a sleek appearance. Precise cutouts ensure full functionality. Compatible with iPhone 14 Pro. Made from premium TPU with reinforced corners.",
+    "compatibility": [
+      "iPhone 14 Pro"
+    ],
+    "material": "TPU",
+    "finish": "Matte Anti-fingerprint",
+    "thickness": "1.2mm",
+    "moq": 500,
+    "leadTime": "7-10 business days",
+    "priceRange": "$1.20 - $1.80",
+    "patent": "Design Patent Pending",
+    "features": [
+      "Slim profile, easy to install/remove",
+      "Precise cutouts for all ports and buttons",
+      "Supports wireless charging",
+      "Anti-yellowing material",
+      "Reinforced corner protection"
+    ],
+    "images": [
+      "/uploads/series-placeholders/iPhone-14-Series.png"
+    ],
+    "is_active": 1,
+    "created_at": "2026-03-26T00:20:03.237076",
+    "updated_at": "2026-03-26T00:20:03.237081"
+  },
+  {
+    "id": "IPHOIPHONE14-PRE-007",
+    "name": "iPhone 14 Pro Max Premium Case",
+    "slug": "iphoiphone14-pre-007",
+    "category": "iPhone 14 Series",
+    "description": "Premium materials and finishes for iPhone 14 Pro Max. Executive appeal with superior protection.",
+    "fullDescription": "The Premium series combines genuine leather with metal accents for an upscale look and feel. Designed specifically for iPhone 14 Pro Max, this case offers excellent protection while maintaining a sophisticated appearance. Includes a built-in card slot for convenience.",
+    "compatibility": [
+      "iPhone 14 Pro Max"
+    ],
+    "material": "Leather",
+    "finish": "Hand-finished leather with metal button",
+    "thickness": "1.5mm",
+    "moq": 500,
+    "leadTime": "7-10 business days",
+    "priceRange": "$3.00 - $4.50",
+    "patent": "Design Patent Pending",
+    "features": [
+      "Genuine leather exterior (where applicable)",
+      "Metal button accents",
+      "Built-in card slot",
+      "RFID protection",
+      "Wireless charging compatible"
+    ],
+    "images": [
+      "/uploads/series-placeholders/iPhone-14-Series.png"
+    ],
+    "is_active": 1,
+    "created_at": "2026-03-26T00:20:03.237105",
+    "updated_at": "2026-03-26T00:20:03.237109"
+  },
+  {
+    "id": "IPHOIPHONE15-CLA-008",
+    "name": "iPhone 15 Classic Case",
+    "slug": "iphoiphone15-cla-008",
+    "category": "iPhone 15 Series",
+    "description": "Clean, minimalist protection for iPhone 15. Perfect for professionals.",
+    "fullDescription": "Our Classic series offers a slim profile with reliable drop protection. The TPU material provides everyday durability while maintaining a sleek appearance. Precise cutouts ensure full functionality. Compatible with iPhone 15. Made from premium TPU with reinforced corners.",
+    "compatibility": [
+      "iPhone 15"
+    ],
+    "material": "TPU",
+    "finish": "Matte Anti-fingerprint",
+    "thickness": "1.2mm",
+    "moq": 500,
+    "leadTime": "7-10 business days",
+    "priceRange": "$1.20 - $1.80",
+    "patent": "Design Patent Pending",
+    "features": [
+      "Slim profile, easy to install/remove",
+      "Precise cutouts for all ports and buttons",
+      "Supports wireless charging",
+      "Anti-yellowing material",
+      "Reinforced corner protection"
+    ],
+    "images": [
+      "/uploads/series-placeholders/iPhone-15-Series.png"
+    ],
+    "is_active": 1,
+    "created_at": "2026-03-26T00:20:03.237137",
+    "updated_at": "2026-03-26T00:20:03.237142"
+  },
+  {
+    "id": "IPHOIPHONE15-CLA-009",
+    "name": "iPhone 15 Plus Classic Case",
+    "slug": "iphoiphone15-cla-009",
+    "category": "iPhone 15 Series",
+    "description": "Clean, minimalist protection for iPhone 15 Plus. Perfect for professionals.",
+    "fullDescription": "Our Classic series offers a slim profile with reliable drop protection. The TPU material provides everyday durability while maintaining a sleek appearance. Precise cutouts ensure full functionality. Compatible with iPhone 15 Plus. Made from premium TPU with reinforced corners.",
+    "compatibility": [
+      "iPhone 15 Plus"
+    ],
+    "material": "TPU",
+    "finish": "Matte Anti-fingerprint",
+    "thickness": "1.2mm",
+    "moq": 500,
+    "leadTime": "7-10 business days",
+    "priceRange": "$1.20 - $1.80",
+    "patent": "Design Patent Pending",
+    "features": [
+      "Slim profile, easy to install/remove",
+      "Precise cutouts for all ports and buttons",
+      "Supports wireless charging",
+      "Anti-yellowing material",
+      "Reinforced corner protection"
+    ],
+    "images": [
+      "/uploads/series-placeholders/iPhone-15-Series.png"
+    ],
+    "is_active": 1,
+    "created_at": "2026-03-26T00:20:03.237166",
+    "updated_at": "2026-03-26T00:20:03.237171"
+  },
+  {
+    "id": "IPHOIPHONE15-CLA-010",
+    "name": "iPhone 15 Pro Classic Case",
+    "slug": "iphoiphone15-cla-010",
+    "category": "iPhone 15 Series",
+    "description": "Clean, minimalist protection for iPhone 15 Pro. Perfect for professionals.",
+    "fullDescription": "Our Classic series offers a slim profile with reliable drop protection. The TPU material provides everyday durability while maintaining a sleek appearance. Precise cutouts ensure full functionality. Compatible with iPhone 15 Pro. Made from premium TPU with reinforced corners.",
+    "compatibility": [
+      "iPhone 15 Pro"
+    ],
+    "material": "TPU",
+    "finish": "Matte Anti-fingerprint",
+    "thickness": "1.2mm",
+    "moq": 500,
+    "leadTime": "7-10 business days",
+    "priceRange": "$1.20 - $1.80",
+    "patent": "Design Patent Pending",
+    "features": [
+      "Slim profile, easy to install/remove",
+      "Precise cutouts for all ports and buttons",
+      "Supports wireless charging",
+      "Anti-yellowing material",
+      "Reinforced corner protection"
+    ],
+    "images": [
+      "/uploads/series-placeholders/iPhone-15-Series.png"
+    ],
+    "is_active": 1,
+    "created_at": "2026-03-26T00:20:03.237193",
+    "updated_at": "2026-03-26T00:20:03.237198"
+  },
+  {
+    "id": "IPHOIPHONE15-PRE-011",
+    "name": "iPhone 15 Pro Max Premium Case",
+    "slug": "iphoiphone15-pre-011",
+    "category": "iPhone 15 Series",
+    "description": "Premium materials and finishes for iPhone 15 Pro Max. Executive appeal with superior protection.",
+    "fullDescription": "The Premium series combines genuine leather with metal accents for an upscale look and feel. Designed specifically for iPhone 15 Pro Max, this case offers excellent protection while maintaining a sophisticated appearance. Includes a built-in card slot for convenience.",
+    "compatibility": [
+      "iPhone 15 Pro Max"
+    ],
+    "material": "Leather",
+    "finish": "Hand-finished leather with metal button",
+    "thickness": "1.5mm",
+    "moq": 500,
+    "leadTime": "7-10 business days",
+    "priceRange": "$3.00 - $4.50",
+    "patent": "Design Patent Pending",
+    "features": [
+      "Genuine leather exterior (where applicable)",
+      "Metal button accents",
+      "Built-in card slot",
+      "RFID protection",
+      "Wireless charging compatible"
+    ],
+    "images": [
+      "/uploads/series-placeholders/iPhone-15-Series.png"
+    ],
+    "is_active": 1,
+    "created_at": "2026-03-26T00:20:03.237232",
+    "updated_at": "2026-03-26T00:20:03.237237"
+  },
+  {
+    "id": "IPHOIPHONE16-CLA-012",
+    "name": "iPhone 16 Classic Case",
+    "slug": "iphoiphone16-cla-012",
+    "category": "iPhone 16 Series",
+    "description": "Clean, minimalist protection for iPhone 16. Perfect for professionals.",
+    "fullDescription": "Our Classic series offers a slim profile with reliable drop protection. The TPU material provides everyday durability while maintaining a sleek appearance. Precise cutouts ensure full functionality. Compatible with iPhone 16. Made from premium TPU with reinforced corners.",
+    "compatibility": [
+      "iPhone 16"
+    ],
+    "material": "TPU",
+    "finish": "Matte Anti-fingerprint",
+    "thickness": "1.2mm",
+    "moq": 500,
+    "leadTime": "7-10 business days",
+    "priceRange": "$1.20 - $1.80",
+    "patent": "Design Patent Pending",
+    "features": [
+      "Slim profile, easy to install/remove",
+      "Precise cutouts for all ports and buttons",
+      "Supports wireless charging",
+      "Anti-yellowing material",
+      "Reinforced corner protection"
+    ],
+    "images": [
+      "/uploads/series-placeholders/iPhone-16-Series.png"
+    ],
+    "is_active": 1,
+    "created_at": "2026-03-26T00:20:03.237266",
+    "updated_at": "2026-03-26T00:20:03.237271"
+  },
+  {
+    "id": "IPHOIPHONE16-CLA-013",
+    "name": "iPhone 16 Plus Classic Case",
+    "slug": "iphoiphone16-cla-013",
+    "category": "iPhone 16 Series",
+    "description": "Clean, minimalist protection for iPhone 16 Plus. Perfect for professionals.",
+    "fullDescription": "Our Classic series offers a slim profile with reliable drop protection. The TPU material provides everyday durability while maintaining a sleek appearance. Precise cutouts ensure full functionality. Compatible with iPhone 16 Plus. Made from premium TPU with reinforced corners.",
+    "compatibility": [
+      "iPhone 16 Plus"
+    ],
+    "material": "TPU",
+    "finish": "Matte Anti-fingerprint",
+    "thickness": "1.2mm",
+    "moq": 500,
+    "leadTime": "7-10 business days",
+    "priceRange": "$1.20 - $1.80",
+    "patent": "Design Patent Pending",
+    "features": [
+      "Slim profile, easy to install/remove",
+      "Precise cutouts for all ports and buttons",
+      "Supports wireless charging",
+      "Anti-yellowing material",
+      "Reinforced corner protection"
+    ],
+    "images": [
+      "/uploads/series-placeholders/iPhone-16-Series.png"
+    ],
+    "is_active": 1,
+    "created_at": "2026-03-26T00:20:03.237298",
+    "updated_at": "2026-03-26T00:20:03.237302"
+  },
+  {
+    "id": "IPHOIPHONE16-CLA-014",
+    "name": "iPhone 16 Pro Classic Case",
+    "slug": "iphoiphone16-cla-014",
+    "category": "iPhone 16 Series",
+    "description": "Clean, minimalist protection for iPhone 16 Pro. Perfect for professionals.",
+    "fullDescription": "Our Classic series offers a slim profile with reliable drop protection. The TPU material provides everyday durability while maintaining a sleek appearance. Precise cutouts ensure full functionality. Compatible with iPhone 16 Pro. Made from premium TPU with reinforced corners.",
+    "compatibility": [
+      "iPhone 16 Pro"
+    ],
+    "material": "TPU",
+    "finish": "Matte Anti-fingerprint",
+    "thickness": "1.2mm",
+    "moq": 500,
+    "leadTime": "7-10 business days",
+    "priceRange": "$1.20 - $1.80",
+    "patent": "Design Patent Pending",
+    "features": [
+      "Slim profile, easy to install/remove",
+      "Precise cutouts for all ports and buttons",
+      "Supports wireless charging",
+      "Anti-yellowing material",
+      "Reinforced corner protection"
+    ],
+    "images": [
+      "/uploads/series-placeholders/iPhone-16-Series.png"
+    ],
+    "is_active": 1,
+    "created_at": "2026-03-26T00:20:03.237328",
+    "updated_at": "2026-03-26T00:20:03.237332"
+  },
+  {
+    "id": "IPHOIPHONE16-PRE-015",
+    "name": "iPhone 16 Pro Max Premium Case",
+    "slug": "iphoiphone16-pre-015",
+    "category": "iPhone 16 Series",
+    "description": "Premium materials and finishes for iPhone 16 Pro Max. Executive appeal with superior protection.",
+    "fullDescription": "The Premium series combines genuine leather with metal accents for an upscale look and feel. Designed specifically for iPhone 16 Pro Max, this case offers excellent protection while maintaining a sophisticated appearance. Includes a built-in card slot for convenience.",
+    "compatibility": [
+      "iPhone 16 Pro Max"
+    ],
+    "material": "Leather",
+    "finish": "Hand-finished leather with metal button",
+    "thickness": "1.5mm",
+    "moq": 500,
+    "leadTime": "7-10 business days",
+    "priceRange": "$3.00 - $4.50",
+    "patent": "Design Patent Pending",
+    "features": [
+      "Genuine leather exterior (where applicable)",
+      "Metal button accents",
+      "Built-in card slot",
+      "RFID protection",
+      "Wireless charging compatible"
+    ],
+    "images": [
+      "/uploads/series-placeholders/iPhone-16-Series.png"
+    ],
+    "is_active": 1,
+    "created_at": "2026-03-26T00:20:03.237353",
+    "updated_at": "2026-03-26T00:20:03.237358"
+  },
+  {
+    "id": "IPHOIPHONE17-CLA-016",
+    "name": "iPhone 17 Classic Case",
+    "slug": "iphoiphone17-cla-016",
+    "category": "iPhone 17 Series",
+    "description": "Clean, minimalist protection for iPhone 17. Perfect for professionals.",
+    "fullDescription": "Our Classic series offers a slim profile with reliable drop protection. The TPU material provides everyday durability while maintaining a sleek appearance. Precise cutouts ensure full functionality. Compatible with iPhone 17. Made from premium TPU with reinforced corners.",
+    "compatibility": [
+      "iPhone 17"
+    ],
+    "material": "TPU",
+    "finish": "Matte Anti-fingerprint",
+    "thickness": "1.2mm",
+    "moq": 500,
+    "leadTime": "7-10 business days",
+    "priceRange": "$1.20 - $1.80",
+    "patent": "Design Patent Pending",
+    "features": [
+      "Slim profile, easy to install/remove",
+      "Precise cutouts for all ports and buttons",
+      "Supports wireless charging",
+      "Anti-yellowing material",
+      "Reinforced corner protection"
+    ],
+    "images": [
+      "/uploads/series-placeholders/iPhone-17-Series.png"
+    ],
+    "is_active": 1,
+    "created_at": "2026-03-26T00:20:03.237379",
+    "updated_at": "2026-03-26T00:20:03.237383"
+  },
+  {
+    "id": "IPHOIPHONE17-CLA-017",
+    "name": "iPhone 17 Plus Classic Case",
+    "slug": "iphoiphone17-cla-017",
+    "category": "iPhone 17 Series",
+    "description": "Clean, minimalist protection for iPhone 17 Plus. Perfect for professionals.",
+    "fullDescription": "Our Classic series offers a slim profile with reliable drop protection. The TPU material provides everyday durability while maintaining a sleek appearance. Precise cutouts ensure full functionality. Compatible with iPhone 17 Plus. Made from premium TPU with reinforced corners.",
+    "compatibility": [
+      "iPhone 17 Plus"
+    ],
+    "material": "TPU",
+    "finish": "Matte Anti-fingerprint",
+    "thickness": "1.2mm",
+    "moq": 500,
+    "leadTime": "7-10 business days",
+    "priceRange": "$1.20 - $1.80",
+    "patent": "Design Patent Pending",
+    "features": [
+      "Slim profile, easy to install/remove",
+      "Precise cutouts for all ports and buttons",
+      "Supports wireless charging",
+      "Anti-yellowing material",
+      "Reinforced corner protection"
+    ],
+    "images": [
+      "/uploads/series-placeholders/iPhone-17-Series.png"
+    ],
+    "is_active": 1,
+    "created_at": "2026-03-26T00:20:03.237405",
+    "updated_at": "2026-03-26T00:20:03.237409"
+  },
+  {
+    "id": "IPHOIPHONE17-CLA-018",
+    "name": "iPhone 17 Pro Classic Case",
+    "slug": "iphoiphone17-cla-018",
+    "category": "iPhone 17 Series",
+    "description": "Clean, minimalist protection for iPhone 17 Pro. Perfect for professionals.",
+    "fullDescription": "Our Classic series offers a slim profile with reliable drop protection. The TPU material provides everyday durability while maintaining a sleek appearance. Precise cutouts ensure full functionality. Compatible with iPhone 17 Pro. Made from premium TPU with reinforced corners.",
+    "compatibility": [
+      "iPhone 17 Pro"
+    ],
+    "material": "TPU",
+    "finish": "Matte Anti-fingerprint",
+    "thickness": "1.2mm",
+    "moq": 500,
+    "leadTime": "7-10 business days",
+    "priceRange": "$1.20 - $1.80",
+    "patent": "Design Patent Pending",
+    "features": [
+      "Slim profile, easy to install/remove",
+      "Precise cutouts for all ports and buttons",
+      "Supports wireless charging",
+      "Anti-yellowing material",
+      "Reinforced corner protection"
+    ],
+    "images": [
+      "/uploads/series-placeholders/iPhone-17-Series.png"
+    ],
+    "is_active": 1,
+    "created_at": "2026-03-26T00:20:03.237431",
+    "updated_at": "2026-03-26T00:20:03.237435"
+  },
+  {
+    "id": "IPHOIPHONE17-PRE-019",
+    "name": "iPhone 17 Pro Max Premium Case",
+    "slug": "iphoiphone17-pre-019",
+    "category": "iPhone 17 Series",
+    "description": "Premium materials and finishes for iPhone 17 Pro Max. Executive appeal with superior protection.",
+    "fullDescription": "The Premium series combines genuine leather with metal accents for an upscale look and feel. Designed specifically for iPhone 17 Pro Max, this case offers excellent protection while maintaining a sophisticated appearance. Includes a built-in card slot for convenience.",
+    "compatibility": [
+      "iPhone 17 Pro Max"
+    ],
+    "material": "Leather",
+    "finish": "Hand-finished leather with metal button",
+    "thickness": "1.5mm",
+    "moq": 500,
+    "leadTime": "7-10 business days",
+    "priceRange": "$3.00 - $4.50",
+    "patent": "Design Patent Pending",
+    "features": [
+      "Genuine leather exterior (where applicable)",
+      "Metal button accents",
+      "Built-in card slot",
+      "RFID protection",
+      "Wireless charging compatible"
+    ],
+    "images": [
+      "/uploads/series-placeholders/iPhone-17-Series.png"
+    ],
+    "is_active": 1,
+    "created_at": "2026-03-26T00:20:03.237455",
+    "updated_at": "2026-03-26T00:20:03.237459"
+  },
+  {
+    "id": "SAMSGALAXYS2-CLA-020",
+    "name": "Galaxy S24 Classic Case",
+    "slug": "samsgalaxys2-cla-020",
+    "category": "Samsung Galaxy S Series",
+    "description": "Clean, minimalist protection for Galaxy S24. Perfect for professionals.",
+    "fullDescription": "Our Classic series offers a slim profile with reliable drop protection. The TPU material provides everyday durability while maintaining a sleek appearance. Precise cutouts ensure full functionality. Compatible with Galaxy S24. Made from premium TPU with reinforced corners.",
+    "compatibility": [
+      "Galaxy S24"
+    ],
+    "material": "TPU",
+    "finish": "Matte Anti-fingerprint",
+    "thickness": "1.2mm",
+    "moq": 500,
+    "leadTime": "7-10 business days",
+    "priceRange": "$1.30 - $1.90",
+    "patent": "Design Patent Pending",
+    "features": [
+      "Slim profile, easy to install/remove",
+      "Precise cutouts for all ports and buttons",
+      "Supports wireless charging",
+      "Anti-yellowing material",
+      "Reinforced corner protection"
+    ],
+    "images": [
+      "/uploads/series-placeholders/Samsung-Galaxy-S-Series.png"
+    ],
+    "is_active": 1,
+    "created_at": "2026-03-26T00:20:03.237481",
+    "updated_at": "2026-03-26T00:20:03.237486"
+  },
+  {
+    "id": "SAMSGALAXYS2-CLA-021",
+    "name": "Galaxy S24+ Classic Case",
+    "slug": "samsgalaxys2-cla-021",
+    "category": "Samsung Galaxy S Series",
+    "description": "Clean, minimalist protection for Galaxy S24+. Perfect for professionals.",
+    "fullDescription": "Our Classic series offers a slim profile with reliable drop protection. The TPU material provides everyday durability while maintaining a sleek appearance. Precise cutouts ensure full functionality. Compatible with Galaxy S24+. Made from premium TPU with reinforced corners.",
+    "compatibility": [
+      "Galaxy S24+"
+    ],
+    "material": "TPU",
+    "finish": "Matte Anti-fingerprint",
+    "thickness": "1.2mm",
+    "moq": 500,
+    "leadTime": "7-10 business days",
+    "priceRange": "$1.30 - $1.90",
+    "patent": "Design Patent Pending",
+    "features": [
+      "Slim profile, easy to install/remove",
+      "Precise cutouts for all ports and buttons",
+      "Supports wireless charging",
+      "Anti-yellowing material",
+      "Reinforced corner protection"
+    ],
+    "images": [
+      "/uploads/series-placeholders/Samsung-Galaxy-S-Series.png"
+    ],
+    "is_active": 1,
+    "created_at": "2026-03-26T00:20:03.237507",
+    "updated_at": "2026-03-26T00:20:03.237511"
+  },
+  {
+    "id": "SAMSGALAXYS2-PRE-022",
+    "name": "Galaxy S24 Ultra Premium Case",
+    "slug": "samsgalaxys2-pre-022",
+    "category": "Samsung Galaxy S Series",
+    "description": "Premium materials and finishes for Galaxy S24 Ultra. Executive appeal with superior protection.",
+    "fullDescription": "The Premium series combines genuine leather with metal accents for an upscale look and feel. Designed specifically for Galaxy S24 Ultra, this case offers excellent protection while maintaining a sophisticated appearance. Includes a built-in card slot for convenience.",
+    "compatibility": [
+      "Galaxy S24 Ultra"
+    ],
+    "material": "Leather",
+    "finish": "Hand-finished leather with metal button",
+    "thickness": "1.5mm",
+    "moq": 500,
+    "leadTime": "7-10 business days",
+    "priceRange": "$3.20 - $4.80",
+    "patent": "Design Patent Pending",
+    "features": [
+      "Genuine leather exterior (where applicable)",
+      "Metal button accents",
+      "Built-in card slot",
+      "RFID protection",
+      "Wireless charging compatible"
+    ],
+    "images": [
+      "/uploads/series-placeholders/Samsung-Galaxy-S-Series.png"
+    ],
+    "is_active": 1,
+    "created_at": "2026-03-26T00:20:03.237536",
+    "updated_at": "2026-03-26T00:20:03.237540"
+  },
+  {
+    "id": "SAMSGALAXYS2-CLA-023",
+    "name": "Galaxy S25 Classic Case",
+    "slug": "samsgalaxys2-cla-023",
+    "category": "Samsung Galaxy S Series",
+    "description": "Clean, minimalist protection for Galaxy S25. Perfect for professionals.",
+    "fullDescription": "Our Classic series offers a slim profile with reliable drop protection. The TPU material provides everyday durability while maintaining a sleek appearance. Precise cutouts ensure full functionality. Compatible with Galaxy S25. Made from premium TPU with reinforced corners.",
+    "compatibility": [
+      "Galaxy S25"
+    ],
+    "material": "TPU",
+    "finish": "Matte Anti-fingerprint",
+    "thickness": "1.2mm",
+    "moq": 500,
+    "leadTime": "7-10 business days",
+    "priceRange": "$1.30 - $1.90",
+    "patent": "Design Patent Pending",
+    "features": [
+      "Slim profile, easy to install/remove",
+      "Precise cutouts for all ports and buttons",
+      "Supports wireless charging",
+      "Anti-yellowing material",
+      "Reinforced corner protection"
+    ],
+    "images": [
+      "/uploads/series-placeholders/Samsung-Galaxy-S-Series.png"
+    ],
+    "is_active": 1,
+    "created_at": "2026-03-26T00:20:03.237566",
+    "updated_at": "2026-03-26T00:20:03.237571"
+  },
+  {
+    "id": "SAMSGALAXYS2-CLA-024",
+    "name": "Galaxy S25+ Classic Case",
+    "slug": "samsgalaxys2-cla-024",
+    "category": "Samsung Galaxy S Series",
+    "description": "Clean, minimalist protection for Galaxy S25+. Perfect for professionals.",
+    "fullDescription": "Our Classic series offers a slim profile with reliable drop protection. The TPU material provides everyday durability while maintaining a sleek appearance. Precise cutouts ensure full functionality. Compatible with Galaxy S25+. Made from premium TPU with reinforced corners.",
+    "compatibility": [
+      "Galaxy S25+"
+    ],
+    "material": "TPU",
+    "finish": "Matte Anti-fingerprint",
+    "thickness": "1.2mm",
+    "moq": 500,
+    "leadTime": "7-10 business days",
+    "priceRange": "$1.30 - $1.90",
+    "patent": "Design Patent Pending",
+    "features": [
+      "Slim profile, easy to install/remove",
+      "Precise cutouts for all ports and buttons",
+      "Supports wireless charging",
+      "Anti-yellowing material",
+      "Reinforced corner protection"
+    ],
+    "images": [
+      "/uploads/series-placeholders/Samsung-Galaxy-S-Series.png"
+    ],
+    "is_active": 1,
+    "created_at": "2026-03-26T00:20:03.237592",
+    "updated_at": "2026-03-26T00:20:03.237596"
+  },
+  {
+    "id": "SAMSGALAXYS2-PRE-025",
+    "name": "Galaxy S25 Ultra Premium Case",
+    "slug": "samsgalaxys2-pre-025",
+    "category": "Samsung Galaxy S Series",
+    "description": "Premium materials and finishes for Galaxy S25 Ultra. Executive appeal with superior protection.",
+    "fullDescription": "The Premium series combines genuine leather with metal accents for an upscale look and feel. Designed specifically for Galaxy S25 Ultra, this case offers excellent protection while maintaining a sophisticated appearance. Includes a built-in card slot for convenience.",
+    "compatibility": [
+      "Galaxy S25 Ultra"
+    ],
+    "material": "Leather",
+    "finish": "Hand-finished leather with metal button",
+    "thickness": "1.5mm",
+    "moq": 500,
+    "leadTime": "7-10 business days",
+    "priceRange": "$3.20 - $4.80",
+    "patent": "Design Patent Pending",
+    "features": [
+      "Genuine leather exterior (where applicable)",
+      "Metal button accents",
+      "Built-in card slot",
+      "RFID protection",
+      "Wireless charging compatible"
+    ],
+    "images": [
+      "/uploads/series-placeholders/Samsung-Galaxy-S-Series.png"
+    ],
+    "is_active": 1,
+    "created_at": "2026-03-26T00:20:03.237616",
+    "updated_at": "2026-03-26T00:20:03.237621"
+  },
+  {
+    "id": "SAMSGALAXYZF-HEA-026",
+    "name": "Galaxy Z Flip 5 Heavy-Duty Case",
+    "slug": "samsgalaxyzf-hea-026",
+    "category": "Samsung Galaxy Z Series",
+    "description": "Military-grade protection for Galaxy Z Flip 5. Built for extreme conditions.",
+    "fullDescription": "Heavy-duty protection for Galaxy Z Flip 5. Features include dual-layer construction (PC + TPU), reinforced corners, and raised edges for screen and camera protection. Military-grade drop tested (MIL-STD-810H).",
+    "compatibility": [
+      "Galaxy Z Flip 5"
+    ],
+    "material": "PC + TPU hybrid",
+    "finish": "Matte texture with grip strips",
+    "thickness": "2.0mm",
+    "moq": 500,
+    "leadTime": "7-10 business days",
+    "priceRange": "$1.50 - $2.00",
+    "patent": "Design Patent Pending",
+    "features": [
+      "Military-grade drop protection",
+      "Dual-layer construction (PC + TPU)",
+      "Built-in kickstand (select models)",
+      "Raised camera and screen edges",
+      "Anti-slip grip strips"
+    ],
+    "images": [
+      "/uploads/series-placeholders/Samsung-Galaxy-Z-Series.png"
+    ],
+    "is_active": 1,
+    "created_at": "2026-03-26T00:20:03.237648",
+    "updated_at": "2026-03-26T00:20:03.237653"
+  },
+  {
+    "id": "SAMSGALAXYZF-HEA-027",
+    "name": "Galaxy Z Flip 6 Heavy-Duty Case",
+    "slug": "samsgalaxyzf-hea-027",
+    "category": "Samsung Galaxy Z Series",
+    "description": "Military-grade protection for Galaxy Z Flip 6. Built for extreme conditions.",
+    "fullDescription": "Heavy-duty protection for Galaxy Z Flip 6. Features include dual-layer construction (PC + TPU), reinforced corners, and raised edges for screen and camera protection. Military-grade drop tested (MIL-STD-810H).",
+    "compatibility": [
+      "Galaxy Z Flip 6"
+    ],
+    "material": "PC + TPU hybrid",
+    "finish": "Matte texture with grip strips",
+    "thickness": "2.0mm",
+    "moq": 500,
+    "leadTime": "7-10 business days",
+    "priceRange": "$1.50 - $2.00",
+    "patent": "Design Patent Pending",
+    "features": [
+      "Military-grade drop protection",
+      "Dual-layer construction (PC + TPU)",
+      "Built-in kickstand (select models)",
+      "Raised camera and screen edges",
+      "Anti-slip grip strips"
+    ],
+    "images": [
+      "/uploads/series-placeholders/Samsung-Galaxy-Z-Series.png"
+    ],
+    "is_active": 1,
+    "created_at": "2026-03-26T00:20:03.237674",
+    "updated_at": "2026-03-26T00:20:03.237678"
+  },
+  {
+    "id": "SAMSGALAXYZF-HEA-028",
+    "name": "Galaxy Z Fold 5 Heavy-Duty Case",
+    "slug": "samsgalaxyzf-hea-028",
+    "category": "Samsung Galaxy Z Series",
+    "description": "Military-grade protection for Galaxy Z Fold 5. Built for extreme conditions.",
+    "fullDescription": "Heavy-duty protection for Galaxy Z Fold 5. Features include dual-layer construction (PC + TPU), reinforced corners, and raised edges for screen and camera protection. Military-grade drop tested (MIL-STD-810H).",
+    "compatibility": [
+      "Galaxy Z Fold 5"
+    ],
+    "material": "PC + TPU hybrid",
+    "finish": "Matte texture with grip strips",
+    "thickness": "2.0mm",
+    "moq": 500,
+    "leadTime": "7-10 business days",
+    "priceRange": "$1.50 - $2.00",
+    "patent": "Design Patent Pending",
+    "features": [
+      "Military-grade drop protection",
+      "Dual-layer construction (PC + TPU)",
+      "Built-in kickstand (select models)",
+      "Raised camera and screen edges",
+      "Anti-slip grip strips"
+    ],
+    "images": [
+      "/uploads/series-placeholders/Samsung-Galaxy-Z-Series.png"
+    ],
+    "is_active": 1,
+    "created_at": "2026-03-26T00:20:03.237698",
+    "updated_at": "2026-03-26T00:20:03.237703"
+  },
+  {
+    "id": "SAMSGALAXYZF-HEA-029",
+    "name": "Galaxy Z Fold 6 Heavy-Duty Case",
+    "slug": "samsgalaxyzf-hea-029",
+    "category": "Samsung Galaxy Z Series",
+    "description": "Military-grade protection for Galaxy Z Fold 6. Built for extreme conditions.",
+    "fullDescription": "Heavy-duty protection for Galaxy Z Fold 6. Features include dual-layer construction (PC + TPU), reinforced corners, and raised edges for screen and camera protection. Military-grade drop tested (MIL-STD-810H).",
+    "compatibility": [
+      "Galaxy Z Fold 6"
+    ],
+    "material": "PC + TPU hybrid",
+    "finish": "Matte texture with grip strips",
+    "thickness": "2.0mm",
+    "moq": 500,
+    "leadTime": "7-10 business days",
+    "priceRange": "$1.50 - $2.00",
+    "patent": "Design Patent Pending",
+    "features": [
+      "Military-grade drop protection",
+      "Dual-layer construction (PC + TPU)",
+      "Built-in kickstand (select models)",
+      "Raised camera and screen edges",
+      "Anti-slip grip strips"
+    ],
+    "images": [
+      "/uploads/series-placeholders/Samsung-Galaxy-Z-Series.png"
+    ],
+    "is_active": 1,
+    "created_at": "2026-03-26T00:20:03.237723",
+    "updated_at": "2026-03-26T00:20:03.237727"
+  },
+  {
+    "id": "SAMSGALAXYA5-CLA-030",
+    "name": "Galaxy A54 Classic Case",
+    "slug": "samsgalaxya5-cla-030",
+    "category": "Samsung Galaxy S Series",
+    "description": "Clean, minimalist protection for Galaxy A54. Perfect for professionals.",
+    "fullDescription": "Our Classic series offers a slim profile with reliable drop protection. The TPU material provides everyday durability while maintaining a sleek appearance. Precise cutouts ensure full functionality. Compatible with Galaxy A54. Made from premium TPU with reinforced corners.",
+    "compatibility": [
+      "Galaxy A54"
+    ],
+    "material": "TPU",
+    "finish": "Matte Anti-fingerprint",
+    "thickness": "1.2mm",
+    "moq": 500,
+    "leadTime": "7-10 business days",
+    "priceRange": "$1.30 - $1.90",
+    "patent": "Design Patent Pending",
+    "features": [
+      "Slim profile, easy to install/remove",
+      "Precise cutouts for all ports and buttons",
+      "Supports wireless charging",
+      "Anti-yellowing material",
+      "Reinforced corner protection"
+    ],
+    "images": [
+      "/uploads/series-placeholders/Samsung-Galaxy-S-Series.png"
+    ],
+    "is_active": 1,
+    "created_at": "2026-03-26T00:20:03.237755",
+    "updated_at": "2026-03-26T00:20:03.237760"
+  },
+  {
+    "id": "SAMSGALAXYA5-CLA-031",
+    "name": "Galaxy A55 Classic Case",
+    "slug": "samsgalaxya5-cla-031",
+    "category": "Samsung Galaxy S Series",
+    "description": "Clean, minimalist protection for Galaxy A55. Perfect for professionals.",
+    "fullDescription": "Our Classic series offers a slim profile with reliable drop protection. The TPU material provides everyday durability while maintaining a sleek appearance. Precise cutouts ensure full functionality. Compatible with Galaxy A55. Made from premium TPU with reinforced corners.",
+    "compatibility": [
+      "Galaxy A55"
+    ],
+    "material": "TPU",
+    "finish": "Matte Anti-fingerprint",
+    "thickness": "1.2mm",
+    "moq": 500,
+    "leadTime": "7-10 business days",
+    "priceRange": "$1.30 - $1.90",
+    "patent": "Design Patent Pending",
+    "features": [
+      "Slim profile, easy to install/remove",
+      "Precise cutouts for all ports and buttons",
+      "Supports wireless charging",
+      "Anti-yellowing material",
+      "Reinforced corner protection"
+    ],
+    "images": [
+      "/uploads/series-placeholders/Samsung-Galaxy-S-Series.png"
+    ],
+    "is_active": 1,
+    "created_at": "2026-03-26T00:20:03.237785",
+    "updated_at": "2026-03-26T00:20:03.237790"
+  },
+  {
+    "id": "SAMSGALAXYA5-CLA-032",
+    "name": "Galaxy A53 Classic Case",
+    "slug": "samsgalaxya5-cla-032",
+    "category": "Samsung Galaxy S Series",
+    "description": "Clean, minimalist protection for Galaxy A53. Perfect for professionals.",
+    "fullDescription": "Our Classic series offers a slim profile with reliable drop protection. The TPU material provides everyday durability while maintaining a sleek appearance. Precise cutouts ensure full functionality. Compatible with Galaxy A53. Made from premium TPU with reinforced corners.",
+    "compatibility": [
+      "Galaxy A53"
+    ],
+    "material": "TPU",
+    "finish": "Matte Anti-fingerprint",
+    "thickness": "1.2mm",
+    "moq": 500,
+    "leadTime": "7-10 business days",
+    "priceRange": "$1.30 - $1.90",
+    "patent": "Design Patent Pending",
+    "features": [
+      "Slim profile, easy to install/remove",
+      "Precise cutouts for all ports and buttons",
+      "Supports wireless charging",
+      "Anti-yellowing material",
+      "Reinforced corner protection"
+    ],
+    "images": [
+      "/uploads/series-placeholders/Samsung-Galaxy-S-Series.png"
+    ],
+    "is_active": 1,
+    "created_at": "2026-03-26T00:20:03.237811",
+    "updated_at": "2026-03-26T00:20:03.237815"
+  },
+  {
+    "id": "SAMSGALAXYA5-CLA-033",
+    "name": "Galaxy A52 Classic Case",
+    "slug": "samsgalaxya5-cla-033",
+    "category": "Samsung Galaxy S Series",
+    "description": "Clean, minimalist protection for Galaxy A52. Perfect for professionals.",
+    "fullDescription": "Our Classic series offers a slim profile with reliable drop protection. The TPU material provides everyday durability while maintaining a sleek appearance. Precise cutouts ensure full functionality. Compatible with Galaxy A52. Made from premium TPU with reinforced corners.",
+    "compatibility": [
+      "Galaxy A52"
+    ],
+    "material": "TPU",
+    "finish": "Matte Anti-fingerprint",
+    "thickness": "1.2mm",
+    "moq": 500,
+    "leadTime": "7-10 business days",
+    "priceRange": "$1.30 - $1.90",
+    "patent": "Design Patent Pending",
+    "features": [
+      "Slim profile, easy to install/remove",
+      "Precise cutouts for all ports and buttons",
+      "Supports wireless charging",
+      "Anti-yellowing material",
+      "Reinforced corner protection"
+    ],
+    "images": [
+      "/uploads/series-placeholders/Samsung-Galaxy-S-Series.png"
+    ],
+    "is_active": 1,
+    "created_at": "2026-03-26T00:20:03.237836",
+    "updated_at": "2026-03-26T00:20:03.237841"
+  },
+  {
+    "id": "HUAWMATE60-CLA-034",
+    "name": "Mate 60 Classic Case",
+    "slug": "huawmate60-cla-034",
+    "category": "Huawei Mate Series",
+    "description": "Clean, minimalist protection for Mate 60. Perfect for professionals.",
+    "fullDescription": "Our Classic series offers a slim profile with reliable drop protection. The TPU material provides everyday durability while maintaining a sleek appearance. Precise cutouts ensure full functionality. Compatible with Mate 60. Made from premium TPU with reinforced corners.",
+    "compatibility": [
+      "Mate 60"
+    ],
+    "material": "TPU",
+    "finish": "Matte Anti-fingerprint",
+    "thickness": "1.2mm",
+    "moq": 500,
+    "leadTime": "7-12 business days",
+    "priceRange": "$1.20 - $1.80",
+    "patent": "Design Patent Pending",
+    "features": [
+      "Slim profile, easy to install/remove",
+      "Precise cutouts for all ports and buttons",
+      "Supports wireless charging",
+      "Anti-yellowing material",
+      "Reinforced corner protection"
+    ],
+    "images": [
+      "/uploads/series-placeholders/Huawei-Mate-Series.png"
+    ],
+    "is_active": 1,
+    "created_at": "2026-03-26T00:20:03.237870",
+    "updated_at": "2026-03-26T00:20:03.237875"
+  },
+  {
+    "id": "HUAWMATE60PR-CLA-035",
+    "name": "Mate 60 Pro Classic Case",
+    "slug": "huawmate60pr-cla-035",
+    "category": "Huawei Mate Series",
+    "description": "Clean, minimalist protection for Mate 60 Pro. Perfect for professionals.",
+    "fullDescription": "Our Classic series offers a slim profile with reliable drop protection. The TPU material provides everyday durability while maintaining a sleek appearance. Precise cutouts ensure full functionality. Compatible with Mate 60 Pro. Made from premium TPU with reinforced corners.",
+    "compatibility": [
+      "Mate 60 Pro"
+    ],
+    "material": "TPU",
+    "finish": "Matte Anti-fingerprint",
+    "thickness": "1.2mm",
+    "moq": 500,
+    "leadTime": "7-12 business days",
+    "priceRange": "$1.20 - $1.80",
+    "patent": "Design Patent Pending",
+    "features": [
+      "Slim profile, easy to install/remove",
+      "Precise cutouts for all ports and buttons",
+      "Supports wireless charging",
+      "Anti-yellowing material",
+      "Reinforced corner protection"
+    ],
+    "images": [
+      "/uploads/series-placeholders/Huawei-Mate-Series.png"
+    ],
+    "is_active": 1,
+    "created_at": "2026-03-26T00:20:03.237897",
+    "updated_at": "2026-03-26T00:20:03.237901"
+  },
+  {
+    "id": "HUAWMATE60PR-PRE-036",
+    "name": "Mate 60 Pro+ Premium Case",
+    "slug": "huawmate60pr-pre-036",
+    "category": "Huawei Mate Series",
+    "description": "Premium materials and finishes for Mate 60 Pro+. Executive appeal with superior protection.",
+    "fullDescription": "The Premium series combines genuine leather with metal accents for an upscale look and feel. Designed specifically for Mate 60 Pro+, this case offers excellent protection while maintaining a sophisticated appearance. Includes a built-in card slot for convenience.",
+    "compatibility": [
+      "Mate 60 Pro+"
+    ],
+    "material": "Leather",
+    "finish": "Hand-finished leather with metal button",
+    "thickness": "1.5mm",
+    "moq": 500,
+    "leadTime": "7-12 business days",
+    "priceRange": "$3.00 - $4.50",
+    "patent": "Design Patent Pending",
+    "features": [
+      "Genuine leather exterior (where applicable)",
+      "Metal button accents",
+      "Built-in card slot",
+      "RFID protection",
+      "Wireless charging compatible"
+    ],
+    "images": [
+      "/uploads/series-placeholders/Huawei-Mate-Series.png"
+    ],
+    "is_active": 1,
+    "created_at": "2026-03-26T00:20:03.237922",
+    "updated_at": "2026-03-26T00:20:03.237926"
+  },
+  {
+    "id": "HUAWMATE50-CLA-037",
+    "name": "Mate 50 Classic Case",
+    "slug": "huawmate50-cla-037",
+    "category": "Huawei Mate Series",
+    "description": "Clean, minimalist protection for Mate 50. Perfect for professionals.",
+    "fullDescription": "Our Classic series offers a slim profile with reliable drop protection. The TPU material provides everyday durability while maintaining a sleek appearance. Precise cutouts ensure full functionality. Compatible with Mate 50. Made from premium TPU with reinforced corners.",
+    "compatibility": [
+      "Mate 50"
+    ],
+    "material": "TPU",
+    "finish": "Matte Anti-fingerprint",
+    "thickness": "1.2mm",
+    "moq": 500,
+    "leadTime": "7-12 business days",
+    "priceRange": "$1.20 - $1.80",
+    "patent": "Design Patent Pending",
+    "features": [
+      "Slim profile, easy to install/remove",
+      "Precise cutouts for all ports and buttons",
+      "Supports wireless charging",
+      "Anti-yellowing material",
+      "Reinforced corner protection"
+    ],
+    "images": [
+      "/uploads/series-placeholders/Huawei-Mate-Series.png"
+    ],
+    "is_active": 1,
+    "created_at": "2026-03-26T00:20:03.237946",
+    "updated_at": "2026-03-26T00:20:03.237951"
+  },
+  {
+    "id": "HUAWMATE50PR-CLA-038",
+    "name": "Mate 50 Pro Classic Case",
+    "slug": "huawmate50pr-cla-038",
+    "category": "Huawei Mate Series",
+    "description": "Clean, minimalist protection for Mate 50 Pro. Perfect for professionals.",
+    "fullDescription": "Our Classic series offers a slim profile with reliable drop protection. The TPU material provides everyday durability while maintaining a sleek appearance. Precise cutouts ensure full functionality. Compatible with Mate 50 Pro. Made from premium TPU with reinforced corners.",
+    "compatibility": [
+      "Mate 50 Pro"
+    ],
+    "material": "TPU",
+    "finish": "Matte Anti-fingerprint",
+    "thickness": "1.2mm",
+    "moq": 500,
+    "leadTime": "7-12 business days",
+    "priceRange": "$1.20 - $1.80",
+    "patent": "Design Patent Pending",
+    "features": [
+      "Slim profile, easy to install/remove",
+      "Precise cutouts for all ports and buttons",
+      "Supports wireless charging",
+      "Anti-yellowing material",
+      "Reinforced corner protection"
+    ],
+    "images": [
+      "/uploads/series-placeholders/Huawei-Mate-Series.png"
+    ],
+    "is_active": 1,
+    "created_at": "2026-03-26T00:20:03.237972",
+    "updated_at": "2026-03-26T00:20:03.237976"
+  },
+  {
+    "id": "HUAWMATE40-CLA-039",
+    "name": "Mate 40 Classic Case",
+    "slug": "huawmate40-cla-039",
+    "category": "Huawei Mate Series",
+    "description": "Clean, minimalist protection for Mate 40. Perfect for professionals.",
+    "fullDescription": "Our Classic series offers a slim profile with reliable drop protection. The TPU material provides everyday durability while maintaining a sleek appearance. Precise cutouts ensure full functionality. Compatible with Mate 40. Made from premium TPU with reinforced corners.",
+    "compatibility": [
+      "Mate 40"
+    ],
+    "material": "TPU",
+    "finish": "Matte Anti-fingerprint",
+    "thickness": "1.2mm",
+    "moq": 500,
+    "leadTime": "7-12 business days",
+    "priceRange": "$1.20 - $1.80",
+    "patent": "Design Patent Pending",
+    "features": [
+      "Slim profile, easy to install/remove",
+      "Precise cutouts for all ports and buttons",
+      "Supports wireless charging",
+      "Anti-yellowing material",
+      "Reinforced corner protection"
+    ],
+    "images": [
+      "/uploads/series-placeholders/Huawei-Mate-Series.png"
+    ],
+    "is_active": 1,
+    "created_at": "2026-03-26T00:20:03.238000",
+    "updated_at": "2026-03-26T00:20:03.238005"
+  },
+  {
+    "id": "HUAWMATE40PR-CLA-040",
+    "name": "Mate 40 Pro Classic Case",
+    "slug": "huawmate40pr-cla-040",
+    "category": "Huawei Mate Series",
+    "description": "Clean, minimalist protection for Mate 40 Pro. Perfect for professionals.",
+    "fullDescription": "Our Classic series offers a slim profile with reliable drop protection. The TPU material provides everyday durability while maintaining a sleek appearance. Precise cutouts ensure full functionality. Compatible with Mate 40 Pro. Made from premium TPU with reinforced corners.",
+    "compatibility": [
+      "Mate 40 Pro"
+    ],
+    "material": "TPU",
+    "finish": "Matte Anti-fingerprint",
+    "thickness": "1.2mm",
+    "moq": 500,
+    "leadTime": "7-12 business days",
+    "priceRange": "$1.20 - $1.80",
+    "patent": "Design Patent Pending",
+    "features": [
+      "Slim profile, easy to install/remove",
+      "Precise cutouts for all ports and buttons",
+      "Supports wireless charging",
+      "Anti-yellowing material",
+      "Reinforced corner protection"
+    ],
+    "images": [
+      "/uploads/series-placeholders/Huawei-Mate-Series.png"
+    ],
+    "is_active": 1,
+    "created_at": "2026-03-26T00:20:03.238026",
+    "updated_at": "2026-03-26T00:20:03.238030"
+  },
+  {
+    "id": "HUAWMATEX5-CLA-041",
+    "name": "Mate X5 Classic Case",
+    "slug": "huawmatex5-cla-041",
+    "category": "Huawei Mate Series",
+    "description": "Clean, minimalist protection for Mate X5. Perfect for professionals.",
+    "fullDescription": "Our Classic series offers a slim profile with reliable drop protection. The TPU material provides everyday durability while maintaining a sleek appearance. Precise cutouts ensure full functionality. Compatible with Mate X5. Made from premium TPU with reinforced corners.",
+    "compatibility": [
+      "Mate X5"
+    ],
+    "material": "TPU",
+    "finish": "Matte Anti-fingerprint",
+    "thickness": "1.2mm",
+    "moq": 500,
+    "leadTime": "7-12 business days",
+    "priceRange": "$1.20 - $1.80",
+    "patent": "Design Patent Pending",
+    "features": [
+      "Slim profile, easy to install/remove",
+      "Precise cutouts for all ports and buttons",
+      "Supports wireless charging",
+      "Anti-yellowing material",
+      "Reinforced corner protection"
+    ],
+    "images": [
+      "/uploads/series-placeholders/Huawei-Mate-Series.png"
+    ],
+    "is_active": 1,
+    "created_at": "2026-03-26T00:20:03.238051",
+    "updated_at": "2026-03-26T00:20:03.238056"
+  },
+  {
+    "id": "HUAWP70-CLA-042",
+    "name": "P70 Classic Case",
+    "slug": "huawp70-cla-042",
+    "category": "Huawei P Series",
+    "description": "Clean, minimalist protection for P70. Perfect for professionals.",
+    "fullDescription": "Our Classic series offers a slim profile with reliable drop protection. The TPU material provides everyday durability while maintaining a sleek appearance. Precise cutouts ensure full functionality. Compatible with P70. Made from premium TPU with reinforced corners.",
+    "compatibility": [
+      "P70"
+    ],
+    "material": "TPU",
+    "finish": "Matte Anti-fingerprint",
+    "thickness": "1.2mm",
+    "moq": 500,
+    "leadTime": "7-12 business days",
+    "priceRange": "$1.20 - $1.80",
+    "patent": "Design Patent Pending",
+    "features": [
+      "Slim profile, easy to install/remove",
+      "Precise cutouts for all ports and buttons",
+      "Supports wireless charging",
+      "Anti-yellowing material",
+      "Reinforced corner protection"
+    ],
+    "images": [
+      "/uploads/series-placeholders/Huawei-P-Series.png"
+    ],
+    "is_active": 1,
+    "created_at": "2026-03-26T00:20:03.238076",
+    "updated_at": "2026-03-26T00:20:03.238080"
+  },
+  {
+    "id": "HUAWP70PRO-CLA-043",
+    "name": "P70 Pro Classic Case",
+    "slug": "huawp70pro-cla-043",
+    "category": "Huawei P Series",
+    "description": "Clean, minimalist protection for P70 Pro. Perfect for professionals.",
+    "fullDescription": "Our Classic series offers a slim profile with reliable drop protection. The TPU material provides everyday durability while maintaining a sleek appearance. Precise cutouts ensure full functionality. Compatible with P70 Pro. Made from premium TPU with reinforced corners.",
+    "compatibility": [
+      "P70 Pro"
+    ],
+    "material": "TPU",
+    "finish": "Matte Anti-fingerprint",
+    "thickness": "1.2mm",
+    "moq": 500,
+    "leadTime": "7-12 business days",
+    "priceRange": "$1.20 - $1.80",
+    "patent": "Design Patent Pending",
+    "features": [
+      "Slim profile, easy to install/remove",
+      "Precise cutouts for all ports and buttons",
+      "Supports wireless charging",
+      "Anti-yellowing material",
+      "Reinforced corner protection"
+    ],
+    "images": [
+      "/uploads/series-placeholders/Huawei-P-Series.png"
+    ],
+    "is_active": 1,
+    "created_at": "2026-03-26T00:20:03.238105",
+    "updated_at": "2026-03-26T00:20:03.238110"
+  },
+  {
+    "id": "HUAWP60-CLA-044",
+    "name": "P60 Classic Case",
+    "slug": "huawp60-cla-044",
+    "category": "Huawei P Series",
+    "description": "Clean, minimalist protection for P60. Perfect for professionals.",
+    "fullDescription": "Our Classic series offers a slim profile with reliable drop protection. The TPU material provides everyday durability while maintaining a sleek appearance. Precise cutouts ensure full functionality. Compatible with P60. Made from premium TPU with reinforced corners.",
+    "compatibility": [
+      "P60"
+    ],
+    "material": "TPU",
+    "finish": "Matte Anti-fingerprint",
+    "thickness": "1.2mm",
+    "moq": 500,
+    "leadTime": "7-12 business days",
+    "priceRange": "$1.20 - $1.80",
+    "patent": "Design Patent Pending",
+    "features": [
+      "Slim profile, easy to install/remove",
+      "Precise cutouts for all ports and buttons",
+      "Supports wireless charging",
+      "Anti-yellowing material",
+      "Reinforced corner protection"
+    ],
+    "images": [
+      "/uploads/series-placeholders/Huawei-P-Series.png"
+    ],
+    "is_active": 1,
+    "created_at": "2026-03-26T00:20:03.238133",
+    "updated_at": "2026-03-26T00:20:03.238138"
+  },
+  {
+    "id": "HUAWP60PRO-CLA-045",
+    "name": "P60 Pro Classic Case",
+    "slug": "huawp60pro-cla-045",
+    "category": "Huawei P Series",
+    "description": "Clean, minimalist protection for P60 Pro. Perfect for professionals.",
+    "fullDescription": "Our Classic series offers a slim profile with reliable drop protection. The TPU material provides everyday durability while maintaining a sleek appearance. Precise cutouts ensure full functionality. Compatible with P60 Pro. Made from premium TPU with reinforced corners.",
+    "compatibility": [
+      "P60 Pro"
+    ],
+    "material": "TPU",
+    "finish": "Matte Anti-fingerprint",
+    "thickness": "1.2mm",
+    "moq": 500,
+    "leadTime": "7-12 business days",
+    "priceRange": "$1.20 - $1.80",
+    "patent": "Design Patent Pending",
+    "features": [
+      "Slim profile, easy to install/remove",
+      "Precise cutouts for all ports and buttons",
+      "Supports wireless charging",
+      "Anti-yellowing material",
+      "Reinforced corner protection"
+    ],
+    "images": [
+      "/uploads/series-placeholders/Huawei-P-Series.png"
+    ],
+    "is_active": 1,
+    "created_at": "2026-03-26T00:20:03.238159",
+    "updated_at": "2026-03-26T00:20:03.238163"
+  },
+  {
+    "id": "HUAWP50-CLA-046",
+    "name": "P50 Classic Case",
+    "slug": "huawp50-cla-046",
+    "category": "Huawei P Series",
+    "description": "Clean, minimalist protection for P50. Perfect for professionals.",
+    "fullDescription": "Our Classic series offers a slim profile with reliable drop protection. The TPU material provides everyday durability while maintaining a sleek appearance. Precise cutouts ensure full functionality. Compatible with P50. Made from premium TPU with reinforced corners.",
+    "compatibility": [
+      "P50"
+    ],
+    "material": "TPU",
+    "finish": "Matte Anti-fingerprint",
+    "thickness": "1.2mm",
+    "moq": 500,
+    "leadTime": "7-12 business days",
+    "priceRange": "$1.20 - $1.80",
+    "patent": "Design Patent Pending",
+    "features": [
+      "Slim profile, easy to install/remove",
+      "Precise cutouts for all ports and buttons",
+      "Supports wireless charging",
+      "Anti-yellowing material",
+      "Reinforced corner protection"
+    ],
+    "images": [
+      "/uploads/series-placeholders/Huawei-P-Series.png"
+    ],
+    "is_active": 1,
+    "created_at": "2026-03-26T00:20:03.238183",
+    "updated_at": "2026-03-26T00:20:03.238187"
+  },
+  {
+    "id": "HUAWP50PRO-CLA-047",
+    "name": "P50 Pro Classic Case",
+    "slug": "huawp50pro-cla-047",
+    "category": "Huawei P Series",
+    "description": "Clean, minimalist protection for P50 Pro. Perfect for professionals.",
+    "fullDescription": "Our Classic series offers a slim profile with reliable drop protection. The TPU material provides everyday durability while maintaining a sleek appearance. Precise cutouts ensure full functionality. Compatible with P50 Pro. Made from premium TPU with reinforced corners.",
+    "compatibility": [
+      "P50 Pro"
+    ],
+    "material": "TPU",
+    "finish": "Matte Anti-fingerprint",
+    "thickness": "1.2mm",
+    "moq": 500,
+    "leadTime": "7-12 business days",
+    "priceRange": "$1.20 - $1.80",
+    "patent": "Design Patent Pending",
+    "features": [
+      "Slim profile, easy to install/remove",
+      "Precise cutouts for all ports and buttons",
+      "Supports wireless charging",
+      "Anti-yellowing material",
+      "Reinforced corner protection"
+    ],
+    "images": [
+      "/uploads/series-placeholders/Huawei-P-Series.png"
+    ],
+    "is_active": 1,
+    "created_at": "2026-03-26T00:20:03.238207",
+    "updated_at": "2026-03-26T00:20:03.242230"
+  },
+  {
+    "id": "HUAWP40-CLA-048",
+    "name": "P40 Classic Case",
+    "slug": "huawp40-cla-048",
+    "category": "Huawei P Series",
+    "description": "Clean, minimalist protection for P40. Perfect for professionals.",
+    "fullDescription": "Our Classic series offers a slim profile with reliable drop protection. The TPU material provides everyday durability while maintaining a sleek appearance. Precise cutouts ensure full functionality. Compatible with P40. Made from premium TPU with reinforced corners.",
+    "compatibility": [
+      "P40"
+    ],
+    "material": "TPU",
+    "finish": "Matte Anti-fingerprint",
+    "thickness": "1.2mm",
+    "moq": 500,
+    "leadTime": "7-12 business days",
+    "priceRange": "$1.20 - $1.80",
+    "patent": "Design Patent Pending",
+    "features": [
+      "Slim profile, easy to install/remove",
+      "Precise cutouts for all ports and buttons",
+      "Supports wireless charging",
+      "Anti-yellowing material",
+      "Reinforced corner protection"
+    ],
+    "images": [
+      "/uploads/series-placeholders/Huawei-P-Series.png"
+    ],
+    "is_active": 1,
+    "created_at": "2026-03-26T00:20:03.242288",
+    "updated_at": "2026-03-26T00:20:03.242294"
+  },
+  {
+    "id": "HUAWP40PRO-CLA-049",
+    "name": "P40 Pro Classic Case",
+    "slug": "huawp40pro-cla-049",
+    "category": "Huawei P Series",
+    "description": "Clean, minimalist protection for P40 Pro. Perfect for professionals.",
+    "fullDescription": "Our Classic series offers a slim profile with reliable drop protection. The TPU material provides everyday durability while maintaining a sleek appearance. Precise cutouts ensure full functionality. Compatible with P40 Pro. Made from premium TPU with reinforced corners.",
+    "compatibility": [
+      "P40 Pro"
+    ],
+    "material": "TPU",
+    "finish": "Matte Anti-fingerprint",
+    "thickness": "1.2mm",
+    "moq": 500,
+    "leadTime": "7-12 business days",
+    "priceRange": "$1.20 - $1.80",
+    "patent": "Design Patent Pending",
+    "features": [
+      "Slim profile, easy to install/remove",
+      "Precise cutouts for all ports and buttons",
+      "Supports wireless charging",
+      "Anti-yellowing material",
+      "Reinforced corner protection"
+    ],
+    "images": [
+      "/uploads/series-placeholders/Huawei-P-Series.png"
+    ],
+    "is_active": 1,
+    "created_at": "2026-03-26T00:20:03.242334",
+    "updated_at": "2026-03-26T00:20:03.242340"
+  },
+  {
+    "id": "HUAWNOVA12-CLA-050",
+    "name": "nova 12 Classic Case",
+    "slug": "huawnova12-cla-050",
+    "category": "Huawei nova Series",
+    "description": "Clean, minimalist protection for nova 12. Perfect for professionals.",
+    "fullDescription": "Our Classic series offers a slim profile with reliable drop protection. The TPU material provides everyday durability while maintaining a sleek appearance. Precise cutouts ensure full functionality. Compatible with nova 12. Made from premium TPU with reinforced corners.",
+    "compatibility": [
+      "nova 12"
+    ],
+    "material": "TPU",
+    "finish": "Matte Anti-fingerprint",
+    "thickness": "1.2mm",
+    "moq": 500,
+    "leadTime": "7-12 business days",
+    "priceRange": "$1.20 - $1.80",
+    "patent": "Design Patent Pending",
+    "features": [
+      "Slim profile, easy to install/remove",
+      "Precise cutouts for all ports and buttons",
+      "Supports wireless charging",
+      "Anti-yellowing material",
+      "Reinforced corner protection"
+    ],
+    "images": [
+      "/uploads/series-placeholders/Huawei-nova-Series.png"
+    ],
+    "is_active": 1,
+    "created_at": "2026-03-26T00:20:03.242366",
+    "updated_at": "2026-03-26T00:20:03.242371"
+  },
+  {
+    "id": "HUAWNOVA12PR-CLA-051",
+    "name": "nova 12 Pro Classic Case",
+    "slug": "huawnova12pr-cla-051",
+    "category": "Huawei nova Series",
+    "description": "Clean, minimalist protection for nova 12 Pro. Perfect for professionals.",
+    "fullDescription": "Our Classic series offers a slim profile with reliable drop protection. The TPU material provides everyday durability while maintaining a sleek appearance. Precise cutouts ensure full functionality. Compatible with nova 12 Pro. Made from premium TPU with reinforced corners.",
+    "compatibility": [
+      "nova 12 Pro"
+    ],
+    "material": "TPU",
+    "finish": "Matte Anti-fingerprint",
+    "thickness": "1.2mm",
+    "moq": 500,
+    "leadTime": "7-12 business days",
+    "priceRange": "$1.20 - $1.80",
+    "patent": "Design Patent Pending",
+    "features": [
+      "Slim profile, easy to install/remove",
+      "Precise cutouts for all ports and buttons",
+      "Supports wireless charging",
+      "Anti-yellowing material",
+      "Reinforced corner protection"
+    ],
+    "images": [
+      "/uploads/series-placeholders/Huawei-nova-Series.png"
+    ],
+    "is_active": 1,
+    "created_at": "2026-03-26T00:20:03.242395",
+    "updated_at": "2026-03-26T00:20:03.242399"
+  },
+  {
+    "id": "HUAWNOVA11-CLA-052",
+    "name": "nova 11 Classic Case",
+    "slug": "huawnova11-cla-052",
+    "category": "Huawei nova Series",
+    "description": "Clean, minimalist protection for nova 11. Perfect for professionals.",
+    "fullDescription": "Our Classic series offers a slim profile with reliable drop protection. The TPU material provides everyday durability while maintaining a sleek appearance. Precise cutouts ensure full functionality. Compatible with nova 11. Made from premium TPU with reinforced corners.",
+    "compatibility": [
+      "nova 11"
+    ],
+    "material": "TPU",
+    "finish": "Matte Anti-fingerprint",
+    "thickness": "1.2mm",
+    "moq": 500,
+    "leadTime": "7-12 business days",
+    "priceRange": "$1.20 - $1.80",
+    "patent": "Design Patent Pending",
+    "features": [
+      "Slim profile, easy to install/remove",
+      "Precise cutouts for all ports and buttons",
+      "Supports wireless charging",
+      "Anti-yellowing material",
+      "Reinforced corner protection"
+    ],
+    "images": [
+      "/uploads/series-placeholders/Huawei-nova-Series.png"
+    ],
+    "is_active": 1,
+    "created_at": "2026-03-26T00:20:03.242423",
+    "updated_at": "2026-03-26T00:20:03.242427"
+  },
+  {
+    "id": "HUAWNOVA10-CLA-053",
+    "name": "nova 10 Classic Case",
+    "slug": "huawnova10-cla-053",
+    "category": "Huawei nova Series",
+    "description": "Clean, minimalist protection for nova 10. Perfect for professionals.",
+    "fullDescription": "Our Classic series offers a slim profile with reliable drop protection. The TPU material provides everyday durability while maintaining a sleek appearance. Precise cutouts ensure full functionality. Compatible with nova 10. Made from premium TPU with reinforced corners.",
+    "compatibility": [
+      "nova 10"
+    ],
+    "material": "TPU",
+    "finish": "Matte Anti-fingerprint",
+    "thickness": "1.2mm",
+    "moq": 500,
+    "leadTime": "7-12 business days",
+    "priceRange": "$1.20 - $1.80",
+    "patent": "Design Patent Pending",
+    "features": [
+      "Slim profile, easy to install/remove",
+      "Precise cutouts for all ports and buttons",
+      "Supports wireless charging",
+      "Anti-yellowing material",
+      "Reinforced corner protection"
+    ],
+    "images": [
+      "/uploads/series-placeholders/Huawei-nova-Series.png"
+    ],
+    "is_active": 1,
+    "created_at": "2026-03-26T00:20:03.242457",
+    "updated_at": "2026-03-26T00:20:03.242462"
+  },
+  {
+    "id": "HUAWNOVA9-CLA-054",
+    "name": "nova 9 Classic Case",
+    "slug": "huawnova9-cla-054",
+    "category": "Huawei nova Series",
+    "description": "Clean, minimalist protection for nova 9. Perfect for professionals.",
+    "fullDescription": "Our Classic series offers a slim profile with reliable drop protection. The TPU material provides everyday durability while maintaining a sleek appearance. Precise cutouts ensure full functionality. Compatible with nova 9. Made from premium TPU with reinforced corners.",
+    "compatibility": [
+      "nova 9"
+    ],
+    "material": "TPU",
+    "finish": "Matte Anti-fingerprint",
+    "thickness": "1.2mm",
+    "moq": 500,
+    "leadTime": "7-12 business days",
+    "priceRange": "$1.20 - $1.80",
+    "patent": "Design Patent Pending",
+    "features": [
+      "Slim profile, easy to install/remove",
+      "Precise cutouts for all ports and buttons",
+      "Supports wireless charging",
+      "Anti-yellowing material",
+      "Reinforced corner protection"
+    ],
+    "images": [
+      "/uploads/series-placeholders/Huawei-nova-Series.png"
+    ],
+    "is_active": 1,
+    "created_at": "2026-03-26T00:20:03.242490",
+    "updated_at": "2026-03-26T00:20:03.242495"
+  },
+  {
+    "id": "HUAWENJOY60-CLA-055",
+    "name": "Enjoy 60 Classic Case",
+    "slug": "huawenjoy60-cla-055",
+    "category": "Huawei Enjoy Series",
+    "description": "Clean, minimalist protection for Enjoy 60. Perfect for professionals.",
+    "fullDescription": "Our Classic series offers a slim profile with reliable drop protection. The TPU material provides everyday durability while maintaining a sleek appearance. Precise cutouts ensure full functionality. Compatible with Enjoy 60. Made from premium TPU with reinforced corners.",
+    "compatibility": [
+      "Enjoy 60"
+    ],
+    "material": "TPU",
+    "finish": "Matte Anti-fingerprint",
+    "thickness": "1.2mm",
+    "moq": 500,
+    "leadTime": "7-12 business days",
+    "priceRange": "$1.20 - $1.80",
+    "patent": "Design Patent Pending",
+    "features": [
+      "Slim profile, easy to install/remove",
+      "Precise cutouts for all ports and buttons",
+      "Supports wireless charging",
+      "Anti-yellowing material",
+      "Reinforced corner protection"
+    ],
+    "images": [
+      "/uploads/series-placeholders/Huawei-Enjoy-Series.png"
+    ],
+    "is_active": 1,
+    "created_at": "2026-03-26T00:20:03.242522",
+    "updated_at": "2026-03-26T00:20:03.242527"
+  },
+  {
+    "id": "HUAWENJOY50-CLA-056",
+    "name": "Enjoy 50 Classic Case",
+    "slug": "huawenjoy50-cla-056",
+    "category": "Huawei Enjoy Series",
+    "description": "Clean, minimalist protection for Enjoy 50. Perfect for professionals.",
+    "fullDescription": "Our Classic series offers a slim profile with reliable drop protection. The TPU material provides everyday durability while maintaining a sleek appearance. Precise cutouts ensure full functionality. Compatible with Enjoy 50. Made from premium TPU with reinforced corners.",
+    "compatibility": [
+      "Enjoy 50"
+    ],
+    "material": "TPU",
+    "finish": "Matte Anti-fingerprint",
+    "thickness": "1.2mm",
+    "moq": 500,
+    "leadTime": "7-12 business days",
+    "priceRange": "$1.20 - $1.80",
+    "patent": "Design Patent Pending",
+    "features": [
+      "Slim profile, easy to install/remove",
+      "Precise cutouts for all ports and buttons",
+      "Supports wireless charging",
+      "Anti-yellowing material",
+      "Reinforced corner protection"
+    ],
+    "images": [
+      "/uploads/series-placeholders/Huawei-Enjoy-Series.png"
+    ],
+    "is_active": 1,
+    "created_at": "2026-03-26T00:20:03.242553",
+    "updated_at": "2026-03-26T00:20:03.242557"
+  },
+  {
+    "id": "HUAWENJOY30-CLA-057",
+    "name": "Enjoy 30 Classic Case",
+    "slug": "huawenjoy30-cla-057",
+    "category": "Huawei Enjoy Series",
+    "description": "Clean, minimalist protection for Enjoy 30. Perfect for professionals.",
+    "fullDescription": "Our Classic series offers a slim profile with reliable drop protection. The TPU material provides everyday durability while maintaining a sleek appearance. Precise cutouts ensure full functionality. Compatible with Enjoy 30. Made from premium TPU with reinforced corners.",
+    "compatibility": [
+      "Enjoy 30"
+    ],
+    "material": "TPU",
+    "finish": "Matte Anti-fingerprint",
+    "thickness": "1.2mm",
+    "moq": 500,
+    "leadTime": "7-12 business days",
+    "priceRange": "$1.20 - $1.80",
+    "patent": "Design Patent Pending",
+    "features": [
+      "Slim profile, easy to install/remove",
+      "Precise cutouts for all ports and buttons",
+      "Supports wireless charging",
+      "Anti-yellowing material",
+      "Reinforced corner protection"
+    ],
+    "images": [
+      "/uploads/series-placeholders/Huawei-Enjoy-Series.png"
+    ],
+    "is_active": 1,
+    "created_at": "2026-03-26T00:20:03.242580",
+    "updated_at": "2026-03-26T00:20:03.242584"
+  },
+  {
+    "id": "XIAOMI14-CLA-058",
+    "name": "Mi 14 Classic Case",
+    "slug": "xiaomi14-cla-058",
+    "category": "Xiaomi Mi Series",
+    "description": "Clean, minimalist protection for Mi 14. Perfect for professionals.",
+    "fullDescription": "Our Classic series offers a slim profile with reliable drop protection. The TPU material provides everyday durability while maintaining a sleek appearance. Precise cutouts ensure full functionality. Compatible with Mi 14. Made from premium TPU with reinforced corners.",
+    "compatibility": [
+      "Mi 14"
+    ],
+    "material": "TPU",
+    "finish": "Matte Anti-fingerprint",
+    "thickness": "1.2mm",
+    "moq": 500,
+    "leadTime": "7-10 business days",
+    "priceRange": "$1.10 - $1.60",
+    "patent": "Design Patent Pending",
+    "features": [
+      "Slim profile, easy to install/remove",
+      "Precise cutouts for all ports and buttons",
+      "Supports wireless charging",
+      "Anti-yellowing material",
+      "Reinforced corner protection"
+    ],
+    "images": [
+      "/uploads/series-placeholders/Xiaomi-Mi-Series.png"
+    ],
+    "is_active": 1,
+    "created_at": "2026-03-26T00:20:03.242607",
+    "updated_at": "2026-03-26T00:20:03.242611"
+  },
+  {
+    "id": "XIAOMI14PRO-CLA-059",
+    "name": "Mi 14 Pro Classic Case",
+    "slug": "xiaomi14pro-cla-059",
+    "category": "Xiaomi Mi Series",
+    "description": "Clean, minimalist protection for Mi 14 Pro. Perfect for professionals.",
+    "fullDescription": "Our Classic series offers a slim profile with reliable drop protection. The TPU material provides everyday durability while maintaining a sleek appearance. Precise cutouts ensure full functionality. Compatible with Mi 14 Pro. Made from premium TPU with reinforced corners.",
+    "compatibility": [
+      "Mi 14 Pro"
+    ],
+    "material": "TPU",
+    "finish": "Matte Anti-fingerprint",
+    "thickness": "1.2mm",
+    "moq": 500,
+    "leadTime": "7-10 business days",
+    "priceRange": "$1.10 - $1.60",
+    "patent": "Design Patent Pending",
+    "features": [
+      "Slim profile, easy to install/remove",
+      "Precise cutouts for all ports and buttons",
+      "Supports wireless charging",
+      "Anti-yellowing material",
+      "Reinforced corner protection"
+    ],
+    "images": [
+      "/uploads/series-placeholders/Xiaomi-Mi-Series.png"
+    ],
+    "is_active": 1,
+    "created_at": "2026-03-26T00:20:03.242637",
+    "updated_at": "2026-03-26T00:20:03.242642"
+  },
+  {
+    "id": "XIAOMI13-CLA-060",
+    "name": "Mi 13 Classic Case",
+    "slug": "xiaomi13-cla-060",
+    "category": "Xiaomi Mi Series",
+    "description": "Clean, minimalist protection for Mi 13. Perfect for professionals.",
+    "fullDescription": "Our Classic series offers a slim profile with reliable drop protection. The TPU material provides everyday durability while maintaining a sleek appearance. Precise cutouts ensure full functionality. Compatible with Mi 13. Made from premium TPU with reinforced corners.",
+    "compatibility": [
+      "Mi 13"
+    ],
+    "material": "TPU",
+    "finish": "Matte Anti-fingerprint",
+    "thickness": "1.2mm",
+    "moq": 500,
+    "leadTime": "7-10 business days",
+    "priceRange": "$1.10 - $1.60",
+    "patent": "Design Patent Pending",
+    "features": [
+      "Slim profile, easy to install/remove",
+      "Precise cutouts for all ports and buttons",
+      "Supports wireless charging",
+      "Anti-yellowing material",
+      "Reinforced corner protection"
+    ],
+    "images": [
+      "/uploads/series-placeholders/Xiaomi-Mi-Series.png"
+    ],
+    "is_active": 1,
+    "created_at": "2026-03-26T00:20:03.242667",
+    "updated_at": "2026-03-26T00:20:03.242672"
+  },
+  {
+    "id": "XIAOMI13PRO-CLA-061",
+    "name": "Mi 13 Pro Classic Case",
+    "slug": "xiaomi13pro-cla-061",
+    "category": "Xiaomi Mi Series",
+    "description": "Clean, minimalist protection for Mi 13 Pro. Perfect for professionals.",
+    "fullDescription": "Our Classic series offers a slim profile with reliable drop protection. The TPU material provides everyday durability while maintaining a sleek appearance. Precise cutouts ensure full functionality. Compatible with Mi 13 Pro. Made from premium TPU with reinforced corners.",
+    "compatibility": [
+      "Mi 13 Pro"
+    ],
+    "material": "TPU",
+    "finish": "Matte Anti-fingerprint",
+    "thickness": "1.2mm",
+    "moq": 500,
+    "leadTime": "7-10 business days",
+    "priceRange": "$1.10 - $1.60",
+    "patent": "Design Patent Pending",
+    "features": [
+      "Slim profile, easy to install/remove",
+      "Precise cutouts for all ports and buttons",
+      "Supports wireless charging",
+      "Anti-yellowing material",
+      "Reinforced corner protection"
+    ],
+    "images": [
+      "/uploads/series-placeholders/Xiaomi-Mi-Series.png"
+    ],
+    "is_active": 1,
+    "created_at": "2026-03-26T00:20:03.242694",
+    "updated_at": "2026-03-26T00:20:03.242699"
+  },
+  {
+    "id": "XIAOREDMINOT-CLA-062",
+    "name": "Redmi Note 13 Classic Case",
+    "slug": "xiaoredminot-cla-062",
+    "category": "Xiaomi Redmi Note",
+    "description": "Clean, minimalist protection for Redmi Note 13. Perfect for professionals.",
+    "fullDescription": "Our Classic series offers a slim profile with reliable drop protection. The TPU material provides everyday durability while maintaining a sleek appearance. Precise cutouts ensure full functionality. Compatible with Redmi Note 13. Made from premium TPU with reinforced corners.",
+    "compatibility": [
+      "Redmi Note 13"
+    ],
+    "material": "TPU",
+    "finish": "Matte Anti-fingerprint",
+    "thickness": "1.2mm",
+    "moq": 500,
+    "leadTime": "7-10 business days",
+    "priceRange": "$1.10 - $1.60",
+    "patent": "Design Patent Pending",
+    "features": [
+      "Slim profile, easy to install/remove",
+      "Precise cutouts for all ports and buttons",
+      "Supports wireless charging",
+      "Anti-yellowing material",
+      "Reinforced corner protection"
+    ],
+    "images": [
+      "/uploads/series-placeholders/Xiaomi-Redmi-Note.png"
+    ],
+    "is_active": 1,
+    "created_at": "2026-03-26T00:20:03.242725",
+    "updated_at": "2026-03-26T00:20:03.242730"
+  },
+  {
+    "id": "XIAOREDMINOT-CLA-063",
+    "name": "Redmi Note 12 Classic Case",
+    "slug": "xiaoredminot-cla-063",
+    "category": "Xiaomi Redmi Note",
+    "description": "Clean, minimalist protection for Redmi Note 12. Perfect for professionals.",
+    "fullDescription": "Our Classic series offers a slim profile with reliable drop protection. The TPU material provides everyday durability while maintaining a sleek appearance. Precise cutouts ensure full functionality. Compatible with Redmi Note 12. Made from premium TPU with reinforced corners.",
+    "compatibility": [
+      "Redmi Note 12"
+    ],
+    "material": "TPU",
+    "finish": "Matte Anti-fingerprint",
+    "thickness": "1.2mm",
+    "moq": 500,
+    "leadTime": "7-10 business days",
+    "priceRange": "$1.10 - $1.60",
+    "patent": "Design Patent Pending",
+    "features": [
+      "Slim profile, easy to install/remove",
+      "Precise cutouts for all ports and buttons",
+      "Supports wireless charging",
+      "Anti-yellowing material",
+      "Reinforced corner protection"
+    ],
+    "images": [
+      "/uploads/series-placeholders/Xiaomi-Redmi-Note.png"
+    ],
+    "is_active": 1,
+    "created_at": "2026-03-26T00:20:03.242752",
+    "updated_at": "2026-03-26T00:20:03.242757"
+  },
+  {
+    "id": "XIAOREDMINOT-CLA-064",
+    "name": "Redmi Note 11 Classic Case",
+    "slug": "xiaoredminot-cla-064",
+    "category": "Xiaomi Redmi Note",
+    "description": "Clean, minimalist protection for Redmi Note 11. Perfect for professionals.",
+    "fullDescription": "Our Classic series offers a slim profile with reliable drop protection. The TPU material provides everyday durability while maintaining a sleek appearance. Precise cutouts ensure full functionality. Compatible with Redmi Note 11. Made from premium TPU with reinforced corners.",
+    "compatibility": [
+      "Redmi Note 11"
+    ],
+    "material": "TPU",
+    "finish": "Matte Anti-fingerprint",
+    "thickness": "1.2mm",
+    "moq": 500,
+    "leadTime": "7-10 business days",
+    "priceRange": "$1.10 - $1.60",
+    "patent": "Design Patent Pending",
+    "features": [
+      "Slim profile, easy to install/remove",
+      "Precise cutouts for all ports and buttons",
+      "Supports wireless charging",
+      "Anti-yellowing material",
+      "Reinforced corner protection"
+    ],
+    "images": [
+      "/uploads/series-placeholders/Xiaomi-Redmi-Note.png"
+    ],
+    "is_active": 1,
+    "created_at": "2026-03-26T00:20:03.242778",
+    "updated_at": "2026-03-26T00:20:03.242782"
+  },
+  {
+    "id": "OPPOFINDX7-CLA-065",
+    "name": "Find X7 Classic Case",
+    "slug": "oppofindx7-cla-065",
+    "category": "OPPO Find X",
+    "description": "Clean, minimalist protection for Find X7. Perfect for professionals.",
+    "fullDescription": "Our Classic series offers a slim profile with reliable drop protection. The TPU material provides everyday durability while maintaining a sleek appearance. Precise cutouts ensure full functionality. Compatible with Find X7. Made from premium TPU with reinforced corners.",
+    "compatibility": [
+      "Find X7"
+    ],
+    "material": "TPU",
+    "finish": "Matte Anti-fingerprint",
+    "thickness": "1.2mm",
+    "moq": 500,
+    "leadTime": "7-10 business days",
+    "priceRange": "$1.10 - $1.60",
+    "patent": "Design Patent Pending",
+    "features": [
+      "Slim profile, easy to install/remove",
+      "Precise cutouts for all ports and buttons",
+      "Supports wireless charging",
+      "Anti-yellowing material",
+      "Reinforced corner protection"
+    ],
+    "images": [
+      "/uploads/series-placeholders/OPPO-Find-X.png"
+    ],
+    "is_active": 1,
+    "created_at": "2026-03-26T00:20:03.242807",
+    "updated_at": "2026-03-26T00:20:03.242812"
+  },
+  {
+    "id": "OPPOFINDX6-CLA-066",
+    "name": "Find X6 Classic Case",
+    "slug": "oppofindx6-cla-066",
+    "category": "OPPO Find X",
+    "description": "Clean, minimalist protection for Find X6. Perfect for professionals.",
+    "fullDescription": "Our Classic series offers a slim profile with reliable drop protection. The TPU material provides everyday durability while maintaining a sleek appearance. Precise cutouts ensure full functionality. Compatible with Find X6. Made from premium TPU with reinforced corners.",
+    "compatibility": [
+      "Find X6"
+    ],
+    "material": "TPU",
+    "finish": "Matte Anti-fingerprint",
+    "thickness": "1.2mm",
+    "moq": 500,
+    "leadTime": "7-10 business days",
+    "priceRange": "$1.10 - $1.60",
+    "patent": "Design Patent Pending",
+    "features": [
+      "Slim profile, easy to install/remove",
+      "Precise cutouts for all ports and buttons",
+      "Supports wireless charging",
+      "Anti-yellowing material",
+      "Reinforced corner protection"
+    ],
+    "images": [
+      "/uploads/series-placeholders/OPPO-Find-X.png"
+    ],
+    "is_active": 1,
+    "created_at": "2026-03-26T00:20:03.242833",
+    "updated_at": "2026-03-26T00:20:03.242837"
+  },
+  {
+    "id": "OPPOFINDX5-CLA-067",
+    "name": "Find X5 Classic Case",
+    "slug": "oppofindx5-cla-067",
+    "category": "OPPO Find X",
+    "description": "Clean, minimalist protection for Find X5. Perfect for professionals.",
+    "fullDescription": "Our Classic series offers a slim profile with reliable drop protection. The TPU material provides everyday durability while maintaining a sleek appearance. Precise cutouts ensure full functionality. Compatible with Find X5. Made from premium TPU with reinforced corners.",
+    "compatibility": [
+      "Find X5"
+    ],
+    "material": "TPU",
+    "finish": "Matte Anti-fingerprint",
+    "thickness": "1.2mm",
+    "moq": 500,
+    "leadTime": "7-10 business days",
+    "priceRange": "$1.10 - $1.60",
+    "patent": "Design Patent Pending",
+    "features": [
+      "Slim profile, easy to install/remove",
+      "Precise cutouts for all ports and buttons",
+      "Supports wireless charging",
+      "Anti-yellowing material",
+      "Reinforced corner protection"
+    ],
+    "images": [
+      "/uploads/series-placeholders/OPPO-Find-X.png"
+    ],
+    "is_active": 1,
+    "created_at": "2026-03-26T00:20:03.242858",
+    "updated_at": "2026-03-26T00:20:03.242862"
+  },
+  {
+    "id": "OPPORENO11-CLA-068",
+    "name": "Reno 11 Classic Case",
+    "slug": "opporeno11-cla-068",
+    "category": "OPPO Reno",
+    "description": "Clean, minimalist protection for Reno 11. Perfect for professionals.",
+    "fullDescription": "Our Classic series offers a slim profile with reliable drop protection. The TPU material provides everyday durability while maintaining a sleek appearance. Precise cutouts ensure full functionality. Compatible with Reno 11. Made from premium TPU with reinforced corners.",
+    "compatibility": [
+      "Reno 11"
+    ],
+    "material": "TPU",
+    "finish": "Matte Anti-fingerprint",
+    "thickness": "1.2mm",
+    "moq": 500,
+    "leadTime": "7-10 business days",
+    "priceRange": "$1.10 - $1.60",
+    "patent": "Design Patent Pending",
+    "features": [
+      "Slim profile, easy to install/remove",
+      "Precise cutouts for all ports and buttons",
+      "Supports wireless charging",
+      "Anti-yellowing material",
+      "Reinforced corner protection"
+    ],
+    "images": [
+      "/uploads/series-placeholders/OPPO-Reno.png"
+    ],
+    "is_active": 1,
+    "created_at": "2026-03-26T00:20:03.242882",
+    "updated_at": "2026-03-26T00:20:03.242887"
+  },
+  {
+    "id": "OPPORENO10-CLA-069",
+    "name": "Reno 10 Classic Case",
+    "slug": "opporeno10-cla-069",
+    "category": "OPPO Reno",
+    "description": "Clean, minimalist protection for Reno 10. Perfect for professionals.",
+    "fullDescription": "Our Classic series offers a slim profile with reliable drop protection. The TPU material provides everyday durability while maintaining a sleek appearance. Precise cutouts ensure full functionality. Compatible with Reno 10. Made from premium TPU with reinforced corners.",
+    "compatibility": [
+      "Reno 10"
+    ],
+    "material": "TPU",
+    "finish": "Matte Anti-fingerprint",
+    "thickness": "1.2mm",
+    "moq": 500,
+    "leadTime": "7-10 business days",
+    "priceRange": "$1.10 - $1.60",
+    "patent": "Design Patent Pending",
+    "features": [
+      "Slim profile, easy to install/remove",
+      "Precise cutouts for all ports and buttons",
+      "Supports wireless charging",
+      "Anti-yellowing material",
+      "Reinforced corner protection"
+    ],
+    "images": [
+      "/uploads/series-placeholders/OPPO-Reno.png"
+    ],
+    "is_active": 1,
+    "created_at": "2026-03-26T00:20:03.242922",
+    "updated_at": "2026-03-26T00:20:03.242927"
+  },
+  {
+    "id": "OPPORENO9-CLA-070",
+    "name": "Reno 9 Classic Case",
+    "slug": "opporeno9-cla-070",
+    "category": "OPPO Reno",
+    "description": "Clean, minimalist protection for Reno 9. Perfect for professionals.",
+    "fullDescription": "Our Classic series offers a slim profile with reliable drop protection. The TPU material provides everyday durability while maintaining a sleek appearance. Precise cutouts ensure full functionality. Compatible with Reno 9. Made from premium TPU with reinforced corners.",
+    "compatibility": [
+      "Reno 9"
+    ],
+    "material": "TPU",
+    "finish": "Matte Anti-fingerprint",
+    "thickness": "1.2mm",
+    "moq": 500,
+    "leadTime": "7-10 business days",
+    "priceRange": "$1.10 - $1.60",
+    "patent": "Design Patent Pending",
+    "features": [
+      "Slim profile, easy to install/remove",
+      "Precise cutouts for all ports and buttons",
+      "Supports wireless charging",
+      "Anti-yellowing material",
+      "Reinforced corner protection"
+    ],
+    "images": [
+      "/uploads/series-placeholders/OPPO-Reno.png"
+    ],
+    "is_active": 1,
+    "created_at": "2026-03-26T00:20:03.242949",
+    "updated_at": "2026-03-26T00:20:03.242954"
+  },
+  {
+    "id": "VIVOX100-CLA-071",
+    "name": "X100 Classic Case",
+    "slug": "vivox100-cla-071",
+    "category": "vivo X Series",
+    "description": "Clean, minimalist protection for X100. Perfect for professionals.",
+    "fullDescription": "Our Classic series offers a slim profile with reliable drop protection. The TPU material provides everyday durability while maintaining a sleek appearance. Precise cutouts ensure full functionality. Compatible with X100. Made from premium TPU with reinforced corners.",
+    "compatibility": [
+      "X100"
+    ],
+    "material": "TPU",
+    "finish": "Matte Anti-fingerprint",
+    "thickness": "1.2mm",
+    "moq": 500,
+    "leadTime": "7-10 business days",
+    "priceRange": "$1.10 - $1.60",
+    "patent": "Design Patent Pending",
+    "features": [
+      "Slim profile, easy to install/remove",
+      "Precise cutouts for all ports and buttons",
+      "Supports wireless charging",
+      "Anti-yellowing material",
+      "Reinforced corner protection"
+    ],
+    "images": [
+      "/uploads/series-placeholders/vivo-X-Series.png"
+    ],
+    "is_active": 1,
+    "created_at": "2026-03-26T00:20:03.242974",
+    "updated_at": "2026-03-26T00:20:03.242978"
+  },
+  {
+    "id": "VIVOX90-CLA-072",
+    "name": "X90 Classic Case",
+    "slug": "vivox90-cla-072",
+    "category": "vivo X Series",
+    "description": "Clean, minimalist protection for X90. Perfect for professionals.",
+    "fullDescription": "Our Classic series offers a slim profile with reliable drop protection. The TPU material provides everyday durability while maintaining a sleek appearance. Precise cutouts ensure full functionality. Compatible with X90. Made from premium TPU with reinforced corners.",
+    "compatibility": [
+      "X90"
+    ],
+    "material": "TPU",
+    "finish": "Matte Anti-fingerprint",
+    "thickness": "1.2mm",
+    "moq": 500,
+    "leadTime": "7-10 business days",
+    "priceRange": "$1.10 - $1.60",
+    "patent": "Design Patent Pending",
+    "features": [
+      "Slim profile, easy to install/remove",
+      "Precise cutouts for all ports and buttons",
+      "Supports wireless charging",
+      "Anti-yellowing material",
+      "Reinforced corner protection"
+    ],
+    "images": [
+      "/uploads/series-placeholders/vivo-X-Series.png"
+    ],
+    "is_active": 1,
+    "created_at": "2026-03-26T00:20:03.243003",
+    "updated_at": "2026-03-26T00:20:03.243008"
+  },
+  {
+    "id": "VIVOX80-CLA-073",
+    "name": "X80 Classic Case",
+    "slug": "vivox80-cla-073",
+    "category": "vivo X Series",
+    "description": "Clean, minimalist protection for X80. Perfect for professionals.",
+    "fullDescription": "Our Classic series offers a slim profile with reliable drop protection. The TPU material provides everyday durability while maintaining a sleek appearance. Precise cutouts ensure full functionality. Compatible with X80. Made from premium TPU with reinforced corners.",
+    "compatibility": [
+      "X80"
+    ],
+    "material": "TPU",
+    "finish": "Matte Anti-fingerprint",
+    "thickness": "1.2mm",
+    "moq": 500,
+    "leadTime": "7-10 business days",
+    "priceRange": "$1.10 - $1.60",
+    "patent": "Design Patent Pending",
+    "features": [
+      "Slim profile, easy to install/remove",
+      "Precise cutouts for all ports and buttons",
+      "Supports wireless charging",
+      "Anti-yellowing material",
+      "Reinforced corner protection"
+    ],
+    "images": [
+      "/uploads/series-placeholders/vivo-X-Series.png"
+    ],
+    "is_active": 1,
+    "created_at": "2026-03-26T00:20:03.243027",
+    "updated_at": "2026-03-26T00:20:03.243032"
+  },
+  {
+    "id": "VIVOV30-CLA-074",
+    "name": "V30 Classic Case",
+    "slug": "vivov30-cla-074",
+    "category": "vivo V Series",
+    "description": "Clean, minimalist protection for V30. Perfect for professionals.",
+    "fullDescription": "Our Classic series offers a slim profile with reliable drop protection. The TPU material provides everyday durability while maintaining a sleek appearance. Precise cutouts ensure full functionality. Compatible with V30. Made from premium TPU with reinforced corners.",
+    "compatibility": [
+      "V30"
+    ],
+    "material": "TPU",
+    "finish": "Matte Anti-fingerprint",
+    "thickness": "1.2mm",
+    "moq": 500,
+    "leadTime": "7-10 business days",
+    "priceRange": "$1.10 - $1.60",
+    "patent": "Design Patent Pending",
+    "features": [
+      "Slim profile, easy to install/remove",
+      "Precise cutouts for all ports and buttons",
+      "Supports wireless charging",
+      "Anti-yellowing material",
+      "Reinforced corner protection"
+    ],
+    "images": [
+      "/uploads/series-placeholders/vivo-V-Series.png"
+    ],
+    "is_active": 1,
+    "created_at": "2026-03-26T00:20:03.243051",
+    "updated_at": "2026-03-26T00:20:03.243055"
+  },
+  {
+    "id": "VIVOV29-CLA-075",
+    "name": "V29 Classic Case",
+    "slug": "vivov29-cla-075",
+    "category": "vivo V Series",
+    "description": "Clean, minimalist protection for V29. Perfect for professionals.",
+    "fullDescription": "Our Classic series offers a slim profile with reliable drop protection. The TPU material provides everyday durability while maintaining a sleek appearance. Precise cutouts ensure full functionality. Compatible with V29. Made from premium TPU with reinforced corners.",
+    "compatibility": [
+      "V29"
+    ],
+    "material": "TPU",
+    "finish": "Matte Anti-fingerprint",
+    "thickness": "1.2mm",
+    "moq": 500,
+    "leadTime": "7-10 business days",
+    "priceRange": "$1.10 - $1.60",
+    "patent": "Design Patent Pending",
+    "features": [
+      "Slim profile, easy to install/remove",
+      "Precise cutouts for all ports and buttons",
+      "Supports wireless charging",
+      "Anti-yellowing material",
+      "Reinforced corner protection"
+    ],
+    "images": [
+      "/uploads/series-placeholders/vivo-V-Series.png"
+    ],
+    "is_active": 1,
+    "created_at": "2026-03-26T00:20:03.243074",
+    "updated_at": "2026-03-26T00:20:03.243078"
+  },
+  {
+    "id": "VIVOV27-CLA-076",
+    "name": "V27 Classic Case",
+    "slug": "vivov27-cla-076",
+    "category": "vivo V Series",
+    "description": "Clean, minimalist protection for V27. Perfect for professionals.",
+    "fullDescription": "Our Classic series offers a slim profile with reliable drop protection. The TPU material provides everyday durability while maintaining a sleek appearance. Precise cutouts ensure full functionality. Compatible with V27. Made from premium TPU with reinforced corners.",
+    "compatibility": [
+      "V27"
+    ],
+    "material": "TPU",
+    "finish": "Matte Anti-fingerprint",
+    "thickness": "1.2mm",
+    "moq": 500,
+    "leadTime": "7-10 business days",
+    "priceRange": "$1.10 - $1.60",
+    "patent": "Design Patent Pending",
+    "features": [
+      "Slim profile, easy to install/remove",
+      "Precise cutouts for all ports and buttons",
+      "Supports wireless charging",
+      "Anti-yellowing material",
+      "Reinforced corner protection"
+    ],
+    "images": [
+      "/uploads/series-placeholders/vivo-V-Series.png"
+    ],
+    "is_active": 1,
+    "created_at": "2026-03-26T00:20:03.243097",
+    "updated_at": "2026-03-26T00:20:03.243101"
+  },
+  {
+    "id": "ONEPONEPLUS1-CLA-077",
+    "name": "OnePlus 12 Classic Case",
+    "slug": "oneponeplus1-cla-077",
+    "category": "OnePlus Flagship",
+    "description": "Clean, minimalist protection for OnePlus 12. Perfect for professionals.",
+    "fullDescription": "Our Classic series offers a slim profile with reliable drop protection. The TPU material provides everyday durability while maintaining a sleek appearance. Precise cutouts ensure full functionality. Compatible with OnePlus 12. Made from premium TPU with reinforced corners.",
+    "compatibility": [
+      "OnePlus 12"
+    ],
+    "material": "TPU",
+    "finish": "Matte Anti-fingerprint",
+    "thickness": "1.2mm",
+    "moq": 500,
+    "leadTime": "7-10 business days",
+    "priceRange": "$1.20 - $1.80",
+    "patent": "Design Patent Pending",
+    "features": [
+      "Slim profile, easy to install/remove",
+      "Precise cutouts for all ports and buttons",
+      "Supports wireless charging",
+      "Anti-yellowing material",
+      "Reinforced corner protection"
+    ],
+    "images": [
+      "/uploads/series-placeholders/OnePlus-Flagship.png"
+    ],
+    "is_active": 1,
+    "created_at": "2026-03-26T00:20:03.243124",
+    "updated_at": "2026-03-26T00:20:03.243129"
+  },
+  {
+    "id": "ONEPONEPLUS1-CLA-078",
+    "name": "OnePlus 11 Classic Case",
+    "slug": "oneponeplus1-cla-078",
+    "category": "OnePlus Flagship",
+    "description": "Clean, minimalist protection for OnePlus 11. Perfect for professionals.",
+    "fullDescription": "Our Classic series offers a slim profile with reliable drop protection. The TPU material provides everyday durability while maintaining a sleek appearance. Precise cutouts ensure full functionality. Compatible with OnePlus 11. Made from premium TPU with reinforced corners.",
+    "compatibility": [
+      "OnePlus 11"
+    ],
+    "material": "TPU",
+    "finish": "Matte Anti-fingerprint",
+    "thickness": "1.2mm",
+    "moq": 500,
+    "leadTime": "7-10 business days",
+    "priceRange": "$1.20 - $1.80",
+    "patent": "Design Patent Pending",
+    "features": [
+      "Slim profile, easy to install/remove",
+      "Precise cutouts for all ports and buttons",
+      "Supports wireless charging",
+      "Anti-yellowing material",
+      "Reinforced corner protection"
+    ],
+    "images": [
+      "/uploads/series-placeholders/OnePlus-Flagship.png"
+    ],
+    "is_active": 1,
+    "created_at": "2026-03-26T00:20:03.243159",
+    "updated_at": "2026-03-26T00:20:03.243164"
+  },
+  {
+    "id": "ONEPONEPLUS1-CLA-079",
+    "name": "OnePlus 10 Classic Case",
+    "slug": "oneponeplus1-cla-079",
+    "category": "OnePlus Flagship",
+    "description": "Clean, minimalist protection for OnePlus 10. Perfect for professionals.",
+    "fullDescription": "Our Classic series offers a slim profile with reliable drop protection. The TPU material provides everyday durability while maintaining a sleek appearance. Precise cutouts ensure full functionality. Compatible with OnePlus 10. Made from premium TPU with reinforced corners.",
+    "compatibility": [
+      "OnePlus 10"
+    ],
+    "material": "TPU",
+    "finish": "Matte Anti-fingerprint",
+    "thickness": "1.2mm",
+    "moq": 500,
+    "leadTime": "7-10 business days",
+    "priceRange": "$1.20 - $1.80",
+    "patent": "Design Patent Pending",
+    "features": [
+      "Slim profile, easy to install/remove",
+      "Precise cutouts for all ports and buttons",
+      "Supports wireless charging",
+      "Anti-yellowing material",
+      "Reinforced corner protection"
+    ],
+    "images": [
+      "/uploads/series-placeholders/OnePlus-Flagship.png"
+    ],
+    "is_active": 1,
+    "created_at": "2026-03-26T00:20:03.243189",
+    "updated_at": "2026-03-26T00:20:03.243194"
+  }
+]

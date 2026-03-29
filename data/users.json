@@ -1,0 +1,21 @@
+[
+  {
+    "id": "user_1774628875758_d7v36hxt7",
+    "email": "admin@test.com",
+    "password_hash": "60d612da310d93fed90dae1f0231d9d6:5759d4d8b85788026003400e49381edd214980773d95e555ef5b9c89baf150502a6bc45e7c94beedf4aa8b2de94c1daffab3e6be1f77af31a31b7451f4d0c6fb",
+    "name": "Admin Test",
+    "role": "customer",
+    "created_at": "2026-03-27T16:27:55.758Z",
+    "updated_at": "2026-03-27T16:27:55.758Z"
+  },
+  {
+    "id": "user_1774629694391_t0uo7txzu",
+    "email": "testuser@example.com",
+    "password_hash": "f71f83838af026859e33d5dce51452f3:c5b0081395bb8a9f66b822463a2e71147f257407c51f9f879d343bbb6fef8cdb4753b52b5cb4ff2a438a6bebee6865cb4203b7d27296bf9f5872016ef6bb1361",
+    "name": "Test User",
+    "company": "Test Co",
+    "role": "customer",
+    "created_at": "2026-03-27T16:41:34.391Z",
+    "updated_at": "2026-03-27T16:41:34.391Z"
+  }
+]

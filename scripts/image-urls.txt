@@ -1,0 +1,27 @@
+# Product Placeholder Image URLs
+# Copy these URLs into browser to download images, or use wget/curl
+
+# iPhone Series
+https://placehold.co/400x600/1e40af/white?text=iPhone-13-Series
+https://placehold.co/400x600/1e40af/white?text=iPhone-14-Series
+https://placehold.co/400x600/1e40af/white?text=iPhone-15-Series
+https://placehold.co/400x600/1e40af/white?text=iPhone-16-Series
+
+# Samsung Series
+https://placehold.co/400x600/4a90e2/white?text=Samsung-Galaxy-S24
+https://placehold.co/400x600/4a90e2/white?text=Samsung-Galaxy-Z-Flip
+https://placehold.co/400x600/4a90e2/white?text=Samsung-Galaxy-A-Series
+
+# Huawei Series
+https://placehold.co/400x600/da291c/white?text=Huawei-Mate-Series
+https://placehold.co/400x600/da291c/white?text=Huawei-P-Series
+https://placehold.co/400x600/da291c/white?text=Huawei-nova-Series
+
+# Custom & Accessories
+https://placehold.co/400x600/28a745/white?text=Custom-OEM-ODM
+https://placehold.co/400x600/28a745/white?text=Phone-Accessories
+
+# Bulk download command (run in terminal):
+# mkdir -p public/uploads/series-placeholders
+# cd public/uploads/series-placeholders
+# for url in $(cat ../../scripts/image-urls.txt | grep '^https'); do wget -q "$url" -O $(echo $url | sed 's/.*text=//'); done

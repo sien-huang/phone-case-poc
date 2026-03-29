@@ -1,0 +1,57 @@
+{
+  "nav": {
+    "home": "首頁",
+    "products": "產品",
+    "categories": "分類",
+    "getQuote": "獲取報價",
+    "admin": "後台管理"
+  },
+  "home": {
+    "heroTitle": "CloudWing - 專業手機殼製造商",
+    "heroSubtitle": "為全球品牌提供 OEM 製造與原創設計。快速樣品，靈活起訂量。",
+    "latestProducts": "最新產品",
+    "hotPicks": "熱門精選",
+    "browseCategories": "瀏覽分類",
+    "viewAll": "查看全部"
+  },
+  "products": {
+    "title": "產品列表",
+    "searchPlaceholder": "搜索產品...",
+    "allCategories": "全部分類",
+    "sortBy": "排序",
+    "gridView": "網格視圖",
+    "listView": "列表視圖",
+    "addToInquiry": "添加",
+    "remove": "移除"
+  },
+  "inquiry": {
+    "title": "獲取報價",
+    "subtitle": "選擇產品並提交詢盤，我們將在 24 小時內回覆。",
+    "selectProducts": "1. 選擇產品",
+    "yourInfo": "2. 您的信息",
+    "name": "姓名",
+    "company": "公司名稱",
+    "email": "郵箱",
+    "phone": "電話",
+    "country": "國家",
+    "website": "網站",
+    "notes": "附加說明",
+    "selectedProducts": "已選產品",
+    "totalQuantity": "總數量",
+    "estimatedTotal": "預估總價",
+    "submit": "提交詢盤",
+    "successTitle": "詢盤已提交！",
+    "successMessage": "感謝您的詢盤，我們將在 24 小時內與您聯繫。"
+  },
+  "admin": {
+    "dashboard": "儀表板",
+    "products": "產品管理",
+    "inquiries": "詢盤管理",
+    "analytics": "數據分析",
+    "categories": "分類管理",
+    "login": "管理員登錄",
+    "password": "密碼",
+    "signIn": "登錄",
+    "signOut": "退出"
+  }
+}

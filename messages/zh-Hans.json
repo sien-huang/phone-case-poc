@@ -1,0 +1,102 @@
+{
+  "common": {
+    "home": "首页",
+    "products": "产品",
+    "contact": "联系我们",
+    "latest": "最新上架",
+    "hot": "热销产品",
+    "view_all": "查看全部",
+    "loading": "加载中...",
+    "error": "发生错误",
+    "success": "成功",
+    "cancel": "取消",
+    "save": "保存",
+    "delete": "删除",
+    "edit": "编辑",
+    "add": "添加",
+    "search": "搜索",
+    "filter": "筛选",
+    "sort": "排序",
+    "actions": "操作",
+    "status": "状态",
+    "date": "日期",
+    "total": "总计",
+    "quantity": "数量",
+    "unit_price": "单价",
+    "price": "价格",
+    "name": "名称",
+    "description": "描述",
+    "category": "分类",
+    "image": "图片",
+    "moq": "起订量",
+    "lead_time": "交货期",
+    "in_stock": "有货",
+    "out_of_stock": "缺货",
+    "min_order": "最小起订量",
+    "contact_for_price": "询价"
+  },
+  "nav": {
+    "home": "首页",
+    "products": "产品",
+    "contact": "联系我们",
+    "admin": "管理",
+    "logout": "退出登录"
+  },
+  "hero": {
+    "title": "为全球品牌提供优质手机壳",
+    "subtitle": "拥有原创设计的OEM/ODM制造商",
+    "cta": "获取报价"
+  },
+  "search": {
+    "placeholder": "搜索产品...",
+    "button": "搜索"
+  },
+  "product": {
+    "add_to_inquiry": "加入询盘",
+    "back_to_products": "返回产品",
+    "related_products": "相关产品",
+    "specifications": "产品规格",
+    "no_products": "未找到产品"
+  },
+  "admin": {
+    "dashboard": "仪表板",
+    "products": "产品管理",
+    "orders": "订单管理",
+    "inquiries": "询盘管理",
+    "analytics": "数据分析",
+    "settings": "设置",
+    "total_sales": "总销售额",
+    "total_orders": "总订单量",
+    "total_inquiries": "总询盘量",
+    "manage_products": "管理产品",
+    "add_product": "添加产品",
+    "edit_product": "编辑产品",
+    "manage_orders": "管理订单",
+    "view_order": "查看订单",
+    "manage_inquiries": "管理询盘",
+    "view_inquiry": "查看询盘",
+    "sales_overview": "销售概览",
+    "top_products": "热销产品"
+  },
+  "pagination": {
+    "prev": "上一页",
+    "next": "下一页",
+    "page": "第",
+    "of": "页"
+  },
+  "inquiry": {
+    "title": "我的询盘",
+    "empty": "您还没有询盘记录",
+    "status": "状态",
+    "date": "日期",
+    "total": "总计",
+    "details": "询盘详情",
+    "submit": "提交询盘",
+    "name_placeholder": "您的姓名",
+    "email_placeholder": "您的邮箱",
+    "company_placeholder": "公司名称",
+    "message_placeholder": "留言内容",
+    "product": "产品",
+    "quantity": "数量"
+  }
+}

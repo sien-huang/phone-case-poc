@@ -1,0 +1,38 @@
+#!/usr/bin/env bash
+#
+# pre-commit hook
+#
+# Exits with 1 if any quality check fails.
+# Quality checks:
+# 1. TypeScript type check
+# 2. ESLint
+# 3. Unit tests (quick check)
+# 4. Prettier (if configured)
+#
+
+set -e
+
+echo "🔍 Running pre-commit quality checks..."
+
+# Install dependencies if needed (optional)
+# npm install
+
+# Run type check
+echo "📝 Running TypeScript type check..."
+npm run type-check
+
+# Run ESLint
+echo "🔎 Running ESLint..."
+npm run lint
+
+# Run unit tests (fast, no coverage)
+echo "🧪 Running unit tests..."
+npm run test -- --passWithNoTests --watchAll=false
+
+# Optional: Run Prettier check (if configured)
+# if [ -f ".prettierrc" ] || [ -f ".prettierrc.js" ]; then
+#   echo "💅 Running Prettier check..."
+#   npx prettier --check .
+# fi
+
+echo "✅ All pre-commit checks passed!"

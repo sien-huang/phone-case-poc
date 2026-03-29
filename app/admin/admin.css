@@ -1,0 +1,9 @@
+/* Admin layout styles */
+.admin-layout {
+  min-height: 100vh;
+  background: #f9fafb;
+}
+
+.admin-content {
+  padding: 2rem 0;
+}

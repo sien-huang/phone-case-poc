@@ -1,0 +1,204 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model Product {
+  id        String   @id @default(cuid())
+  name      String
+  slug      String   @unique
+  category  String
+  description String?
+  moq       Int
+  priceRange String
+  leadTime  String?
+  material  String?
+  compatibility Json? // Array of compatible models
+  features     Json? // Array of key features
+  images       Json? // Array of image URLs
+
+  // Statistics
+  viewCount   Int    @default(0)
+  salesCount  Int    @default(0)
+
+  // Status management
+  status       ProductStatus @default(ACTIVE)
+  isActive     Boolean       @default(true)
+
+  // Timestamps
+  createdAt    DateTime      @default(now())
+  updatedAt    DateTime      @updatedAt
+
+  // Relations
+  inquiries   InquiryItem[]
+  saleLogs    SaleLog[]
+
+  @@index([category])
+  @@index([status])
+  @@index([slug])
+  @@map("products")
+}
+
+model Category {
+  id          String   @id @default(cuid())
+  name        String   @unique
+  description String?
+  order       Int      @default(0)
+  isActive    Boolean  @default(true)
+
+  // Statistics (cached, computed via triggers or app logic)
+  productCount Int     @default(0)
+  totalViews   Int     @default(0)
+  totalSales   Int     @default(0)
+
+  // Timestamps
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+
+  @@map("categories")
+}
+
+model Inquiry {
+  id            String   @id @default(cuid())
+  inquiryNumber String   @unique // Human-readable: INV-2026-0001
+  status        InquiryStatus @default(PENDING)
+
+  // Customer info
+  customerName    String
+  customerEmail   String
+  customerPhone   String?
+  customerCompany String?
+  customerCountry String?
+  customerWebsite String?
+
+  // Order summary
+  totalQuantity  Int
+  estimatedTotal Float?
+  notes          String?
+
+  // Assignment
+  assignedTo     String? // User ID (if you have user system)
+  handledBy      String? // Staff who responded
+
+  // Timestamps
+  createdAt      DateTime @default(now())
+  updatedAt      DateTime @updatedAt
+  respondedAt    DateTime?
+
+  // Relations
+  items     InquiryItem[]
+  communications InquiryCommunication[]
+
+  @@index([status])
+  @@index([customerEmail])
+  @@index([createdAt])
+  @@map("inquiries")
+}
+
+model InquiryItem {
+  id        String   @id @default(cuid())
+  inquiry   Inquiry  @relation(fields: [inquiryId], references: [id], onDelete: Cascade)
+  inquiryId String
+
+  product     Product? @relation(fields: [productId], references: [id])
+  productId   String?
+  productName String // Snapshot at time of inquiry (in case product deleted)
+  quantity    Int
+  unitPrice   Float?  // Price quoted per unit
+  notes       String?
+
+  // Timestamps
+  createdAt   DateTime @default(now())
+
+  @@map("inquiry_items")
+}
+
+model InquiryCommunication {
+  id         String   @id @default(cuid())
+  inquiry    Inquiry  @relation(fields: [inquiryId], references: [id], onDelete: Cascade)
+  inquiryId  String
+
+  type       CommType  // EMAIL, NOTE, CALL, etc.
+  direction  Direction // INBOUND, OUTBOUND
+  content    String
+  metadata   Json?     // Additional data (attachments, call duration, etc.)
+
+  createdBy  String    // User ID or "customer", "system"
+  createdAt  DateTime  @default(now())
+
+  @@index([inquiryId])
+  @@index([createdAt])
+  @@map("inquiry_communications")
+}
+
+model SaleLog {
+  id          String   @id @default(cuid())
+  product     Product  @relation(fields: [productId], references: [id])
+  productId   String
+  productName String   // Snapshot
+  quantity    Int
+  orderId     String?  // External order reference
+  customerInfo Json?   // Optional customer snapshot
+
+  // Timestamps
+  createdAt   DateTime @default(now())
+
+  @@index([productId])
+  @@index([createdAt])
+  @@map("sale_logs")
+}
+
+model SystemLog {
+  id        String   @id @default(cuid())
+  level     LogLevel  // INFO, WARN, ERROR
+  category  String   // 'email', 'api', 'auth', etc.
+  message   String
+  metadata  Json?
+  createdAt DateTime @default(now())
+
+  @@index([level])
+  @@index([category])
+  @@index([createdAt])
+  @@map("system_logs")
+}
+
+// Enums
+enum ProductStatus {
+  ACTIVE
+  DRAFT
+  ARCHIVED
+}
+
+enum InquiryStatus {
+  PENDING
+  PROCESSING
+  QUOTED
+  CONFIRMED
+  CANCELLED
+}
+
+enum CommType {
+  EMAIL
+  NOTE
+  CALL
+  WHATSAPP
+  OTHER
+}
+
+enum Direction {
+  INBOUND
+  OUTBOUND
+}
+
+enum LogLevel {
+  INFO
+  WARN
+  ERROR
+}

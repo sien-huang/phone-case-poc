@@ -1,0 +1,17 @@
+# https://www.robots.com/
+
+User-agent: *
+Allow: /
+
+# Disallow admin areas
+Disallow: /admin/
+Disallow: /api/admin/
+
+# Disallow private API endpoints
+Disallow: /api/login
+Disallow: /api/logout
+
+# Sitemap location
+Sitemap: https://cloudwing-cases.com/sitemap.xml
+# For local dev, use:
+# Sitemap: http://localhost:3000/sitemap.xml

@@ -1,0 +1,102 @@
+{
+  "common": {
+    "home": "Home",
+    "products": "Products",
+    "contact": "Contact",
+    "latest": "Latest Arrivals",
+    "hot": "Hot Sellers",
+    "view_all": "View All",
+    "loading": "Loading...",
+    "error": "An error occurred",
+    "success": "Success",
+    "cancel": "Cancel",
+    "save": "Save",
+    "delete": "Delete",
+    "edit": "Edit",
+    "add": "Add",
+    "search": "Search",
+    "filter": "Filter",
+    "sort": "Sort",
+    "actions": "Actions",
+    "status": "Status",
+    "date": "Date",
+    "total": "Total",
+    "quantity": "Quantity",
+    "unit_price": "Unit Price",
+    "price": "Price",
+    "name": "Name",
+    "description": "Description",
+    "category": "Category",
+    "image": "Image",
+    "moq": "MOQ",
+    "lead_time": "Lead Time",
+    "in_stock": "In Stock",
+    "out_of_stock": "Out of Stock",
+    "min_order": "Minimum Order",
+    "contact_for_price": "Contact for Price"
+  },
+  "nav": {
+    "home": "Home",
+    "products": "Products",
+    "contact": "Contact",
+    "admin": "Admin",
+    "logout": "Logout"
+  },
+  "hero": {
+    "title": "Premium Phone Cases for Global Brands",
+    "subtitle": "OEM/ODM Manufacturer with Original Designs",
+    "cta": "Get a Quote"
+  },
+  "search": {
+    "placeholder": "Search products...",
+    "button": "Search"
+  },
+  "product": {
+    "add_to_inquiry": "Add to Inquiry",
+    "back_to_products": "Back to Products",
+    "related_products": "Related Products",
+    "specifications": "Specifications",
+    "no_products": "No products found"
+  },
+  "admin": {
+    "dashboard": "Dashboard",
+    "products": "Products",
+    "orders": "Orders",
+    "inquiries": "Inquiries",
+    "analytics": "Analytics",
+    "settings": "Settings",
+    "total_sales": "Total Sales",
+    "total_orders": "Total Orders",
+    "total_inquiries": "Total Inquiries",
+    "manage_products": "Manage Products",
+    "add_product": "Add Product",
+    "edit_product": "Edit Product",
+    "manage_orders": "Manage Orders",
+    "view_order": "View Order",
+    "manage_inquiries": "Manage Inquiries",
+    "view_inquiry": "View Inquiry",
+    "sales_overview": "Sales Overview",
+    "top_products": "Top Products"
+  },
+  "pagination": {
+    "prev": "Previous",
+    "next": "Next",
+    "page": "Page",
+    "of": "of"
+  },
+  "inquiry": {
+    "title": "My Inquiries",
+    "empty": "You have no inquiries yet",
+    "status": "Status",
+    "date": "Date",
+    "total": "Total",
+    "details": "Inquiry Details",
+    "submit": "Submit Inquiry",
+    "name_placeholder": "Your Name",
+    "email_placeholder": "Your Email",
+    "company_placeholder": "Company",
+    "message_placeholder": "Message",
+    "product": "Product",
+    "quantity": "Quantity"
+  }
+}
