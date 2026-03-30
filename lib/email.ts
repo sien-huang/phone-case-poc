@@ -43,12 +43,21 @@ export async function sendInquiryNotification(inquiry: any) {
     throw verr // 抛出让调用方知道
   }
 
-  // 4. 准备邮件内容
-  const customerEmail = inquiry.customer?.email || 'N/A'
-  const customerName = inquiry.customer?.name || 'Unknown'
-  const customerCompany = inquiry.customer?.company || 'N/A'
-  const customerPhone = inquiry.customer?.phone || 'N/A'
-  const customerCountry = inquiry.customer?.country || 'N/A'
+  // 4. 准备邮件内容 - 适配新数据库结构
+  // New schema: flat fields + items relation
+  const customerEmail = inquiry.customerEmail || inquiry.customer?.email || 'N/A'
+  const customerName = inquiry.customerName || inquiry.customer?.name || 'Unknown'
+  const customerCompany = inquiry.customerCompany || inquiry.customer?.company || 'N/A'
+  const customerPhone = inquiry.customerPhone || inquiry.customer?.phone || 'N/A'
+  const customerCountry = inquiry.customerCountry || inquiry.customer?.country || 'N/A'
+
+  // Build summary object for template compatibility
+  const summary = {
+    totalQuantity: inquiry.totalQuantity || inquiry.items?.reduce((sum: number, item: any) => sum + (item.quantity || 1), 0) || 0,
+    estimatedTotal: inquiry.estimatedTotal || 0,
+    leadTime: '5-10 business days (estimated)', // default lead time
+    notes: inquiry.notes || '',
+  }
   
   const subject = `[CloudWing] New Inquiry from ${customerName}`
   
@@ -95,10 +104,10 @@ export async function sendInquiryNotification(inquiry: any) {
       </table>
 
       <div style="background: #f0f9ff; padding: 16px; border-radius: 8px; margin-bottom: 24px;">
-        <p style="margin: 0 0 8px 0;"><strong>Total Quantity:</strong> ${inquiry.summary?.totalQuantity || 0} pcs</p>
-        ${inquiry.summary?.estimatedTotal ? `<p style="margin: 0 0 8px 0;"><strong>Estimated Total:</strong> $${inquiry.summary.estimatedTotal.toLocaleString()}</p>` : ''}
-        ${inquiry.summary?.leadTime ? `<p style="margin: 0 0 8px 0;"><strong>Lead Time:</strong> ${inquiry.summary.leadTime}</p>` : ''}
-        ${inquiry.summary?.notes ? `<p style="margin: 0;"><strong>Notes:</strong> ${inquiry.summary.notes}</p>` : ''}
+        <p style="margin: 0 0 8px 0;"><strong>Total Quantity:</strong> ${summary.totalQuantity} pcs</p>
+        ${summary.estimatedTotal ? `<p style="margin: 0 0 8px 0;"><strong>Estimated Total:</strong> $${summary.estimatedTotal.toLocaleString()}</p>` : ''}
+        <p style="margin: 0 0 8px 0;"><strong>Lead Time:</strong> ${summary.leadTime}</p>
+        ${summary.notes ? `<p style="margin: 0;"><strong>Notes:</strong> ${summary.notes}</p>` : ''}
       </div>
 
       <hr style="border: none; border-top: 1px solid #e5e7eb; margin: 30px 0;">
@@ -107,7 +116,7 @@ export async function sendInquiryNotification(inquiry: any) {
         Please respond within 24 hours.
       </p>
       <p style="color: #999; font-size: 11px; margin-top: 10px;">
-        Inquiry ID: ${inquiry.id} • ${new Date(inquiry.created_at).toLocaleString()}
+        Inquiry ID: ${inquiry.id} • ${new Date(inquiry.createdAt).toLocaleString()}
       </p>
     </div>
   `

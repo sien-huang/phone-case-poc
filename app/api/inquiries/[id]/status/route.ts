@@ -1,49 +1,53 @@
-import { NextRequest, NextResponse } from 'next/server';
-import { readFileSync, writeFileSync } from 'fs';
-import { join } from 'path';
+import { NextResponse } from 'next/server'
+import { prisma } from '@/lib/db'
 
-const INQUIRIES_PATH = join(process.cwd(), 'data', 'inquiries.json');
-
-function readInquiries() {
-  try {
-    const data = readFileSync(INQUIRIES_PATH, 'utf-8');
-    return JSON.parse(data);
-  } catch {
-    return [];
-  }
-}
-
-function writeInquiries(inquiries: any[]) {
-  writeFileSync(INQUIRIES_PATH, JSON.stringify(inquiries, null, 2));
-}
-
+// @ts-ignore
 export async function PATCH(
-  request: NextRequest,
+  request: Request,
   { params }: { params: Promise<{ id: string }> }
 ) {
   try {
-    const { id } = await params;
-    const body = await request.json();
-    const { status } = body;
+    const { id } = await params
+    const body = await request.json()
+    const { status } = body
 
-    const allowedStatuses = ['pending', 'contacted', 'quoted', 'closed'];
-    if (!allowedStatuses.includes(status)) {
-      return NextResponse.json({ error: 'Invalid status' }, { status: 400 });
+    // 映射前端状态到数据库枚举
+    const statusMap: Record<string, 'PENDING' | 'PROCESSING' | 'QUOTED' | 'CONFIRMED' | 'CANCELLED'> = {
+      pending: 'PENDING',
+      contacted: 'PROCESSING',
+      quoted: 'QUOTED',
+      closed: 'CONFIRMED'
     }
 
-    const inquiries = readInquiries();
-    const index = inquiries.findIndex((i: any) => i.id === id);
-    if (index === -1) {
-      return NextResponse.json({ error: 'Inquiry not found' }, { status: 404 });
+    const dbStatus = statusMap[status]
+    if (!dbStatus) {
+      return NextResponse.json(
+        { error: `Invalid status. Allowed: ${Object.keys(statusMap).join(', ')}` },
+        { status: 400 }
+      )
     }
 
-    inquiries[index].status = status;
-    inquiries[index].updated_at = new Date().toISOString();
-    writeInquiries(inquiries);
+    // 更新状态
+    const inquiry = await prisma.inquiry.update({
+      where: { id },
+      data: {
+        status: dbStatus,
+        updatedAt: new Date(),
+        // 如果状态改为已处理/已成交，记录 respondedAt
+        ...(dbStatus === 'CONFIRMED' || dbStatus === 'QUOTED' ? { respondedAt: new Date() } : {})
+      },
+      include: {
+        items: true,
+        communications: true
+      }
+    })
 
-    return NextResponse.json({ success: true, inquiry: inquiries[index] });
+    return NextResponse.json({ success: true, inquiry })
   } catch (error) {
-    console.error('Failed to update inquiry status:', error);
-    return NextResponse.json({ error: 'Failed to update' }, { status: 500 });
+    console.error('Failed to update inquiry status:', error)
+    return NextResponse.json(
+      { error: 'Failed to update status' },
+      { status: 500 }
+    )
   }
 }

@@ -1,9 +1,31 @@
-import { NextRequest, NextResponse } from 'next/server'
-import { readFileSync, writeFileSync } from 'fs'
-import { join } from 'path'
+import { NextResponse } from 'next/server'
+import { prisma } from '@/lib/db'
 
 // @ts-ignore
-export async function POST(request: NextRequest, { params }: any) {
+export async function GET(request: Request, { params }: any) {
+  try {
+    const inquiryId = params.id
+
+    const communications = await prisma.inquiryCommunication.findMany({
+      where: { inquiryId },
+      orderBy: { createdAt: 'desc' }
+    })
+
+    return NextResponse.json({
+      total: communications.length,
+      communications
+    })
+  } catch (error) {
+    console.error('Failed to fetch communications:', error)
+    return NextResponse.json(
+      { error: 'Failed to fetch communications' },
+      { status: 500 }
+    )
+  }
+}
+
+// @ts-ignore
+export async function POST(request: Request, { params }: any) {
   try {
     const inquiryId = params.id
     const body = await request.json()
@@ -16,39 +38,39 @@ export async function POST(request: NextRequest, { params }: any) {
       )
     }
 
-    // 读取询盘数据
-    const inquiriesPath = join(process.cwd(), 'data', 'inquiries.json')
-    const inquiries = JSON.parse(readFileSync(inquiriesPath, 'utf-8'))
-    const inquiryIndex = inquiries.findIndex((i: any) => i.id === inquiryId)
+    // 验证询盘存在
+    const inquiry = await prisma.inquiry.findUnique({
+      where: { id: inquiryId }
+    })
 
-    if (inquiryIndex === -1) {
+    if (!inquiry) {
       return NextResponse.json({ error: 'Inquiry not found' }, { status: 404 })
     }
 
-    const inquiry = inquiries[inquiryIndex]
+    // 映射 type 到枚举
+    const commType = type.toUpperCase() === 'EMAIL' ? 'EMAIL' :
+                     type.toUpperCase() === 'CALL' ? 'CALL' :
+                     type.toUpperCase() === 'WHATSAPP' ? 'WHATSAPP' :
+                     type.toUpperCase() === 'NOTE' ? 'NOTE' : 'OTHER'
 
-    // 初始化 communications 数组
-    if (!inquiry.communications) {
-      inquiry.communications = []
-    }
+    const communication = await prisma.inquiryCommunication.create({
+      data: {
+        inquiryId,
+        type: commType,
+        direction: 'OUTBOUND', // 默认为外发，管理员添加的
+        content,
+        createdBy: created_by || 'admin'
+      }
+    })
 
-    // 添加新沟通记录
-    const newCommunication = {
-      id: `comm-${Date.now()}`,
-      type: type || 'note', // note, email, call, quote
-      content,
-      created_by: created_by || 'admin',
-      created_at: new Date().toISOString(),
-    }
-
-    inquiry.communications.unshift(newCommunication)
-    inquiry.updated_at = new Date().toISOString()
-
-    // 保存
-    writeFileSync(inquiriesPath, JSON.stringify(inquiries, null, 2))
+    // 更新询盘的 updatedAt
+    await prisma.inquiry.update({
+      where: { id: inquiryId },
+      data: { updatedAt: new Date() }
+    })
 
     return NextResponse.json(
-      { success: true, communication: newCommunication },
+      { success: true, communication },
       { status: 201 }
     )
   } catch (error) {

@@ -1,35 +1,16 @@
 import { NextResponse } from 'next/server'
-import { readFileSync, writeFileSync } from 'fs'
-import { join } from 'path'
-
-interface SaleLog {
-  id: string
-  productId: string
-  productName: string
-  quantity: number
-  orderId?: string
-  customerInfo?: any
-  timestamp: string
-}
+import { prisma } from '@/lib/db'
 
 export async function GET() {
   try {
-    const logsPath = join(process.cwd(), 'data', 'sales-logs.json')
-    const logs: SaleLog[] = []
-    
-    try {
-      const data = readFileSync(logsPath, 'utf-8')
-      logs.push(...JSON.parse(data))
-    } catch {
-      // 文件不存在时返回空数组
-    }
-
-    // 按时间倒序
-    logs.sort((a, b) => new Date(b.timestamp).getTime() - new Date(a.timestamp).getTime())
+    const logs = await prisma.saleLog.findMany({
+      orderBy: { createdAt: 'desc' },
+      take: 100
+    })
 
     return NextResponse.json({
       total: logs.length,
-      logs: logs.slice(0, 100), // 最近 100 条
+      logs
     })
   } catch (error) {
     console.error('Failed to read sales logs:', error)
@@ -46,47 +27,46 @@ export async function POST(request: Request) {
       return NextResponse.json({ error: 'Product ID required' }, { status: 400 })
     }
 
-    // 读取产品数据
-    const productsPath = join(process.cwd(), 'data', 'products.json')
-    const products = JSON.parse(readFileSync(productsPath, 'utf-8'))
-    const productIndex = products.findIndex((p: any) => p.id === productId || p.slug === productId)
-    
-    if (productIndex === -1) {
+    // 查找产品 (by id or slug)
+    const product = await prisma.product.findFirst({
+      where: {
+        OR: [
+          { id: productId },
+          { slug: productId }
+        ]
+      }
+    })
+
+    if (!product) {
       return NextResponse.json({ error: 'Product not found' }, { status: 404 })
     }
 
-    // 更新产品销量
-    products[productIndex].salesCount = (products[productIndex].salesCount || 0) + quantity
-    products[productIndex].updated_at = new Date().toISOString()
-    writeFileSync(productsPath, JSON.stringify(products, null, 2))
+    // 在一个事务中更新销量并创建日志
+    const result = await prisma.$transaction(async (tx) => {
+      // 更新销量
+      const updatedProduct = await tx.product.update({
+        where: { id: product.id },
+        data: { salesCount: { increment: quantity } }
+      })
 
-    // 记录销售日志
-    const logEntry: SaleLog = {
-      id: `sale-${Date.now()}-${Math.random().toString(36).substr(2, 9)}`,
-      productId,
-      productName: products[productIndex].name,
-      quantity,
-      orderId,
-      customerInfo,
-      timestamp: new Date().toISOString(),
-    }
+      // 创建销售日志
+      const log = await tx.saleLog.create({
+        data: {
+          productId: product.id,
+          productName: product.name,
+          quantity,
+          orderId,
+          customerInfo
+        }
+      })
 
-    const logsPath = join(process.cwd(), 'data', 'sales-logs.json')
-    const existingLogs: SaleLog[] = []
-    try {
-      const logsData = readFileSync(logsPath, 'utf-8')
-      existingLogs.push(...JSON.parse(logsData))
-    } catch {
-      // 文件不存在时创建
-    }
-    
-    existingLogs.unshift(logEntry)
-    writeFileSync(logsPath, JSON.stringify(existingLogs, null, 2))
+      return { updatedProduct, log }
+    })
 
-    return NextResponse.json({ 
-      success: true, 
-      salesCount: products[productIndex].salesCount,
-      logEntry 
+    return NextResponse.json({
+      success: true,
+      salesCount: result.updatedProduct.salesCount,
+      logEntry: result.log
     })
   } catch (error) {
     console.error('Track sale error:', error)

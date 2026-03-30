@@ -1,18 +1,20 @@
-import { NextRequest, NextResponse } from 'next/server'
-import { readFileSync } from 'fs'
-import { join } from 'path'
+import { NextResponse } from 'next/server'
+import { prisma } from '@/lib/db'
 import { sendInquiryNotification } from '@/lib/email'
 
 // @ts-ignore
-export async function POST(request: NextRequest, { params }: any) {
+export async function POST(request: Request, { params }: any) {
   try {
     const inquiryId = params.id
-    
-    // 读取询盘数据
-    const inquiriesPath = join(process.cwd(), 'data', 'inquiries.json')
-    const inquiries = JSON.parse(readFileSync(inquiriesPath, 'utf-8'))
-    const inquiry = inquiries.find((i: any) => i.id === inquiryId)
-    
+
+    // 从数据库获取询盘
+    const inquiry = await prisma.inquiry.findUnique({
+      where: { id: inquiryId },
+      include: {
+        items: true
+      }
+    })
+
     if (!inquiry) {
       return NextResponse.json({ error: 'Inquiry not found' }, { status: 404 })
     }
@@ -27,9 +29,9 @@ export async function POST(request: NextRequest, { params }: any) {
   } catch (error) {
     console.error('Failed to send email:', error)
     return NextResponse.json(
-      { 
-        success: false, 
-        error: error instanceof Error ? error.message : 'Failed to send email' 
+      {
+        success: false,
+        error: error instanceof Error ? error.message : 'Failed to send email'
       },
       { status: 500 }
     )

@@ -1,15 +1,20 @@
 import { NextResponse } from 'next/server'
-import { readFileSync } from 'fs'
-import { join } from 'path'
+import { prisma } from '@/lib/db'
 
 // @ts-ignore - Next.js 15 dynamic route params typing
-export async function GET(request: NextRequest, { params }: any) {
+export async function GET(request: Request, { params }: any) {
   try {
     const inquiryId = params.id || ''
-    
-    const inquiriesPath = join(process.cwd(), 'data', 'inquiries.json')
-    const inquiries = JSON.parse(readFileSync(inquiriesPath, 'utf-8'))
-    const inquiry = inquiries.find((i: any) => i.id === inquiryId)
+
+    const inquiry = await prisma.inquiry.findUnique({
+      where: { id: inquiryId },
+      include: {
+        items: true,
+        communications: {
+          orderBy: { createdAt: 'desc' }
+        }
+      }
+    })
 
     if (!inquiry) {
       return NextResponse.json({ error: 'Inquiry not found' }, { status: 404 })
