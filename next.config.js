@@ -3,6 +3,9 @@ const nextConfig = {
   // 启用压缩（gzip/brotli）
   compress: true,
 
+  // 输出为 standalone 模式 (Cloudflare Workers 需要)
+  output: 'standalone',
+
   // 图片配置
   images: {
     remotePatterns: [
