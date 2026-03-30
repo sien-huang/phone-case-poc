@@ -26,15 +26,22 @@ export function convertUSD(amountUSD: number, to: keyof typeof RATES): number {
   return Math.round((amountUSD * rate) * 100) / 100;
 }
 
-export function formatCurrency(amountUSD: number, currency: keyof typeof RATES): string {
-  const converted = convertUSD(amountUSD, currency);
+export function formatCurrency(amount: number, currency: keyof typeof RATES): string {
   const info = CURRENCIES.find(c => c.code === currency);
   const symbol = info?.symbol || currency;
 
-  if (currency === 'JPY') {
-    return `${symbol}${converted}`;
-  }
-  return `${symbol}${converted.toFixed(2)}`;
+  // Handle negative sign placement (before symbol)
+  const isNegative = amount < 0;
+  const absAmount = Math.abs(amount);
+
+  // JPY: no decimals, others: 2 decimals
+  const formattedAmount = currency === 'JPY'
+    ? absAmount.toFixed(0)
+    : absAmount.toFixed(2);
+
+  return isNegative
+    ? `-${symbol}${formattedAmount}`
+    : `${symbol}${formattedAmount}`;
 }
 
 export function getCurrencyOptions() {

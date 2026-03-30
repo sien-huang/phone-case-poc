@@ -104,8 +104,7 @@ export async function PUT(request: Request) {
         })
       }
 
-      // Recalculate stats
-      await prisma.category.updateCategoryStats(category.name)
+      // Stats are computed on-demand; no need to update here
 
       return NextResponse.json(category)
     } catch (dbError) {

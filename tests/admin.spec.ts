@@ -17,8 +17,13 @@ test.describe('Admin Panel Tests', () => {
   })
 
   test('should display dashboard without errors', async ({ page }) => {
-    await page.goto('/admin/dashboard')
-    
+    // Login first
+    await page.goto('/admin')
+    await expect(page).toHaveURL(/admin\/login/)
+    await page.fill('input[type="password"]', 'CloudWing2025!')
+    await page.click('button[type="submit"]')
+    await expect(page).toHaveURL(/admin\/dashboard/)
+
     // Check key metric cards exist
     const totalProducts = page.locator('text=Total Products')
     await expect(totalProducts).toBeVisible()
@@ -37,6 +42,14 @@ test.describe('Admin Panel Tests', () => {
   })
 
   test('should load products list', async ({ page }) => {
+    // First login
+    await page.goto('/admin')
+    await expect(page).toHaveURL(/admin\/login/)
+    await page.fill('input[type="password"]', 'CloudWing2025!')
+    await page.click('button[type="submit"]')
+    await expect(page).toHaveURL(/admin\/dashboard/)
+
+    // Navigate to products
     await page.goto('/admin/products')
     
     // Check table exists
@@ -52,13 +65,14 @@ test.describe('Admin Panel Tests', () => {
   test('should toggle language switcher', async ({ page }) => {
     await page.goto('/')
     
-    // Click language switcher
-    const langSwitch = page.locator('button:has-text("EN")')
+    // Click language switcher (use aria-label, pick first match to avoid strict mode)
+    const langSwitch = page.locator('button[aria-label="Select Language"]').first()
     await expect(langSwitch).toBeVisible()
     await langSwitch.click()
     
-    // Select Chinese
-    const chineseOption = page.locator('text=简体中文')
+    // Select Simplified Chinese (first matching button)
+    const chineseOption = page.locator('button:has-text("简体中文")').first()
+    await expect(chineseOption).toBeVisible()
     await chineseOption.click()
     
     // Check that nav updated

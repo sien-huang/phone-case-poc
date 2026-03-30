@@ -1,6 +1,6 @@
 'use client'
 
-import { useState, useEffect } from 'react'
+import { Suspense, useState, useEffect } from 'react'
 import { useSearchParams } from 'next/navigation'
 import Link from 'next/link'
 
@@ -37,7 +37,7 @@ interface Inquiry {
   }>
 }
 
-export default function InquiriesPage() {
+function InquiriesContent() {
   const searchParams = useSearchParams();
   const initialUserId = searchParams.get('user') || '';
 
@@ -49,7 +49,7 @@ export default function InquiriesPage() {
 
   useEffect(() => {
     fetchInquiries()
-  }, [statusFilter, userIdFilter]) // 依赖这两个筛选状态
+  }, [statusFilter, userIdFilter])
 
   const fetchInquiries = async () => {
     setLoading(true)
@@ -77,7 +77,6 @@ export default function InquiriesPage() {
 
   const updateStatus = async (inquiryId: string, newStatus: string) => {
     try {
-      // 这里需要创建 PUT API，暂时用刷新模拟
       alert(`Status update for ${inquiryId} to ${newStatus} - API needed`)
       fetchInquiries()
     } catch (error) {
@@ -237,5 +236,24 @@ export default function InquiriesPage() {
         )}
       </main>
     </div>
+  )
+}
+
+function LoadingFallback() {
+  return (
+    <div className="min-h-screen bg-gray-50 flex items-center justify-center">
+      <div className="text-center">
+        <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-blue-600 mx-auto mb-4"></div>
+        <p className="text-gray-600">Loading inquiries...</p>
+      </div>
+    </div>
+  )
+}
+
+export default function InquiriesPage() {
+  return (
+    <Suspense fallback={<LoadingFallback />}>
+      <InquiriesContent />
+    </Suspense>
   )
 }

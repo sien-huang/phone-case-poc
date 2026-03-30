@@ -7,13 +7,13 @@ test('LanguageSwitcher: EN -> zh-Hant (Traditional Chinese)', async ({ page }) =
   const homeLink = page.locator('nav a[href="/"]')
   await expect(homeLink).toHaveText('Home')
 
-  // Click first language switcher (there may be two due to test environment)
+  // Click first language switcher (avoid strict mode multiple matches)
   const langBtn = page.locator('button[aria-label="Select Language"]').first()
   await expect(langBtn).toBeVisible()
   await langBtn.click()
 
-  // Select 繁體中文
-  const traditionalOption = page.locator('text=繁體中文')
+  // Select 繁體中文 (first matching button)
+  const traditionalOption = page.locator('button:has-text("繁體中文")').first()
   await expect(traditionalOption).toBeVisible()
   await traditionalOption.click()
 
@@ -36,14 +36,14 @@ test('LanguageSwitcher: zh-Hant -> zh-Hans (Simplified Chinese)', async ({ page 
   await page.goto('/')
 
   // Switch to Traditional first
-  const langBtn = page.locator('button[aria-label="Select Language"]')
+  const langBtn = page.locator('button[aria-label="Select Language"]').first()
   await langBtn.click()
-  await page.locator('text=繁體中文').click()
+  await page.locator('button:has-text("繁體中文")').first().click()
   await page.waitForTimeout(500)
 
   // Now switch to Simplified (click first button again)
   await page.locator('button[aria-label="Select Language"]').first().click()
-  await page.locator('text=简体中文').click()
+  await page.locator('button:has-text("简体中文")').first().click()
   await page.waitForTimeout(500)
 
   // Verify

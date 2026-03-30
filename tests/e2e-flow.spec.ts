@@ -45,12 +45,12 @@ test.describe('Critical User Journeys E2E', () => {
   });
 
   test('should switch languages and persist preference', async ({ page }) => {
-    // 1. Click language switcher
-    const langButton = page.locator('button[aria-label="Select Language"]');
+    // 1. Click language switcher (use first to avoid strict mode)
+    const langButton = page.locator('button[aria-label="Select Language"]').first();
     await langButton.click();
 
-    // 2. Choose Chinese
-    await page.locator('button:has-text("简体中文")').click();
+    // 2. Choose Chinese (first matching)
+    await page.locator('button:has-text("简体中文")').first().click();
 
     // 3. Check navigation text changed
     await expect(page.locator('a:has-text("首页")')).toBeVisible();
@@ -121,24 +121,19 @@ test.describe('Critical User Journeys E2E', () => {
   });
 
   test('should load admin analytics page when authenticated', async ({ page }) => {
-    // 1. Try to access admin route
-    await page.goto('/admin/analytics');
+    // 1. Login first
+    await page.goto('/admin');
+    await expect(page).toHaveURL(/admin\/login/);
+    await page.fill('input[type="password"]', 'CloudWing2025!');
+    await page.click('button[type="submit"]');
+    await expect(page).toHaveURL(/admin\/dashboard/);
 
-    // 2. Check if redirected to login or page loads
-    const isLogin = page.url().includes('signin') || page.locator('text=/signin|login/i').isVisible();
-    
-    if (!isLogin) {
-      // If admin page loads, check for charts or data
-      await expect(page.locator('h1')).toContainText(/analytics|dashboard/i);
-      
-      // Check for data visualization
-      const hasChart = page.locator('canvas, svg, .recharts').first().isVisible();
-      if (await hasChart) {
-        expect(true).toBeTruthy(); // Chart exists
-      }
-    } else {
-      test.info().annotations.push({ type: 'skip', description: 'Auth required for admin page' });
-    }
+    // 2. Navigate to analytics
+    await page.goto('/admin/analytics');
+    await expect(page).not.toHaveURL(/login/);
+
+    // 3. Check for heading and possibly charts
+    await expect(page.locator('h1')).toContainText(/analytics|dashboard/i);
   });
 
   test('should maintain cart state across pages (if e-commerce)', async ({ page }) => {
@@ -254,8 +249,8 @@ test.describe('Accessibility Tests', () => {
   });
 
   test('should have ARIA labels where needed', async ({ page }) => {
-    // Check language switcher has aria-label
-    const langSwitcher = page.locator('button[aria-label="Select Language"]');
+    // Check language switcher has aria-label (use first to avoid strict mode)
+    const langSwitcher = page.locator('button[aria-label="Select Language"]').first();
     await expect(langSwitcher).toBeAttached();
 
     // Check back-to-top has aria-label

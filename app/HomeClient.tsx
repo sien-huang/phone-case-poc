@@ -6,7 +6,7 @@ import { useLocale } from '@/contexts/LocaleContext';
 import productsData from '@/data/products.json';
 
 export default function HomeClient() {
-  const { t } = useLocale();
+  const { locale, t } = useLocale();
   const [query, setQuery] = useState('');
   const [suggestions, setSuggestions] = useState<any[]>([]);
   const [showSuggestions, setShowSuggestions] = useState(false);
@@ -140,7 +140,7 @@ export default function HomeClient() {
       <section className="section bg-gray-50">
         <div className="container">
           <div className="flex items-center justify-between mb-8">
-            <h2 className="text-2xl font-bold text-gray-900">{t('home.latest')}</h2>
+            <h2 className="text-2xl font-bold text-gray-900">{t('common.latest')}</h2>
             <span className="text-sm text-gray-500">Just in this week</span>
           </div>
 

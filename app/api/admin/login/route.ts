@@ -10,11 +10,12 @@ export async function POST(request: NextRequest) {
     const validPassword = process.env.ADMIN_PASSWORD || 'CloudWing2025!'
 
     if (password === validPassword) {
-      // Set secure cookie
+      // Set secure cookie (only over HTTPS)
+      const isSecure = request.url.startsWith('https://')
       const cookieStore = await cookies()
       cookieStore.set('admin-auth', 'true', {
         httpOnly: true,
-        secure: process.env.NODE_ENV === 'production',
+        secure: isSecure,
         sameSite: 'strict',
         maxAge: 60 * 60 * 24 * 7, // 1 week
         path: '/',

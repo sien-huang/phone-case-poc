@@ -12,6 +12,7 @@ import Analytics from '@/components/Analytics'
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
+  metadataBase: new URL('https://cloudwing-cases.com'),
   title: {
     default: 'CloudWing Cases - Premium Phone Case Wholesale',
     template: '%s | CloudWing Cases'
@@ -29,7 +30,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: 'website',
     locale: 'en_US',
-    alternateLocales: ['zh_CN', 'zh_TW'],
+    alternateLocale: ['zh_CN', 'zh_TW'],
     url: 'https://cloudwing-cases.com',
     title: 'CloudWing Cases - Premium Phone Case Wholesale',
     description: 'Professional B2B phone case wholesale. High-quality TPU/PC phone cases for all major brands.',

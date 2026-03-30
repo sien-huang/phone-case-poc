@@ -43,7 +43,7 @@ export function readProductsFile() {
   }
 }
 
-function writeProductsFile(products: any[]) {
+export function writeProductsFile(products: any[]) {
   writeFileSync(PRODUCTS_PATH, JSON.stringify(products, null, 2))
 }
 
@@ -111,7 +111,7 @@ export async function createProduct(data: any) {
     })
 
     // Update category stats
-    await prisma.category.updateCategoryStats(data.category)
+    await updateCategoryStats(data.category)
 
     return dbProduct
   } catch (error) {
@@ -145,7 +145,7 @@ export async function updateProduct(id: string, data: any) {
 
     // Update category stats if category changed
     if (data.category) {
-      await prisma.category.updateCategoryStats(data.category)
+      await updateCategoryStats(data.category)
     }
 
     return dbProduct
@@ -397,6 +397,45 @@ function mapStatus(status: string): 'ACTIVE' | 'DRAFT' | 'ARCHIVED' {
     archived: 'ARCHIVED',
   }
   return map[status] || 'ACTIVE'
+}
+
+// Update category statistics (product count, views, sales)
+export async function updateCategoryStats(categoryName: string) {
+  try {
+    // Get all active products in this category
+    const products = await prisma.product.findMany({
+      where: {
+        category: categoryName,
+        isActive: true,
+      },
+    })
+
+    // Calculate aggregates
+    const productCount = products.length
+    const totalViews = products.reduce((sum, p) => sum + (p.viewCount || 0), 0)
+    const totalSales = products.reduce((sum, p) => sum + (p.salesCount || 0), 0)
+
+    // Upsert category stats
+    await prisma.category.upsert({
+      where: { name: categoryName },
+      update: {
+        productCount,
+        totalViews,
+        totalSales,
+        updatedAt: new Date(),
+      },
+      create: {
+        name: categoryName,
+        productCount,
+        totalViews,
+        totalSales,
+        isActive: true,
+        order: 0,
+      },
+    })
+  } catch (error) {
+    console.warn('⚠️  Failed to update category stats:', error)
+  }
 }
 
 // ============================================

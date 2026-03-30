@@ -29,7 +29,7 @@ export default function Header() {
           </Link>
 
           {/* Desktop Navigation */}
-          <nav className="hidden md:flex items-center gap-6 text-sm font-medium text-gray-700">
+          <nav className="hidden md:flex items-center gap-6 text-sm font-medium text-gray-700" role="navigation">
             <Link href="/" className="hover:text-blue-600 transition-colors">
               {t('nav.home')}
             </Link>
@@ -94,7 +94,7 @@ export default function Header() {
 
       {/* Mobile Menu */}
       {menuOpen && (
-        <div className="md:hidden border-t bg-gray-50">
+        <div className="md:hidden border-t bg-gray-50" role="navigation">
           <div className="container py-3 space-y-1">
             <div className="px-3 py-2">
               <label className="text-xs text-gray-500 mb-1 block">Currency</label>

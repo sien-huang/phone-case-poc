@@ -31,8 +31,6 @@ export default function ReadingProgressBar() {
     return () => window.removeEventListener('scroll', onScroll)
   }, [])
 
-  if (progress < 2) return null // Hide when at top
-
   return (
     <div
       className="fixed top-0 left-0 right-0 h-1 bg-blue-600 z-[9999] origin-left transition-transform duration-75 ease-out"

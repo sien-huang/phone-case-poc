@@ -2,6 +2,10 @@ import { PrismaClient } from '@prisma/client'
 import { readFileSync } from 'fs'
 import { join } from 'path'
 
+function isError(e: unknown): e is Error {
+  return e instanceof Error
+}
+
 const prisma = new PrismaClient()
 
 async function main() {
@@ -33,8 +37,8 @@ async function main() {
       })
       console.log(`  ✓ Category: ${categoryName}`)
     }
-  } catch (error) {
-    console.error('Failed to read products.json, skipping category seed:', error.message)
+  } catch (error: any) {
+    console.error('Failed to read products.json, skipping category seed:', error?.message || String(error))
   }
 
   // 2. Seed Sample Products (if products table empty)

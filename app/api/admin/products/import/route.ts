@@ -6,7 +6,7 @@ export async function GET() {
   try {
     const products = await getProducts()
     // Return all including inactive for export
-    const allProducts = await dbGetAllProducts()
+    const allProducts = readProductsFile()
 
     return NextResponse.json({
       version: '1.0',
@@ -70,8 +70,28 @@ export async function POST(request: Request) {
         }
       }
 
-      // Also update file for consistency
-      const mergedProducts = await dbGetAllProducts()
+      // Also update file for consistency: fetch all from DB and convert to file format
+      const dbProducts = await prisma.product.findMany()
+      const mergedProducts = dbProducts.map(p => ({
+        id: p.id,
+        slug: p.slug,
+        name: p.name,
+        category: p.category,
+        description: p.description,
+        moq: p.moq,
+        priceRange: p.priceRange,
+        leadTime: p.leadTime,
+        material: p.material,
+        compatibility: p.compatibility,
+        features: p.features,
+        images: p.images,
+        viewCount: p.viewCount,
+        salesCount: p.salesCount,
+        status: p.status,
+        is_active: p.isActive,
+        created_at: p.createdAt.toISOString(),
+        updated_at: p.updatedAt.toISOString(),
+      }))
       writeProductsFile(mergedProducts)
 
       return NextResponse.json({

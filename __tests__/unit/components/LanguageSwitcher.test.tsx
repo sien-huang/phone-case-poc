@@ -13,7 +13,8 @@ const renderWithProvider = (component: React.ReactElement) => {
 
 describe('LanguageSwitcher Component', () => {
   beforeEach(() => {
-    document.cookie = '';
+    // Force locale to 'en' via cookie for consistent test startup
+    document.cookie = 'locale=en; path=/';
     document.documentElement.lang = 'en';
   });
 

@@ -9,8 +9,8 @@ test.describe('Homepage Layout Tests', () => {
 
   test('should have centered layout (container class exists)', async ({ page }) => {
     await page.goto('/')
-    // Check that main container exists and has max-width constrained
-    const container = page.locator('.container')
+    // Check that a container inside main exists and has max-width constrained
+    const container = page.locator('main .container').first()
     await expect(container).toBeVisible()
     
     // Check container has proper margin (centered)

@@ -20,7 +20,22 @@ const securityHeaders = {
 export function middleware(request: NextRequest) {
   const response = NextResponse.next()
 
-  // 应用安全头部
+  // 1. 保护 admin 路由（除登录页和 API 外）
+  const pathname = request.nextUrl.pathname
+  if (pathname.startsWith('/admin') && 
+      !pathname.startsWith('/admin/login') && 
+      !pathname.startsWith('/admin/api') &&
+      !pathname.startsWith('/admin/check')) {
+    const adminAuth = request.cookies.get('admin-auth')
+    if (!adminAuth || adminAuth.value !== 'true') {
+      // 重定向到登录页，保留原始 URL 作为 redirect 参数
+      const loginUrl = new URL('/admin/login', request.url)
+      loginUrl.searchParams.set('redirect', pathname)
+      return NextResponse.redirect(loginUrl)
+    }
+  }
+
+  // 2. 应用安全头部
   Object.entries(securityHeaders).forEach(([key, value]) => {
     response.headers.set(key, value)
   })

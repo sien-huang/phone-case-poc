@@ -12,19 +12,18 @@ interface LocaleContextType {
 
 const LocaleContext = createContext<LocaleContextType | undefined>(undefined)
 
-// 加载翻译文件
-let translations: Record<string, Record<string, string>> = {}
+// Cache for translations
+let translationsCache: Record<string, Record<string, string>> = {}
 
 async function loadTranslations(locale: Locale): Promise<Record<string, string>> {
-  if (translations[locale]) {
-    return translations[locale]
+  if (translationsCache[locale]) {
+    return translationsCache[locale]
   }
 
   try {
-    // 从 app/contexts/ 到 messages/ 的路径是 ../../messages/
     const module = await import(`../../messages/${locale}.json`)
     const flat = flattenTranslations(module.default)
-    translations[locale] = flat
+    translationsCache[locale] = flat
     return flat
   } catch (error) {
     console.error(`Failed to load translations for ${locale}:`, error)
@@ -32,16 +31,16 @@ async function loadTranslations(locale: Locale): Promise<Record<string, string>>
   }
 }
 
-// 扁平化 key: "nav.home" => "Home"
+// Flatten nested object to dot notation
 function flattenTranslations(obj: Record<string, any>, prefix = ''): Record<string, string> {
   let result: Record<string, string> = {}
   for (const key in obj) {
     const value = obj[key]
     const newKey = prefix ? `${prefix}.${key}` : key
     if (typeof value === 'object' && value !== null) {
-      result = { ...result, ...flattenTranslations(value, newKey) }
+      Object.assign(result, flattenTranslations(value, newKey))
     } else {
-      result[newKey] = value
+      result[newKey] = value as string
     }
   }
   return result
@@ -51,31 +50,31 @@ export function LocaleProvider({ children }: { children: ReactNode }) {
   const [locale, setLocaleState] = useState<Locale>('en')
   const [translationsMap, setTranslationsMap] = useState<Record<string, string>>({})
 
-  // 初始化：从 URL 或 Cookie 获取语言
+  // Initialize locale from URL/Cookie/browser
   useEffect(() => {
     const initLocale = async () => {
-      // 1. 检查 URL 参数 ?lang=
+      // 1. URL param
       const urlParams = new URLSearchParams(window.location.search)
-      const urlLang = urlParams.get('lang') as Locale
+      const urlLang = urlParams.get('lang') as Locale | null
       if (urlLang && ['en', 'zh-Hans', 'zh-Hant'].includes(urlLang)) {
         setLocaleState(urlLang)
         document.cookie = `locale=${urlLang};path=/;max-age=31536000`
         return
       }
 
-      // 2. 检查 Cookie
+      // 2. Cookie
       const cookies = document.cookie.split(';').map(c => c.trim())
       const localeCookie = cookies.find(c => c.startsWith('locale='))
       if (localeCookie) {
-        const cookieLocale = localeCookie.split('=')[1] as Locale
-        if (['en', 'zh-Hans', 'zh-Hant'].includes(cookieLocale)) {
+        const cookieLocale = localeCookie.split('=')[1] as Locale | undefined
+        if (cookieLocale && ['en', 'zh-Hans', 'zh-Hant'].includes(cookieLocale)) {
           setLocaleState(cookieLocale)
           return
         }
       }
 
-      // 3. 浏览器语言检测
-      const browserLang = navigator.language || navigator.language || 'en'
+      // 3. Browser language
+      const browserLang = (navigator as any).language || navigator.language || 'en'
       if (browserLang.startsWith('zh')) {
         const isTraditional = browserLang.includes('Hant') || browserLang.includes('TW')
         setLocaleState(isTraditional ? 'zh-Hant' : 'zh-Hans')
@@ -87,18 +86,15 @@ export function LocaleProvider({ children }: { children: ReactNode }) {
     initLocale()
   }, [])
 
-  // 加载对应语言包并扁平化
+  // Load translations when locale changes
   useEffect(() => {
-    loadTranslations(locale).then(flat => setTranslationsMap(flat))
+    loadTranslations(locale).then(setTranslationsMap)
+    document.documentElement.lang = locale === 'zh-Hans' ? 'zh-Hans' : locale === 'zh-Hant' ? 'zh-Hant' : 'en'
   }, [locale])
 
-  const setLocale = async (newLocale: Locale) => {
+  const setLocale = (newLocale: Locale) => {
     setLocaleState(newLocale)
     document.cookie = `locale=${newLocale};path=/;max-age=31536000`
-    // Update HTML lang attribute
-    document.documentElement.lang = newLocale === 'zh-Hans' ? 'zh-Hans' : newLocale === 'zh-Hant' ? 'zh-Hant' : 'en'
-    const trans = await loadTranslations(newLocale)
-    setTranslationsMap(trans)
   }
 
   const t = (key: string): string => {
