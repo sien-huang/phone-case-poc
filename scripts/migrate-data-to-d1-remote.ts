@@ -77,8 +77,8 @@ async function migrate() {
           },
         })
         migratedCats++
-      } catch (error) {
-        console.error(`  ❌ 分类 ${cat.name}:`, error.message)
+      } catch (error: any) {
+        console.error(`  ❌ 分类 ${cat.name}:`, error?.message || error)
       }
     }
     console.log(`  ✅ 迁移 ${migratedCats}/${categories.length} 个分类\n`)
@@ -134,8 +134,8 @@ async function migrate() {
           },
         })
         migratedProducts++
-      } catch (error) {
-        console.error(`  ❌ 产品 ${product.slug}:`, error.message)
+      } catch (error: any) {
+        console.error(`  ❌ 产品 ${product.slug}:`, error?.message || error)
       }
     }
     console.log(`  ✅ 迁移 ${migratedProducts}/${products.length} 个产品\n`)
@@ -247,8 +247,8 @@ async function migrate() {
         }
 
         migratedInquiries++
-      } catch (error) {
-        console.error(`  ❌ 询价 ${inquiry.inquiryNumber}:`, error.message)
+      } catch (error: any) {
+        console.error(`  ❌ 询价 ${inquiry.inquiryNumber}:`, error?.message || error)
       }
     }
     console.log(`  ✅ 迁移 ${migratedInquiries}/${inquiries.length} 个询价\n`)
@@ -283,8 +283,8 @@ async function migrate() {
           },
         })
         migratedSales++
-      } catch (error) {
-        console.error(`  ❌ 销售记录 ${log.id}:`, error.message)
+      } catch (error: any) {
+        console.error(`  ❌ 销售记录 ${log.id}:`, error?.message || error)
       }
     }
     console.log(`  ✅ 迁移 ${migratedSales}/${saleLogs.length} 条销售记录\n`)
