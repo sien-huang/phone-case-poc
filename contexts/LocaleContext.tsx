@@ -21,8 +21,8 @@ async function loadTranslations(locale: Locale): Promise<Record<string, string>>
   }
 
   try {
-    const module = await import(`../messages/${locale}.json`)
-    const flat = flattenTranslations(module.default)
+    const mod = await import(`../messages/${locale}.json`)
+    const flat = flattenTranslations(mod.default)
     translationsCache[locale] = flat
     return flat
   } catch (error) {
