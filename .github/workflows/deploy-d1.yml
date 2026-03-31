@@ -1,0 +1,71 @@
+name: Deploy to Cloudflare
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+env:
+  NODE_VERSION: '20'
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      deployments: write
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: ${{ env.NODE_VERSION }}
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Build
+        run: npm run build
+
+      - name: Setup Wrangler
+        uses: cloudflare/wrangler-action@v3
+        with:
+          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+
+      - name: Create D1 Database (if needed)
+        run: |
+          # 检查数据库是否存在
+          if ! npx wrangler d1 databases list --format json | grep -q "phone_case_poc_db"; then
+            echo "Creating D1 database..."
+            npx wrangler d1 create phone_case_poc_db
+          else
+            echo "D1 database already exists"
+          fi
+        env:
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+
+      - name: Apply Database Migrations
+        run: |
+          npx wrangler d1 migrations apply phone_case_poc_db --remote
+
+      - name: Run Data Migration (from local backup)
+        run: |
+          # 如果有备份数据，可以在这里恢复
+          # 例如：npx tsx scripts/restore-from-backup.ts
+          echo "Skipping data restore (manual if needed)"
+
+      - name: Deploy to Cloudflare Pages/Workers
+        run: |
+          # 部署到 Cloudflare Pages 或 Workers
+          npx wrangler deploy --minify
+
+      - name: Get Deployment URL
+        run: |
+          echo "✅ Deployment successful!"
+          echo "🔗 Visit: https://phone-case-poc.pages.dev (or your custom domain)"

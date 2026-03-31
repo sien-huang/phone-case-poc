@@ -1,8 +1,16 @@
 {
-  "name": "phone-case-poc",
-  "main": ".next/standalone/server.js",
-  "compatibility_date": "2026-03-30",
-  "assets": {
-    "directory": ".next/static"
-  }
+	"name": "phone-case-poc",
+	"main": ".next/standalone/server.js",
+	"compatibility_date": "2026-03-30",
+	"assets": {
+		"directory": ".next/static"
+	},
+	"d1_databases": [
+		{
+			"binding": "phone_case_poc_db",
+			"database_name": "phone_case_poc_db",
+			"database_id": "d6b6e51d-42ee-4956-9ecf-c5b179e42954",
+			"remote": true
+		}
+	]
 }

@@ -104,7 +104,7 @@ model Inquiry {
 
 model InquiryItem {
   id        String   @id @default(cuid())
-  inquiry   Inquiry  @relation(fields: [inquiryId], references: [id], onDelete: Cascade)
+  inquiry   Inquiry  @relation(fields: [inquiryId], references: [id])
   inquiryId String
 
   product     Product? @relation(fields: [productId], references: [id])
@@ -122,7 +122,7 @@ model InquiryItem {
 
 model InquiryCommunication {
   id         String   @id @default(cuid())
-  inquiry    Inquiry  @relation(fields: [inquiryId], references: [id], onDelete: Cascade)
+  inquiry    Inquiry  @relation(fields: [inquiryId], references: [id])
   inquiryId  String
 
   type       CommType  // EMAIL, NOTE, CALL, etc.
