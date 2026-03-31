@@ -28,12 +28,11 @@ if (!D1_URL) {
 }
 
 // 连接远程 D1
-const libsqlClient = createClient({ 
+const d1Adapter = new PrismaLibSql({ 
   url: D1_URL,
   // 如果使用远程 D1，可能需要 authToken
   authToken: process.env.D1_AUTH_TOKEN 
 })
-const d1Adapter = new PrismaLibSql(libsqlClient)
 const d1Prisma = new PrismaClient({ adapter: d1Adapter })
 
 async function migrate() {

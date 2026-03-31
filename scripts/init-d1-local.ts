@@ -37,8 +37,7 @@ async function init() {
 
     // 3. 通过 Prisma LibSQL Adapter 验证连接
     console.log('🔍 验证 D1 连接...')
-    const libsqlClient = createClient({ url: `file:${DB_PATH}` })
-    const adapter = new PrismaLibSql(libsqlClient)
+    const adapter = new PrismaLibSql({ url: `file:${DB_PATH}` })
     const prisma = new PrismaClient({ adapter })
 
     const productCount = await prisma.product.count()

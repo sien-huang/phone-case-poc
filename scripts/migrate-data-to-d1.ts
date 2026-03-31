@@ -36,8 +36,7 @@ const CATEGORIES_FILE = join(DATA_DIR, 'categories.json')
 const localPrisma = new PrismaClient()
 
 // 初始化 D1（目标）
-const libsqlClient = createClient({ url: D1_DATABASE_URL })
-const d1Adapter = new PrismaLibSql(libsqlClient)
+const d1Adapter = new PrismaLibSql({ url: D1_DATABASE_URL })
 const d1Prisma = new PrismaClient({ adapter: d1Adapter })
 
 async function migrate() {

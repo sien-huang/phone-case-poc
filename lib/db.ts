@@ -21,20 +21,16 @@ if (isCloudflareWorker) {
 
   if (d1Binding) {
     // 如果有直接 binding，可以使用特殊方式（Wrangler 会处理）
-    // 此时直接使用 D1 binding 作为 datasource
     console.log('✅ Using Cloudflare D1 binding from environment')
     // 注意：在 Workers 中，Prisma 需要特殊配置，通常通过 libsql 桥接
     // 这里我们使用 libsql client 指向本地持久化文件
-    const libsqlClient = createClient({
-      url: `file:./d1-local.db`,
-    })
-    const adapter = new PrismaLibSql(libsqlClient)
+    const libsqlUrl = `file:./d1-local.db`
+    const adapter = new PrismaLibSql({ url: libsqlUrl })
     prisma = new PrismaClient({ adapter })
   } else {
     // 或者使用 D1_DATABASE_URL 环境变量（如果已设置）
     const d1Url = process.env.D1_DATABASE_URL || 'file:./d1-local.db'
-    const libsqlClient = createClient({ url: d1Url })
-    const adapter = new PrismaLibSql(libsqlClient)
+    const adapter = new PrismaLibSql({ url: d1Url })
     prisma = new PrismaClient({ adapter })
     console.log('✅ Connected to D1 via D1_DATABASE_URL')
   }
