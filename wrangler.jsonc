@@ -13,5 +13,9 @@
 			"database_id": "d6b6e51d-42ee-4956-9ecf-c5b179e42954",
 			"remote": true
 		}
-	]
+	],
+	"[[r2_buckets]]": {
+		"binding": "UPLOADS",
+		"bucket_name": "phone-case-poc-uploads"
+	}
 }

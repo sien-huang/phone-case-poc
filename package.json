@@ -48,6 +48,7 @@
   },
   "devDependencies": {
     "@cloudflare/next-on-pages": "^1.13.16",
+    "@cloudflare/workers-types": "^4.20241022.0",
     "@playwright/test": "^1.58.2",
     "@prisma/client": "^6.19.2",
     "@swc/helpers": "^0.5.20",
