@@ -1,5 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { prisma } from '@/lib/db'
+import type { R2Bucket } from '@cloudflare/workers-types'
 
 // R2 bucket binding (configured in wrangler.jsonc)
 declare global {
@@ -64,21 +65,8 @@ export async function POST(request: NextRequest) {
     // Return relative URL (used in frontend)
     const url = `/uploads/${filename}`
 
-    // Optionally save to database (Uploads table)
-    try {
-      await prisma.upload.create({
-        data: {
-          filename,
-          originalName: file.name,
-          mimeType: file.type,
-          size: file.size,
-          path: key,
-          url,
-        },
-      })
-    } catch (dbError) {
-      console.warn('Failed to save upload record to DB:', dbError)
-    }
+    // NOTE: UploadMetadata table not implemented in D1 migration.
+    // Database logging can be added later if needed.
 
     return NextResponse.json({ success: true, url, filename })
   } catch (error) {
@@ -87,18 +75,5 @@ export async function POST(request: NextRequest) {
       { error: 'Upload failed', details: String(error) },
       { status: 500 }
     )
-  }
-}
-
-// Optional: GET to list recent uploads
-export async function GET() {
-  try {
-    const uploads = await prisma.upload.findMany({
-      orderBy: { createdAt: 'desc' },
-      take: 50,
-    })
-    return NextResponse.json(uploads)
-  } catch (error) {
-    return NextResponse.json({ error: 'Failed to fetch uploads' }, { status: 500 })
   }
 }
