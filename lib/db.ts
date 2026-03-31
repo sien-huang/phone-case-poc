@@ -52,12 +52,9 @@ if (isCloudflareWorker) {
 }
 
 // ============================================
-// Unified API - Products
+// Export Prisma Client (for backward compatibility)
 // ============================================
-
-// ============================================
-// Unified API - Products
-// ============================================
+export { prisma }
 
 export async function getProducts() {
   const dbProducts = await prisma.product.findMany({
