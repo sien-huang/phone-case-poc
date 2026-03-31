@@ -26,6 +26,10 @@ jobs:
           node-version: ${{ env.NODE_VERSION }}
           cache: 'npm'
 
+      - name: Generate package-lock.json (if missing)
+        run: npm install --package-lock
+        if: ${{ !contains(ls -la, 'package-lock.json') }}
+
       - name: Install dependencies
         run: npm ci
 
