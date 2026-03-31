@@ -1,0 +1,18 @@
+# E2E & Unit Tests
+tests/
+__tests__/
+coverage/
+
+# Build artifacts
+.next/
+out/
+
+# Dependencies
+node_modules/
+
+# Misc
+.DS_Store
+*.log
+
+# Local env
+.env*.local

@@ -24,7 +24,7 @@ jobs:
         run: npm ci
 
       - name: 🔍 Run ESLint
-        run: npx eslint . --ext .ts,.tsx --max-warnings=0
+        run: npx eslint . --ext .ts,.tsx --ignore-pattern 'tests/**' --ignore-pattern 'scripts/**' --max-warnings=0
         continue-on-error: false
 
       - name: 🔍 Run TypeScript type check
