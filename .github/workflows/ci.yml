@@ -263,8 +263,9 @@ jobs:
         run: |
           echo "❌ Some CI checks failed. Please review the logs above."
           echo "Failed jobs:"
-          for job in code-quality unit-tests e2e-tests build-check security performance; do
-            if [ "${{ needs.$job.result }}" != "success" ]; then
-              echo "  - $job: ${{ needs.$job.result }}"
-            fi
-          done
+          if [ "${{ needs.code-quality.result }}" != "success" ]; then echo "  - code-quality: ${{ needs.code-quality.result }}"; fi
+          if [ "${{ needs.unit-tests.result }}" != "success" ]; then echo "  - unit-tests: ${{ needs.unit-tests.result }}"; fi
+          if [ "${{ needs.e2e-tests.result }}" != "success" ]; then echo "  - e2e-tests: ${{ needs.e2e-tests.result }}"; fi
+          if [ "${{ needs.build-check.result }}" != "success" ]; then echo "  - build-check: ${{ needs.build-check.result }}"; fi
+          if [ "${{ needs.security.result }}" != "success" ]; then echo "  - security: ${{ needs.security.result }}"; fi
+          if [ "${{ needs.performance.result }}" != "success" ]; then echo "  - performance: ${{ needs.performance.result }}"; fi
