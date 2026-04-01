@@ -36,6 +36,9 @@ jobs:
       - name: Build
         run: npm run build
 
+      - name: Clean build cache (reduce size)
+        run: rm -rf .next/cache
+
       - name: Apply Database Migrations (if needed)
         run: |
           npx wrangler d1 migrations apply phone_case_poc_db --remote || echo "Migrations already applied or not needed"
