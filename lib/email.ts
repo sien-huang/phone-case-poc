@@ -1,13 +1,20 @@
 import nodemailer from 'nodemailer'
 
-// 邮件配置（从 .env.local 读取）
-const SMTP_HOST = process.env.SMTP_HOST
-const SMTP_PORT = parseInt(process.env.SMTP_PORT || '587')
-const SMTP_USER = process.env.SMTP_USER
-const SMTP_PASS = process.env.SMTP_PASS
-const ADMIN_EMAIL = process.env.ADMIN_EMAIL
+// Helper to get current email config (allows dynamic changes in tests)
+function getEmailConfig() {
+  return {
+    SMTP_HOST: process.env.SMTP_HOST,
+    SMTP_PORT: parseInt(process.env.SMTP_PORT || '587'),
+    SMTP_USER: process.env.SMTP_USER,
+    SMTP_PASS: process.env.SMTP_PASS,
+    ADMIN_EMAIL: process.env.ADMIN_EMAIL,
+  }
+}
 
 export async function sendInquiryNotification(inquiry: any) {
+  // Read configuration at runtime (not module load time)
+  const { SMTP_HOST, SMTP_PORT, SMTP_USER, SMTP_PASS, ADMIN_EMAIL } = getEmailConfig()
+
   // 1. 验证配置完整性
   if (!SMTP_HOST || !SMTP_PORT || !SMTP_USER || !SMTP_PASS || !ADMIN_EMAIL) {
     console.error('❌ Email configuration incomplete. Please check .env.local')

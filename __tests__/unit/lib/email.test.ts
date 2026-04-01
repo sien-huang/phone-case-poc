@@ -11,6 +11,25 @@ jest.mock('nodemailer', () => ({
   })),
 }));
 
+// Helper to create valid inquiry with correct date field
+function createInquiry(overrides = {}) {
+  return {
+    id: 'INQ-TEST',
+    customerEmail: 'test@example.com',
+    customerName: 'Test User',
+    customerCompany: 'Test Co',
+    customerPhone: '1234567890',
+    customerCountry: 'Testland',
+    items: overrides.items || [
+      { productName: 'Test Product', quantity: 2, unitPrice: 10.0 }
+    ],
+    estimatedTotal: 20,
+    notes: 'Test note',
+    createdAt: new Date().toISOString(), // correct field name
+    ...overrides,
+  };
+}
+
 describe('Email Service', () => {
   beforeEach(() => {
     // Reset environment variables
@@ -27,15 +46,13 @@ describe('Email Service', () => {
 
   describe('sendInquiryNotification', () => {
     it('sends email with correct structure', async () => {
-      const inquiry = {
+      const inquiry = createInquiry({
         id: 'INQ-001',
-        customer: {
-          name: 'John Doe',
-          email: 'john@example.com',
-          company: 'Test Corp',
-          phone: '123-456-7890',
-          country: 'USA',
-        },
+        customerName: 'John Doe',
+        customerEmail: 'john@example.com',
+        customerCompany: 'Test Corp',
+        customerPhone: '123-456-7890',
+        customerCountry: 'USA',
         items: [
           {
             productName: 'iPhone Case',
@@ -43,14 +60,9 @@ describe('Email Service', () => {
             unitPrice: 5.99,
           },
         ],
-        summary: {
-          totalQuantity: 100,
-          estimatedTotal: 599,
-          leadTime: '2-3 weeks',
-          notes: 'Urgent order',
-        },
-        created_at: new Date().toISOString(),
-      };
+        estimatedTotal: 599,
+        notes: 'Urgent order',
+      });
 
       mockVerify.mockResolvedValue({ response: 'OK' });
       mockSendMail.mockResolvedValue({ messageId: 'msg-123' });
@@ -70,19 +82,16 @@ describe('Email Service', () => {
     });
 
     it('includes customer information in email', async () => {
-      const inquiry = {
+      const inquiry = createInquiry({
         id: 'INQ-002',
-        customer: {
-          name: 'Jane Smith',
-          email: 'jane@example.com',
-          company: 'Acme Inc',
-          phone: '555-1234',
-          country: 'Canada',
-        },
+        customerName: 'Jane Smith',
+        customerEmail: 'jane@example.com',
+        customerCompany: 'Acme Inc',
+        customerPhone: '555-1234',
+        customerCountry: 'Canada',
         items: [],
-        summary: { totalQuantity: 0 },
-        created_at: new Date().toISOString(),
-      };
+        estimatedTotal: 0,
+      });
 
       mockVerify.mockResolvedValue({ response: 'OK' });
       mockSendMail.mockResolvedValue({ messageId: 'msg-456' });
@@ -98,16 +107,13 @@ describe('Email Service', () => {
     });
 
     it('handles missing items gracefully', async () => {
-      const inquiry = {
+      const inquiry = createInquiry({
         id: 'INQ-003',
-        customer: {
-          name: 'Test User',
-          email: 'test@test.com',
-        },
-        items: null,
-        summary: { totalQuantity: 0 },
-        created_at: new Date().toISOString(),
-      };
+        customerName: 'Test User',
+        customerEmail: 'test@test.com',
+        items: null, // missing items
+        estimatedTotal: 0,
+      });
 
       mockVerify.mockResolvedValue({ response: 'OK' });
       mockSendMail.mockResolvedValue({ messageId: 'msg-789' });
@@ -119,34 +125,49 @@ describe('Email Service', () => {
     });
 
     it('handles missing SMTP configuration', async () => {
-      // Clear environment variables
+      // Temporarily remove required env vars
+      const original = {
+        SMTP_HOST: process.env.SMTP_HOST,
+        SMTP_PORT: process.env.SMTP_PORT,
+        SMTP_USER: process.env.SMTP_USER,
+        SMTP_PASS: process.env.SMTP_PASS,
+        ADMIN_EMAIL: process.env.ADMIN_EMAIL,
+      };
       delete process.env.SMTP_HOST;
       delete process.env.SMTP_PORT;
       delete process.env.SMTP_USER;
       delete process.env.SMTP_PASS;
       delete process.env.ADMIN_EMAIL;
 
-      const inquiry = {
+      const inquiry = createInquiry({
         id: 'INQ-004',
-        customer: { name: 'Test' },
+        customerName: 'Test',
         items: [],
-        summary: { totalQuantity: 0 },
-        created_at: new Date().toISOString(),
-      };
+        estimatedTotal: 0,
+      });
 
-      // Should log error and return early without throwing
-      await expect(sendInquiryNotification(inquiry)).resolves.not.toThrow();
-      expect(mockSendMail).not.toHaveBeenCalled();
+      try {
+        // Should log error and return early without throwing
+        await expect(sendInquiryNotification(inquiry)).resolves.not.toThrow();
+        expect(mockSendMail).not.toHaveBeenCalled();
+      } finally {
+        // Restore for any subsequent tests (though beforeEach will reset anyway)
+        if (original.SMTP_HOST) process.env.SMTP_HOST = original.SMTP_HOST;
+        if (original.SMTP_PORT) process.env.SMTP_PORT = original.SMTP_PORT;
+        if (original.SMTP_USER) process.env.SMTP_USER = original.SMTP_USER;
+        if (original.SMTP_PASS) process.env.SMTP_PASS = original.SMTP_PASS;
+        if (original.ADMIN_EMAIL) process.env.ADMIN_EMAIL = original.ADMIN_EMAIL;
+      }
     });
 
     it('includes inquiry ID and timestamp in footer', async () => {
-      const inquiry = {
+      const inquiry = createInquiry({
         id: 'INQ-999',
-        customer: { name: 'Test' },
+        customerName: 'Test',
         items: [],
-        summary: { totalQuantity: 0 },
-        created_at: '2024-01-15T10:30:00Z',
-      };
+        estimatedTotal: 0,
+        createdAt: '2024-01-15T10:30:00Z', // correct field name
+      });
 
       mockVerify.mockResolvedValue({ response: 'OK' });
       mockSendMail.mockResolvedValue({ messageId: 'msg-999' });

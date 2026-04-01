@@ -54,6 +54,11 @@ global.fetch = jest.fn(() =>
   })
 );
 
+// Polyfill Next.js Web APIs (Request, Response, Headers)
+global.Request = class Request {}
+global.Response = class Response {}
+global.Headers = class Headers {}
+
 // Silence console warnings/errors in tests (optional)
 const originalError = console.error;
 console.error = (...args) => {

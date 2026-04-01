@@ -31,7 +31,7 @@ describe('convertUSD', () => {
 
   it('converts USD to CNY correctly', () => {
     const result = convertUSD(100, 'CNY');
-    expect(result).toBeCloseTo(723, 0);
+    expect(result).toBeCloseTo(723, 0); // 100 * 7.23 = 723
   });
 
   it('rounds JPY correctly', () => {

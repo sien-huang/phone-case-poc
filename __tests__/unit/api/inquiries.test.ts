@@ -1,12 +1,102 @@
-import { POST, GET } from '@/app/api/inquiries/route';
-import { getInquiries, createInquiry, updateInquiryStatus } from '@/lib/db';
+// Declare mocks with var to avoid TDZ issues inside jest.mock factories
+// eslint-disable-next-line no-var
+var mockPrisma: any;
+// eslint-disable-next-line no-var
+var mockSendNotification: any;
 
-// Mock the db module
-jest.mock('@/lib/db', () => ({
-  getInquiries: jest.fn(),
-  createInquiry: jest.fn(),
-  updateInquiryStatus: jest.fn(),
+// Mock next/server before any imports
+jest.mock('next/server', () => {
+  class NextRequestMock {
+    url = '';
+    method = 'GET';
+    headers = {};
+    body: any;
+    constructor(input: string | any, init?: any) {
+      if (typeof input === 'string') {
+        this.url = input;
+        this.method = (init?.method || 'GET').toUpperCase();
+        this.headers = init?.headers || {};
+        this.body = init?.body;
+      } else {
+        this.url = input?.url || '';
+        this.method = input?.method || 'GET';
+        this.headers = input?.headers || {};
+        this.body = input?.body;
+      }
+    }
+    async json() {
+      if (typeof this.body === 'string') {
+        try { return JSON.parse(this.body); } catch (e) { return {}; }
+      }
+      return this.body || {};
+    }
+    async text() {
+      return typeof this.body === 'string' ? this.body : '';
+    }
+    async formData() {
+      if (this.body instanceof FormData) return this.body;
+      if (typeof this.body === 'object' && this.body !== null) {
+        const fd = new FormData();
+        for (const key in this.body) {
+          if (Object.prototype.hasOwnProperty.call(this.body, key)) {
+            fd.append(key, this.body[key]);
+          }
+        }
+        return fd;
+      }
+      return new FormData();
+    }
+  }
+
+  class NextResponseMock {
+    status = 200;
+    body: any;
+    constructor(body?: any, init: any = {}) {
+      this.body = body;
+      this.status = init.status ?? 200;
+    }
+    static json(data: any, init: any = {}) {
+      return new NextResponseMock(JSON.stringify(data), { status: init.status ?? 200 });
+    }
+    static redirect(url: string, status = 302) {
+      return new NextResponseMock(null, { status });
+    }
+    async json() {
+      if (typeof this.body === 'string') {
+        try { return JSON.parse(this.body); } catch (e) { return {}; }
+      }
+      return this.body || {};
+    }
+  }
+
+  return { NextRequest: NextRequestMock, NextResponse: NextResponseMock };
+});
+
+// Mock db before importing route - initialize mockPrisma within factory to break TDZ
+jest.mock('@/lib/db', () => {
+  mockPrisma = {
+    inquiry: {
+      findMany: jest.fn(),
+      findFirst: jest.fn(),
+      create: jest.fn(),
+      update: jest.fn(),
+      delete: jest.fn(),
+    },
+    product: {
+      findUnique: jest.fn(),
+    },
+    $transaction: jest.fn(),
+  };
+  return { prisma: mockPrisma };
+});
+
+// Mock email - initialize mockSendNotification within factory
+jest.mock('@/lib/email', () => ({
+  sendInquiryNotification: mockSendNotification = jest.fn(),
 }));
+
+import { GET, POST } from '@/app/api/inquiries/route';
+import { NextRequest } from 'next/server';
 
 describe('Inquiries API', () => {
   beforeEach(() => {
@@ -20,38 +110,45 @@ describe('Inquiries API', () => {
           id: 'INQ-001',
           customerName: 'John Doe',
           customerEmail: 'john@example.com',
-          status: 'pending',
+          status: 'PENDING',
           items: [{ productName: 'iPhone Case', quantity: 100 }],
-          summary: { totalQuantity: 100 },
+          totalQuantity: 100,
+          estimatedTotal: 1000,
+          createdAt: new Date().toISOString(),
         },
       ];
+      mockPrisma.inquiry.findMany.mockResolvedValue(mockInquiries);
 
-      (getInquiries as jest.Mock).mockResolvedValue(mockInquiries);
-
-      const response = await GET();
+      const response = await GET(new NextRequest('http://localhost:3000/api/inquiries'));
       const data = await response.json();
 
       expect(response.status).toBe(200);
-      expect(data).toHaveProperty('inquiries');
-      expect(data.inquiries).toHaveLength(1);
+      expect(data).toEqual({
+        total: 1,
+        inquiries: mockInquiries,
+      });
+      expect(mockPrisma.inquiry.findMany).toHaveBeenCalledWith(
+        expect.objectContaining({
+          where: undefined,
+          include: expect.any(Object),
+          orderBy: expect.any(Object),
+          take: expect.any(Number),
+        })
+      );
     });
 
     it('returns empty array when no inquiries', async () => {
-      (getInquiries as jest.Mock).mockResolvedValue([]);
-
-      const response = await GET();
+      mockPrisma.inquiry.findMany.mockResolvedValue([]);
+      const response = await GET(new NextRequest('http://localhost:3000/api/inquiries'));
       const data = await response.json();
-
       expect(response.status).toBe(200);
       expect(data.inquiries).toEqual([]);
     });
 
     it('handles database errors', async () => {
-      (getInquiries as jest.Mock).mockRejectedValue(new Error('DB error'));
-
-      const response = await GET();
+      mockPrisma.inquiry.findMany.mockRejectedValue(new Error('DB error'));
+      const response = await GET(new NextRequest('http://localhost:3000/api/inquiries'));
       const data = await response.json();
-
       expect(response.status).toBe(500);
       expect(data).toEqual({ error: 'Failed to fetch inquiries' });
     });
@@ -60,109 +157,79 @@ describe('Inquiries API', () => {
   describe('POST /api/inquiries', () => {
     it('creates new inquiry successfully', async () => {
       const inquiryData = {
-        customerName: 'Jane Smith',
-        customerEmail: 'jane@example.com',
-        customerCompany: 'Acme Corp',
-        customerPhone: '1234567890',
-        customerCountry: 'USA',
-        items: [
-          { productId: 'prod-1', productName: 'Test Product', quantity: 50 },
-        ],
-        summary: {
-          totalQuantity: 50,
-          estimatedTotal: 1000,
-          leadTime: '2 weeks',
-          notes: 'Urgent',
+        customer: {
+          name: 'Jane Smith',
+          email: 'jane@example.com',
         },
+        items: [{ productId: 'prod-1', productName: 'Test', quantity: 50 }],
       };
 
       const createdInquiry = {
-        id: 'INQ-20240329-001',
+        id: 'INQ-002',
+        inquiryNumber: 'INV-123456-ABCD',
         ...inquiryData,
-        status: 'pending',
-        created_at: new Date().toISOString(),
+        totalQuantity: 50,
+        estimatedTotal: 500,
+        status: 'PENDING',
+        items: inquiryData.items,
       };
 
-      (createInquiry as jest.Mock).mockResolvedValue(createdInquiry);
+      mockPrisma.product.findUnique.mockResolvedValue({
+        priceRange: '$10',
+      });
+      mockPrisma.$transaction.mockResolvedValue(createdInquiry);
 
-      const response = await POST(inquiryData);
+      const { NextRequest } = require('next/server');
+      const request = new NextRequest('http://localhost:3000/api/inquiries', {
+        method: 'POST',
+        body: JSON.stringify(inquiryData),
+      });
+
+      const response = await POST(request);
       const data = await response.json();
 
-      expect(response.status).toBe(200);
-      expect(data).toEqual(createdInquiry);
-      expect(createInquiry).toHaveBeenCalledWith(inquiryData);
+      expect(response.status).toBe(201);
+      expect(data).toHaveProperty('success', true);
+      expect(data.inquiry).toHaveProperty('id');
+      expect(mockSendNotification).toHaveBeenCalledWith(createdInquiry);
     });
 
-    it('validates required fields', async () => {
+    it('handles missing required fields', async () => {
       const invalidData = {
-        customerName: '',
-        customerEmail: 'invalid-email',
+        customer: { email: '' },
         items: [],
       };
 
-      const response = await POST(invalidData as any);
-      const data = await response.json();
+      const { NextRequest } = require('next/server');
+      const request = new NextRequest('http://localhost:3000/api/inquiries', {
+        method: 'POST',
+        body: JSON.stringify(invalidData),
+      });
 
+      const response = await POST(request);
       expect(response.status).toBe(400);
-      expect(data).toHaveProperty('error');
-    });
-
-    it('handles creation with empty items', async () => {
-      const inquiryData = {
-        customerName: 'Test',
-        customerEmail: 'test@test.com',
-        items: [],
-        summary: { totalQuantity: 0 },
-      };
-
-      const createdInquiry = {
-        id: 'INQ-001',
-        ...inquiryData,
-        status: 'pending',
-      };
-
-      (createInquiry as jest.Mock).mockResolvedValue(createdInquiry);
-
-      const response = await POST(inquiryData);
-      expect(response.status).toBe(200);
-    });
-
-    it('generates inquiry ID with consistent format', async () => {
-      const inquiryData = {
-        customerName: 'Test',
-        customerEmail: 'test@test.com',
-        items: [],
-        summary: { totalQuantity: 1 },
-      };
-
-      const createdInquiry = {
-        id: 'INQ-20250627-123456',
-        ...inquiryData,
-        status: 'pending',
-      };
-
-      (createInquiry as jest.Mock).mockResolvedValue(createdInquiry);
-
-      const response = await POST(inquiryData);
       const data = await response.json();
-
-      expect(data.id).toMatch(/^INQ-\d{8}-\d{6}$/);
+      expect(data).toEqual({ error: 'Email and at least one product are required' });
     });
 
-    it('handles database errors during creation', async () => {
-      const inquiryData = {
-        customerName: 'Test',
-        customerEmail: 'test@test.com',
-        items: [],
-        summary: { totalQuantity: 0 },
+    it('handles database errors', async () => {
+      const validData = {
+        customer: { email: 'test@example.com' },
+        items: [{ productId: 'prod-1', quantity: 1 }],
       };
 
-      (createInquiry as jest.Mock).mockRejectedValue(new Error('DB error'));
+      mockPrisma.product.findUnique.mockResolvedValue({ priceRange: '$10' });
+      mockPrisma.$transaction.mockRejectedValue(new Error('DB error'));
 
-      const response = await POST(inquiryData);
-      const data = await response.json();
+      const { NextRequest } = require('next/server');
+      const request = new NextRequest('http://localhost:3000/api/inquiries', {
+        method: 'POST',
+        body: JSON.stringify(validData),
+      });
 
+      const response = await POST(request);
       expect(response.status).toBe(500);
+      const data = await response.json();
       expect(data).toEqual({ error: 'Failed to create inquiry' });
     });
   });
