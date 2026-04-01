@@ -12,6 +12,10 @@ env:
 jobs:
   deploy:
     runs-on: ubuntu-latest
+    env:
+      CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+      CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+      DATABASE_URL: "file:./dev.db"
     permissions:
       contents: read
       deployments: write
@@ -28,20 +32,9 @@ jobs:
 
       - name: Install dependencies
         run: npm ci
-        env:
-          DATABASE_URL: "file:./dev.db"
 
       - name: Build
         run: npm run build
-        env:
-          DATABASE_URL: "file:./dev.db"
-
-      - name: Setup Wrangler (install only)
-        uses: cloudflare/wrangler-action@v3
-        with:
-          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
-          accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
-          command: version  # Only verify installation, don't deploy
 
       - name: Apply Database Migrations (if needed)
         run: |
