@@ -283,3 +283,21 @@ export async function dbGetAllProducts() {
   })
   return dbProducts
 }
+
+// ============================================
+// Deprecated File-based Admin Functions (Stubs)
+// ============================================
+
+/**
+ * @deprecated Use database directly. File-based operations not supported on Cloudflare.
+ */
+export async function writeProductsFile() {
+  throw new Error('writeProductsFile is not implemented. File system operations are not supported in Cloudflare environment.')
+}
+
+/**
+ * @deprecated Use database directly. File-based operations not supported on Cloudflare.
+ */
+export async function readProductsFile() {
+  throw new Error('readProductsFile is not implemented. File system operations are not supported in Cloudflare environment.')
+}
