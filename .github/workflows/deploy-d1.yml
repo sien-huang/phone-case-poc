@@ -43,9 +43,9 @@ jobs:
         run: |
           npx wrangler d1 migrations apply phone_case_poc_db --remote || echo "Migrations already applied or not needed"
 
-      - name: Deploy to Cloudflare
+      - name: Deploy to Cloudflare Pages
         run: |
-          npx wrangler deploy --minify
+          npx wrangler pages deploy ./.next --project-name phone-case-poc
 
       - name: Get Deployment URL
         run: |
