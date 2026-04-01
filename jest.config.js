@@ -39,6 +39,10 @@ const customJestConfig = {
       statements: 13,
     },
   },
+  // Ensure test isolation to avoid mock leakage
+  resetModules: true,
+  resetMocks: true,
+  clearMocks: true,
 };
 
 module.exports = createJestConfig(customJestConfig);

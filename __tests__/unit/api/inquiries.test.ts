@@ -1,8 +1,6 @@
-// Declare mocks with var to avoid TDZ issues inside jest.mock factories
-// eslint-disable-next-line no-var
-var mockPrisma: any;
-// eslint-disable-next-line no-var
-var mockSendNotification: any;
+// Declare mocks with let in module scope to avoid TDZ within jest.mock
+let mockPrisma: any;
+let mockSendNotification: any;
 
 // Mock next/server before any imports
 jest.mock('next/server', () => {
@@ -72,7 +70,7 @@ jest.mock('next/server', () => {
   return { NextRequest: NextRequestMock, NextResponse: NextResponseMock };
 });
 
-// Mock db before importing route - initialize mockPrisma within factory to break TDZ
+// Mock db before importing route - initialize mockPrisma within factory
 jest.mock('@/lib/db', () => {
   mockPrisma = {
     inquiry: {
@@ -90,7 +88,7 @@ jest.mock('@/lib/db', () => {
   return { prisma: mockPrisma };
 });
 
-// Mock email - initialize mockSendNotification within factory
+// Mock email
 jest.mock('@/lib/email', () => ({
   sendInquiryNotification: mockSendNotification = jest.fn(),
 }));
