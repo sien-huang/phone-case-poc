@@ -37,7 +37,7 @@ jobs:
         with:
           apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
-          command: ''  # Explicitly no command, only install & auth
+          command: version  # Only verify installation, don't deploy
 
       - name: Apply Database Migrations (if needed)
         run: |
