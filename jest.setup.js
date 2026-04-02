@@ -121,6 +121,24 @@ if (!global.mockPrisma) {
   };
 }
 
+// Reset global mockPrisma implementations before each test to avoid cross-test contamination
+beforeEach(() => {
+  if (global.mockPrisma) {
+    const resetMock = (fn: any) => fn && typeof fn.mockReset === 'function' && fn.mockReset()
+    const resetObj = (obj: any) => {
+      if (!obj || typeof obj !== 'object') return
+      for (const key in obj) {
+        if (Object.prototype.hasOwnProperty.call(obj, key)) {
+          resetMock(obj[key])
+        }
+      }
+    }
+    resetObj(global.mockPrisma.product)
+    resetObj(global.mockPrisma.inquiry)
+    resetMock(global.mockPrisma.$transaction)
+  }
+});
+
 // Optionally mock @libsql/client as well
 jest.mock('@libsql/client', () => ({
   createClient: jest.fn(() => ({
