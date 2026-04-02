@@ -61,13 +61,20 @@ jobs:
 
       - name: 🧹 Enforce coverage thresholds
         run: |
-          COVERAGE=$(grep -oP 'Lines\s*:\s*\K[0-9.]+' coverage/lcov-report/index.html | head -1)
+          # Extract the coverage percentage for Lines from lcov HTML report
+          COVERAGE=$(grep -o '<td[^>]*>Lines</td>[^<]*<td[^>]*>\([0-9.]*\)</td>' coverage/lcov-report/index.html | sed -n 's/.*<td[^>]*>\([0-9.]*\)</td>.*/\1/p' | head -1)
+          # Fallback: extract any number after the "Lines" row
+          if [ -z "$COVERAGE" ]; then
+            COVERAGE=$(grep -A 1 '<td>Lines</td>' coverage/lcov-report/index.html | tail -1 | grep -o '[0-9.]\+')
+          fi
           echo "Lines coverage: ${COVERAGE}%"
-          if (( $(echo "$COVERAGE < 80" | bc -l) )); then
-            echo "❌ Coverage threshold not met: ${COVERAGE}% < 80%"
+          # If COVERAGE is empty, treat as failure
+          if [ -z "$COVERAGE" ]; then
+            echo "❌ Could not determine coverage"
             exit 1
           fi
-          echo "✅ Coverage threshold met: ${COVERAGE}% ≥ 80%"
+          # Compare using awk for portability
+          awk -v cov="$COVERAGE" 'BEGIN { if (cov < 80) { print "❌ Coverage threshold not met: " cov "% < 80%"; exit 1 } else { print "✅ Coverage threshold met: " cov "% ≥ 80%" } }'
 
   # Job 3: E2E Tests with Playwright
   e2e-tests:
