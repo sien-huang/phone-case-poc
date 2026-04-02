@@ -124,8 +124,8 @@ if (!global.mockPrisma) {
 // Reset global mockPrisma implementations before each test to avoid cross-test contamination
 beforeEach(() => {
   if (global.mockPrisma) {
-    const resetMock = (fn: any) => fn && typeof fn.mockReset === 'function' && fn.mockReset()
-    const resetObj = (obj: any) => {
+    const resetMock = (fn) => fn && typeof fn.mockReset === 'function' && fn.mockReset()
+    const resetObj = (obj) => {
       if (!obj || typeof obj !== 'object') return
       for (const key in obj) {
         if (Object.prototype.hasOwnProperty.call(obj, key)) {
