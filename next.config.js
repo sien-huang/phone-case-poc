@@ -1,11 +1,12 @@
-let withNextOnPages = (config) => config;
+let withOpenNext = (config) => config;
 
-// 仅在非测试环境加载 @cloudflare/next-on-pages（避免 Jest require 错误）
+// 仅在非测试环境加载 OpenNext（避免 Jest require 错误）
 if (process.env.NODE_ENV !== 'test') {
   try {
-    withNextOnPages = require('@cloudflare/next-on-pages');
+    const { defineCloudflareConfig } = require('@opennextjs/cloudflare');
+    withOpenNext = defineCloudflareConfig;
   } catch (e) {
-    console.warn('@cloudflare/next-on-pages not available, using plain Next.js config');
+    console.warn('@opennextjs/cloudflare not available, using plain Next.js config');
   }
 }
 
@@ -51,4 +52,4 @@ const nextConfig = {
   },
 }
 
-module.exports = withNextOnPages(nextConfig)
+module.exports = withOpenNext(nextConfig)

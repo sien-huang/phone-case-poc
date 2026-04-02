@@ -14,8 +14,8 @@ const customJestConfig = {
   testEnvironment: 'jest-environment-jsdom',
   moduleNameMapper: {
     '^@/(.*)$': '<rootDir>/$1',
-    // Mock @cloudflare/next-on-pages to avoid export/require issues in Jest
-    '^@cloudflare/next-on-pages$': '<rootDir>/__mocks__/next-on-pages.js',
+    // Mock @opennextjs/cloudflare to avoid require issues in Jest
+    '^@opennextjs/cloudflare$': '<rootDir>/__mocks__/cloudflare-opennext.js',
   },
   testMatch: [
     '<rootDir>/__tests__/**/*.test.ts',

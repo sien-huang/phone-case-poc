@@ -16,10 +16,10 @@ process.env = {
   CF_WORKER: 'false',
 };
 
-// Mock @cloudflare/next-on-pages for Jest (tests don't need actual adapter)
-jest.mock('@cloudflare/next-on-pages', () => ({
+// Mock @opennextjs/cloudflare for Jest (tests don't need actual adapter)
+jest.mock('@opennextjs/cloudflare', () => ({
   __esModule: true,
-  default: (config) => config,
+  defineCloudflareConfig: (config) => config,
 }));
 
 // Mock window.matchMedia
