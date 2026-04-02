@@ -1,12 +1,8 @@
 {
 	"name": "phone-case-poc",
 	"pages_build_output_dir": ".next",
-	"main": ".next/standalone/server.js",
 	"compatibility_date": "2026-03-30",
 	"compatibility_flags": ["nodejs_compat"],
-	"assets": {
-		"directory": ".next/static"
-	},
 	"d1_databases": [
 		{
 			"binding": "phone_case_poc_db",
