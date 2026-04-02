@@ -1,10 +1,18 @@
+let withNextOnPages = (config) => config;
+
+// 仅在非测试环境加载 @cloudflare/next-on-pages（避免 Jest require 错误）
+if (process.env.NODE_ENV !== 'test') {
+  try {
+    withNextOnPages = require('@cloudflare/next-on-pages');
+  } catch (e) {
+    console.warn('@cloudflare/next-on-pages not available, using plain Next.js config');
+  }
+}
+
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   // 启用压缩（gzip/brotli）
   compress: true,
-
-  // 输出为 standalone 模式 (Cloudflare Workers 需要)
-  output: 'standalone',
 
   // 图片配置
   images: {
@@ -43,4 +51,4 @@ const nextConfig = {
   },
 }
 
-module.exports = nextConfig
+module.exports = withNextOnPages(nextConfig)

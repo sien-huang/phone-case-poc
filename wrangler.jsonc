@@ -1,14 +1,3 @@
 {
-	"name": "phone-case-poc",
-	"pages_build_output_dir": ".next",
-	"compatibility_date": "2026-03-30",
-	"compatibility_flags": ["nodejs_compat"],
-	"d1_databases": [
-		{
-			"binding": "phone_case_poc_db",
-			"database_name": "phone_case_poc_db",
-			"database_id": "d6b6e51d-42ee-4956-9ecf-c5b179e42954",
-			"remote": true
-		}
-	]
+	"name": "phone-case-poc"
 }

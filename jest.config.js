@@ -1,11 +1,8 @@
 const nextJest = require('next/jest');
 
 const createJestConfig = nextJest({
-  // Provide the path to your Next.js app to load next.config.js and .env files
   dir: './',
 }, {
-  // Transform options for Next.js
-  // This helps with Web API polyfills
   testEnvironmentOptions: {
     url: 'http://localhost:3000',
   },
@@ -17,6 +14,8 @@ const customJestConfig = {
   testEnvironment: 'jest-environment-jsdom',
   moduleNameMapper: {
     '^@/(.*)$': '<rootDir>/$1',
+    // Mock @cloudflare/next-on-pages to avoid export/require issues in Jest
+    '^@cloudflare/next-on-pages$': '<rootDir>/__mocks__/next-on-pages.js',
   },
   testMatch: [
     '<rootDir>/__tests__/**/*.test.ts',
@@ -29,7 +28,7 @@ const customJestConfig = {
     '!lib/**/*.d.ts',
     '!lib/**/*.test.ts',
     '!lib/**/*.spec.ts',
-    '!lib/data.ts', // Exclude large data.ts to focus on core logic coverage
+    '!lib/data.ts',
   ],
   coverageThreshold: {
     global: {
@@ -39,9 +38,8 @@ const customJestConfig = {
       statements: 70,
     },
   },
-  // Ensure test isolation to avoid mock leakage
   resetModules: true,
-  resetMocks: false,  // Disable: we manually reset where needed
+  resetMocks: false,
   clearMocks: true,
 };
 

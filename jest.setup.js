@@ -16,6 +16,12 @@ process.env = {
   CF_WORKER: 'false',
 };
 
+// Mock @cloudflare/next-on-pages for Jest (tests don't need actual adapter)
+jest.mock('@cloudflare/next-on-pages', () => ({
+  __esModule: true,
+  default: (config) => config,
+}));
+
 // Mock window.matchMedia
 Object.defineProperty(window, 'matchMedia', {
   writable: true,
