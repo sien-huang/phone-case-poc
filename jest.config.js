@@ -41,7 +41,7 @@ const customJestConfig = {
   },
   // Ensure test isolation to avoid mock leakage
   resetModules: true,
-  resetMocks: true,
+  resetMocks: false,  // Disable: we manually reset where needed
   clearMocks: true,
 };
 

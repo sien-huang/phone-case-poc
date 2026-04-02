@@ -107,7 +107,7 @@ describe('Quote API', () => {
       { id: 'prod-1', name: 'Product 1', price_tiers: [{ price: 10 }] },
       { id: 'prod-2', name: 'Product 2', price_tiers: [{ price: 20 }] },
     ];
-    mockGetProducts.mockResolvedValue(mockProducts);
+    mockGetProducts.mockReturnValue(mockProducts);
 
     // Build FormData as the route expects multipart/form-data
     const formData = new FormData();
@@ -120,7 +120,7 @@ describe('Quote API', () => {
     formData.append('message', 'Need pricing');
     formData.append('email', 'test@test.com');
 
-    mockCreateInquiry.mockResolvedValue({
+    mockCreateInquiry.mockReturnValue({
       id: 'INQ-123',
       customerName: 'Test Corp',
       items: [

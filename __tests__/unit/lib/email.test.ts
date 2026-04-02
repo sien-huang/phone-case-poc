@@ -1,8 +1,6 @@
-import { sendInquiryNotification } from '@/lib/email';
-
-// Mock nodemailer
-const mockSendMail = jest.fn();
-const mockVerify = jest.fn();
+// Mock nodemailer FIRST (before importing the module that uses it)
+const mockSendMail = jest.fn().mockResolvedValue({ messageId: 'test-id' });
+const mockVerify = jest.fn().mockResolvedValue({ response: 'OK' });
 
 jest.mock('nodemailer', () => ({
   createTransport: jest.fn(() => ({
@@ -10,6 +8,8 @@ jest.mock('nodemailer', () => ({
     sendMail: mockSendMail,
   })),
 }));
+
+import { sendInquiryNotification } from '@/lib/email';
 
 // Helper to create valid inquiry with correct date field
 function createInquiry(overrides = {}) {
@@ -42,6 +42,13 @@ describe('Email Service', () => {
     // Reset mocks
     mockSendMail.mockClear();
     mockVerify.mockClear();
+
+    // Ensure createTransport still returns object with verify/sendMail (resetMocks cleared implementation)
+    const nodemailer = require('nodemailer');
+    (nodemailer.createTransport as jest.Mock).mockImplementation(() => ({
+      verify: mockVerify,
+      sendMail: mockSendMail,
+    }));
   });
 
   describe('sendInquiryNotification', () => {

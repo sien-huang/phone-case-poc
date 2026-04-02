@@ -23,13 +23,11 @@ jest.mock('@/data/products.json', () => ({
   ],
 }));
 
-// Mock fetch for view tracking
-global.fetch = jest.fn(() =>
-  Promise.resolve({
-    ok: true,
-    json: () => Promise.resolve({}),
-  } as any)
-) as any;
+// Mock fetch for view tracking - will be re-initialized in beforeEach
+let fetchMock: any;
+
+// Debug: check fetch is defined in setup
+console.log('DEBUG: global.fetch in test setup:', !!global.fetch);
 
 // Mock process.env
 process.env.NEXT_PUBLIC_BASE_URL = 'http://localhost:3000';
@@ -38,6 +36,16 @@ process.env.NEXT_PUBLIC_BASE_URL = 'http://localhost:3000';
 import ProductDetailPage from '@/app/product/[slug]/page';
 
 describe('ProductDetailPage', () => {
+  beforeEach(() => {
+    // Reset fetch mock before each test to avoid resetMocks interference
+    global.fetch = jest.fn(() =>
+      Promise.resolve({
+        ok: true,
+        json: () => Promise.resolve({}),
+      } as any)
+    ) as any;
+  });
+
   it('renders product name', async () => {
     const params = Promise.resolve({ slug: 'iphone-15-pro-max-case' });
     const result = await ProductDetailPage({ params });

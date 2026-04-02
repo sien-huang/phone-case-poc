@@ -2,6 +2,14 @@ import React from 'react';
 import { render, screen, waitFor, act } from '@testing-library/react';
 import { LocaleProvider, useLocale } from '@/contexts/LocaleContext';
 
+// Import the module to reset cache (not officially exported, but we can access via any means)
+// We'll reset the internal cache by re-importing? Instead we can modify the module's internal variable after import.
+// Jest allows us to access module internals via ES6 module namespace import? Not easily.
+// We'll rely on beforeEach to clear the cache by directly accessing the module's closure if possible.
+// Unfortunately, translationsCache is not exported. We can hack by using jest.isolateModules? Too heavy.
+// Simpler: modify LocaleContext to reset cache when NODE_ENV === 'test' and a special function is called.
+// We'll add a conditional export for testing.
+
 // Mock translations
 const mockEnTranslations = {
   'nav.home': 'Home',
@@ -37,6 +45,10 @@ describe('LocaleContext', () => {
     // Reset document.cookie and document.documentElement.lang before each test
     document.cookie = '';
     document.documentElement.lang = 'en';
+    // Reset translation cache between tests
+    if (LocaleProvider && (LocaleProvider as any).resetCache) {
+      (LocaleProvider as any).resetCache();
+    }
   });
 
   it('provides default locale from browser or cookie', async () => {

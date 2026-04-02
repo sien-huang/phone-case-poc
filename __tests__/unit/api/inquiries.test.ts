@@ -1,7 +1,3 @@
-// Declare mocks with let in module scope to avoid TDZ within jest.mock
-let mockPrisma: any;
-let mockSendNotification: any;
-
 // Mock next/server before any imports
 jest.mock('next/server', () => {
   class NextRequestMock {
@@ -70,9 +66,9 @@ jest.mock('next/server', () => {
   return { NextRequest: NextRequestMock, NextResponse: NextResponseMock };
 });
 
-// Mock db before importing route - initialize mockPrisma within factory
-jest.mock('@/lib/db', () => {
-  mockPrisma = {
+// Mock db - directly export mock prisma with jest.fn()
+jest.mock('@/lib/db', () => ({
+  prisma: {
     inquiry: {
       findMany: jest.fn(),
       findFirst: jest.fn(),
@@ -84,17 +80,18 @@ jest.mock('@/lib/db', () => {
       findUnique: jest.fn(),
     },
     $transaction: jest.fn(),
-  };
-  return { prisma: mockPrisma };
-});
+  },
+}));
 
-// Mock email
+// Mock email - use var to avoid TDZ
+var mockSendNotification: any;
 jest.mock('@/lib/email', () => ({
   sendInquiryNotification: mockSendNotification = jest.fn(),
 }));
 
 import { GET, POST } from '@/app/api/inquiries/route';
 import { NextRequest } from 'next/server';
+import { prisma } from '@/lib/db';
 
 describe('Inquiries API', () => {
   beforeEach(() => {
@@ -115,7 +112,7 @@ describe('Inquiries API', () => {
           createdAt: new Date().toISOString(),
         },
       ];
-      mockPrisma.inquiry.findMany.mockResolvedValue(mockInquiries);
+      prisma.inquiry.findMany.mockResolvedValue(mockInquiries);
 
       const response = await GET(new NextRequest('http://localhost:3000/api/inquiries'));
       const data = await response.json();
@@ -125,7 +122,7 @@ describe('Inquiries API', () => {
         total: 1,
         inquiries: mockInquiries,
       });
-      expect(mockPrisma.inquiry.findMany).toHaveBeenCalledWith(
+      expect(prisma.inquiry.findMany).toHaveBeenCalledWith(
         expect.objectContaining({
           where: undefined,
           include: expect.any(Object),
@@ -136,7 +133,7 @@ describe('Inquiries API', () => {
     });
 
     it('returns empty array when no inquiries', async () => {
-      mockPrisma.inquiry.findMany.mockResolvedValue([]);
+      prisma.inquiry.findMany.mockResolvedValue([]);
       const response = await GET(new NextRequest('http://localhost:3000/api/inquiries'));
       const data = await response.json();
       expect(response.status).toBe(200);
@@ -144,7 +141,7 @@ describe('Inquiries API', () => {
     });
 
     it('handles database errors', async () => {
-      mockPrisma.inquiry.findMany.mockRejectedValue(new Error('DB error'));
+      prisma.inquiry.findMany.mockRejectedValue(new Error('DB error'));
       const response = await GET(new NextRequest('http://localhost:3000/api/inquiries'));
       const data = await response.json();
       expect(response.status).toBe(500);
@@ -172,10 +169,10 @@ describe('Inquiries API', () => {
         items: inquiryData.items,
       };
 
-      mockPrisma.product.findUnique.mockResolvedValue({
+      prisma.product.findUnique.mockResolvedValue({
         priceRange: '$10',
       });
-      mockPrisma.$transaction.mockResolvedValue(createdInquiry);
+      prisma.$transaction.mockResolvedValue(createdInquiry);
 
       const { NextRequest } = require('next/server');
       const request = new NextRequest('http://localhost:3000/api/inquiries', {
@@ -216,8 +213,8 @@ describe('Inquiries API', () => {
         items: [{ productId: 'prod-1', quantity: 1 }],
       };
 
-      mockPrisma.product.findUnique.mockResolvedValue({ priceRange: '$10' });
-      mockPrisma.$transaction.mockRejectedValue(new Error('DB error'));
+      prisma.product.findUnique.mockResolvedValue({ priceRange: '$10' });
+      prisma.$transaction.mockRejectedValue(new Error('DB error'));
 
       const { NextRequest } = require('next/server');
       const request = new NextRequest('http://localhost:3000/api/inquiries', {

@@ -9,9 +9,11 @@ process.env = {
   SMTP_PASS: 'test-password',
   ADMIN_EMAIL: 'admin@test.com',
   DATABASE_URL: 'postgresql://test:test@localhost:5432/phone-case-test',
+  D1_DATABASE_URL: 'file:./d1-local.db',
   NEXTAUTH_SECRET: 'test-secret-for-testing-only',
   NEXTAUTH_URL: 'http://localhost:3000',
   NEXT_PUBLIC_APP_URL: 'http://localhost:3000',
+  CF_WORKER: 'false',
 };
 
 // Mock window.matchMedia
@@ -70,3 +72,60 @@ console.error = (...args) => {
   }
   originalError.call(console, ...args);
 };
+
+// ============================================
+// Global Mocks for Database & Email
+// ============================================
+
+// Mock PrismaClient to avoid real DB connections
+jest.mock('@prisma/client', () => {
+  const mockPrisma = {
+    product: {
+      findMany: jest.fn(),
+      findFirst: jest.fn(),
+      findUnique: jest.fn(),
+      create: jest.fn(),
+      update: jest.fn(),
+      delete: jest.fn(),
+    },
+    inquiry: {
+      findMany: jest.fn(),
+      findFirst: jest.fn(),
+      findUnique: jest.fn(),
+      create: jest.fn(),
+      update: jest.fn(),
+      delete: jest.fn(),
+    },
+    $transaction: jest.fn(),
+  };
+  return {
+    PrismaClient: jest.fn(() => mockPrisma),
+    PrismaLibSql: jest.fn(),
+  };
+});
+
+// Provide module-level mockPrisma reference for individual tests to configure
+if (!global.mockPrisma) {
+  global.mockPrisma = {
+    product: {
+      findMany: jest.fn(),
+      findFirst: jest.fn(),
+      findUnique: jest.fn(),
+    },
+    inquiry: {
+      findMany: jest.fn(),
+      findFirst: jest.fn(),
+      create: jest.fn(),
+    },
+    $transaction: jest.fn(),
+  };
+}
+
+// Optionally mock @libsql/client as well
+jest.mock('@libsql/client', () => ({
+  createClient: jest.fn(() => ({
+    execute: jest.fn(),
+    batch: jest.fn(),
+    close: jest.fn(),
+  })),
+}));
