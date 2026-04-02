@@ -1,3 +1,11 @@
 {
-	"name": "phone-case-poc"
+	"name": "phone-case-poc",
+	"d1_databases": [
+		{
+			"binding": "phone_case_poc_db",
+			"database_name": "phone_case_poc_db",
+			"database_id": "d6b6e51d-42ee-4956-9ecf-c5b179e42954",
+			"remote": true
+		}
+	]
 }
