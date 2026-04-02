@@ -62,7 +62,7 @@ jobs:
       - name: 🧹 Enforce coverage thresholds
         run: |
           # Extract the coverage percentage for Lines from lcov HTML report
-          COVERAGE=$(grep -o '<td[^>]*>Lines</td>[^<]*<td[^>]*>\([0-9.]*\)</td>' coverage/lcov-report/index.html | sed -n 's/.*<td[^>]*>\([0-9.]*\)</td>.*/\1/p' | head -1)
+          COVERAGE=$(grep -o '<td[^>]*>Lines</td>[^<]*<td[^>]*>\([0-9.]*\)</td>' coverage/lcov-report/index.html | sed -n 's#.*<td[^>]*>\([0-9.]*\)</td>.*#\1#p' | head -1)
           # Fallback: extract any number after the "Lines" row
           if [ -z "$COVERAGE" ]; then
             COVERAGE=$(grep -A 1 '<td>Lines</td>' coverage/lcov-report/index.html | tail -1 | grep -o '[0-9.]\+')
