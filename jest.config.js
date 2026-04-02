@@ -33,10 +33,10 @@ const customJestConfig = {
   ],
   coverageThreshold: {
     global: {
-      branches: 13,
-      functions: 13,
-      lines: 13,
-      statements: 13,
+      branches: 70,
+      functions: 70,
+      lines: 80,
+      statements: 70,
     },
   },
   // Ensure test isolation to avoid mock leakage
