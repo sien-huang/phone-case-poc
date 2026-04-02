@@ -1,19 +1,10 @@
-let withOpenNext = (config) => config;
-
-// 仅在非测试环境加载 OpenNext（避免 Jest require 错误）
-if (process.env.NODE_ENV !== 'test') {
-  try {
-    const { defineCloudflareConfig } = require('@opennextjs/cloudflare');
-    withOpenNext = defineCloudflareConfig;
-  } catch (e) {
-    console.warn('@opennextjs/cloudflare not available, using plain Next.js config');
-  }
-}
-
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   // 启用压缩（gzip/brotli）
   compress: true,
+
+  // 输出为 standalone 模式 (供 OpenNext 适配)
+  output: 'standalone',
 
   // 图片配置
   images: {
@@ -52,4 +43,4 @@ const nextConfig = {
   },
 }
 
-module.exports = withOpenNext(nextConfig)
+module.exports = nextConfig;

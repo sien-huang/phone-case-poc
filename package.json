@@ -4,7 +4,7 @@
   "description": "Phone case wholesale B2B POC",
   "scripts": {
     "dev": "next dev",
-    "build": "npm install && next build",
+    "build": "opennextjs-cloudflare build",
     "postbuild": "next-sitemap",
     "start": "next start",
     "lint": "next lint",
