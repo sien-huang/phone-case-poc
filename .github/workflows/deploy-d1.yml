@@ -45,7 +45,7 @@ jobs:
 
       - name: Deploy to Cloudflare Pages
         run: |
-          npx wrangler pages deploy ./.next --project-name phone-case-poc
+          npx wrangler pages deploy ./.open-next --project-name phone-case-poc
 
       - name: Get Deployment URL
         run: |
